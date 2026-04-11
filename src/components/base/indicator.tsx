@@ -1,0 +1,50 @@
+import type { IndicatorProps } from '@mantine/core'
+import type { ReactNode } from 'react'
+import { Indicator as Base } from '@mantine/core'
+import { cn } from '@/utils/cn'
+
+type IndicatorColor = 'primary' | 'red' | 'secondary'
+
+interface Props {
+  animate?: boolean
+  children?: ReactNode
+  className?: string
+  color?: IndicatorColor
+  disabled?: boolean
+  offset?: number
+  position?: IndicatorProps['position']
+  size?: number
+}
+
+const colorClassName: Record<IndicatorColor, string> = {
+  primary: 'bg-primary-11 before:bg-primary-11',
+  red: 'bg-red-11 before:bg-red-11',
+  secondary: 'bg-secondary-11 before:bg-secondary-11',
+}
+
+export const Indicator = ({
+  animate,
+  children,
+  className,
+  color = 'primary',
+  disabled,
+  offset,
+  position,
+  size = 5,
+}: Props) => {
+  return (
+    <Base
+      className={cn('inline-block', className)}
+      disabled={disabled}
+      offset={offset}
+      position={position}
+      processing={animate}
+      size={size}
+      classNames={{
+        indicator: colorClassName[color],
+      }}
+    >
+      {children}
+    </Base>
+  )
+}
