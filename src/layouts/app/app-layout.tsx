@@ -10,7 +10,6 @@ export const AppLayout = ({ children }: Props) => {
   return (
     <>
       <Sidebar />
-
       <Main>{children}</Main>
     </>
   )

@@ -21,7 +21,7 @@ export const Title = ({
     <div className={cn('min-w-0 space-y-1', className)}>
       {level === 1 && (
         <h1
-          className={cn('text-lg/8 font-semibold text-gray-13', titleClassName)}
+          className={cn('text-lg/6 font-semibold text-gray-13', titleClassName)}
         >
           {title}
         </h1>
@@ -49,7 +49,7 @@ export const Title = ({
       {description && (
         <p
           className={cn(
-            'text-micro/6 text-pretty text-gray-11',
+            'text-micro/6 text-balance text-gray-11',
             descriptionClassName,
           )}
         >

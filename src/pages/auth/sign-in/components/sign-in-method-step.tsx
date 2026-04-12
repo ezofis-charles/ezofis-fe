@@ -1,0 +1,58 @@
+import { Link } from '@tanstack/react-router'
+import { Button } from '@/components/base/button'
+import { Title } from '@/components/base/title'
+import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { useSignInStore } from '../stores/use-sign-in-store'
+
+export const SignInMethodStep = () => {
+  const setMethod = useSignInStore((state) => state.setMethod)
+  const setStep = useSignInStore((state) => state.setStep)
+
+  const onEmailMethodClick = () => {
+    setMethod('email')
+    setStep('form')
+  }
+
+  return (
+    <AnimatePop className='space-y-6'>
+      <Title
+        className='text-center'
+        description='Choose how you want to continue'
+        level={1}
+        title='Sign in to your account'
+      />
+
+      <div className='w-full space-y-4'>
+        <Button
+          className='w-full justify-center'
+          label='Continue with Email'
+          size='lg'
+          onClick={onEmailMethodClick}
+        />
+        <Button
+          className='w-full justify-center'
+          color='gray'
+          label='Continue with Google'
+          size='lg'
+          variant='outline'
+          onClick={() => setMethod('google')}
+        />
+        <Button
+          className='w-full justify-center'
+          color='gray'
+          label='Continue with Microsoft'
+          size='lg'
+          variant='outline'
+          onClick={() => setMethod('microsoft')}
+        />
+      </div>
+
+      <Link
+        className='block cursor-pointer text-center hover:underline'
+        to='/sign-up'
+      >
+        Don't have an account? Sign up
+      </Link>
+    </AnimatePop>
+  )
+}

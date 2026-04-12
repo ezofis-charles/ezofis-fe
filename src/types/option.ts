@@ -1,9 +1,11 @@
 import { z } from 'zod'
-import { ItemListSchema, ItemSchema } from './item'
+import { ItemListSchema } from './item'
 
-export const OptionSchema = ItemSchema.extend({
+export const OptionSchema = z.object({
   description: z.string().optional(),
   disabled: z.boolean().optional(),
+  id: z.string(),
+  name: z.string(),
 })
 
 export type Option = z.infer<typeof OptionSchema>

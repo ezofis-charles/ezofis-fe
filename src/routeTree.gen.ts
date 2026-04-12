@@ -10,13 +10,16 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as DesignSystemRouteRouteImport } from './routes/design-system/route'
+import { Route as AuthRouteRouteImport } from './routes/_auth/route'
 import { Route as AppRouteRouteImport } from './routes/_app/route'
 import { Route as DesignSystemIndexRouteImport } from './routes/design-system/index'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
 import { Route as DesignSystemTypographyRouteImport } from './routes/design-system/typography'
 import { Route as DesignSystemColorsRouteImport } from './routes/design-system/colors'
+import { Route as AuthSignUpRouteImport } from './routes/_auth/sign-up'
 import { Route as AuthSignInRouteImport } from './routes/_auth/sign-in'
-import { Route as AuthLoginRouteImport } from './routes/_auth/login'
+import { Route as AuthResetPasswordRouteImport } from './routes/_auth/reset-password'
+import { Route as AuthForgotPasswordRouteImport } from './routes/_auth/forgot-password'
 import { Route as AppWorkflowsRouteImport } from './routes/_app/workflows'
 import { Route as AppTasksRouteImport } from './routes/_app/tasks'
 import { Route as AppRequestsRouteImport } from './routes/_app/requests'
@@ -87,6 +90,10 @@ const DesignSystemRouteRoute = DesignSystemRouteRouteImport.update({
   path: '/design-system',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthRouteRoute = AuthRouteRouteImport.update({
+  id: '/_auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AppRouteRoute = AppRouteRouteImport.update({
   id: '/_app',
   getParentRoute: () => rootRouteImport,
@@ -111,15 +118,25 @@ const DesignSystemColorsRoute = DesignSystemColorsRouteImport.update({
   path: '/colors',
   getParentRoute: () => DesignSystemRouteRoute,
 } as any)
-const AuthSignInRoute = AuthSignInRouteImport.update({
-  id: '/_auth/sign-in',
-  path: '/sign-in',
-  getParentRoute: () => rootRouteImport,
+const AuthSignUpRoute = AuthSignUpRouteImport.update({
+  id: '/sign-up',
+  path: '/sign-up',
+  getParentRoute: () => AuthRouteRoute,
 } as any)
-const AuthLoginRoute = AuthLoginRouteImport.update({
-  id: '/_auth/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
+const AuthSignInRoute = AuthSignInRouteImport.update({
+  id: '/sign-in',
+  path: '/sign-in',
+  getParentRoute: () => AuthRouteRoute,
+} as any)
+const AuthResetPasswordRoute = AuthResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => AuthRouteRoute,
+} as any)
+const AuthForgotPasswordRoute = AuthForgotPasswordRouteImport.update({
+  id: '/forgot-password',
+  path: '/forgot-password',
+  getParentRoute: () => AuthRouteRoute,
 } as any)
 const AppWorkflowsRoute = AppWorkflowsRouteImport.update({
   id: '/workflows',
@@ -509,8 +526,10 @@ export interface FileRoutesByFullPath {
   '/requests': typeof AppRequestsRoute
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
-  '/login': typeof AuthLoginRoute
+  '/forgot-password': typeof AuthForgotPasswordRoute
+  '/reset-password': typeof AuthResetPasswordRoute
   '/sign-in': typeof AuthSignInRoute
+  '/sign-up': typeof AuthSignUpRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
   '/design-system/typography': typeof DesignSystemTypographyRoute
   '/design-system/': typeof DesignSystemIndexRoute
@@ -574,17 +593,19 @@ export interface FileRoutesByFullPath {
   '/design-system/components/': typeof DesignSystemComponentsIndexRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof AppIndexRoute
   '/folders': typeof AppFoldersRoute
   '/forms': typeof AppFormsRoute
   '/portals': typeof AppPortalsRoute
   '/requests': typeof AppRequestsRoute
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
-  '/login': typeof AuthLoginRoute
+  '/forgot-password': typeof AuthForgotPasswordRoute
+  '/reset-password': typeof AuthResetPasswordRoute
   '/sign-in': typeof AuthSignInRoute
+  '/sign-up': typeof AuthSignUpRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
   '/design-system/typography': typeof DesignSystemTypographyRoute
-  '/': typeof AppIndexRoute
   '/design-system': typeof DesignSystemIndexRoute
   '/my-account/{-$slug}': typeof AppMyAccountChar123SlugChar125Route
   '/design-system/components/accordion': typeof DesignSystemComponentsAccordionRoute
@@ -648,6 +669,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteRouteWithChildren
+  '/_auth': typeof AuthRouteRouteWithChildren
   '/design-system': typeof DesignSystemRouteRouteWithChildren
   '/_app/folders': typeof AppFoldersRoute
   '/_app/forms': typeof AppFormsRoute
@@ -655,8 +677,10 @@ export interface FileRoutesById {
   '/_app/requests': typeof AppRequestsRoute
   '/_app/tasks': typeof AppTasksRoute
   '/_app/workflows': typeof AppWorkflowsRoute
-  '/_auth/login': typeof AuthLoginRoute
+  '/_auth/forgot-password': typeof AuthForgotPasswordRoute
+  '/_auth/reset-password': typeof AuthResetPasswordRoute
   '/_auth/sign-in': typeof AuthSignInRoute
+  '/_auth/sign-up': typeof AuthSignUpRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
   '/design-system/typography': typeof DesignSystemTypographyRoute
   '/_app/': typeof AppIndexRoute
@@ -731,8 +755,10 @@ export interface FileRouteTypes {
     | '/requests'
     | '/tasks'
     | '/workflows'
-    | '/login'
+    | '/forgot-password'
+    | '/reset-password'
     | '/sign-in'
+    | '/sign-up'
     | '/design-system/colors'
     | '/design-system/typography'
     | '/design-system/'
@@ -796,17 +822,19 @@ export interface FileRouteTypes {
     | '/design-system/components/'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/'
     | '/folders'
     | '/forms'
     | '/portals'
     | '/requests'
     | '/tasks'
     | '/workflows'
-    | '/login'
+    | '/forgot-password'
+    | '/reset-password'
     | '/sign-in'
+    | '/sign-up'
     | '/design-system/colors'
     | '/design-system/typography'
-    | '/'
     | '/design-system'
     | '/my-account/{-$slug}'
     | '/design-system/components/accordion'
@@ -869,6 +897,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/_app'
+    | '/_auth'
     | '/design-system'
     | '/_app/folders'
     | '/_app/forms'
@@ -876,8 +905,10 @@ export interface FileRouteTypes {
     | '/_app/requests'
     | '/_app/tasks'
     | '/_app/workflows'
-    | '/_auth/login'
+    | '/_auth/forgot-password'
+    | '/_auth/reset-password'
     | '/_auth/sign-in'
+    | '/_auth/sign-up'
     | '/design-system/colors'
     | '/design-system/typography'
     | '/_app/'
@@ -944,9 +975,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   AppRouteRoute: typeof AppRouteRouteWithChildren
+  AuthRouteRoute: typeof AuthRouteRouteWithChildren
   DesignSystemRouteRoute: typeof DesignSystemRouteRouteWithChildren
-  AuthLoginRoute: typeof AuthLoginRoute
-  AuthSignInRoute: typeof AuthSignInRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -956,6 +986,13 @@ declare module '@tanstack/react-router' {
       path: '/design-system'
       fullPath: '/design-system'
       preLoaderRoute: typeof DesignSystemRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_auth': {
+      id: '/_auth'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_app': {
@@ -993,19 +1030,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DesignSystemColorsRouteImport
       parentRoute: typeof DesignSystemRouteRoute
     }
+    '/_auth/sign-up': {
+      id: '/_auth/sign-up'
+      path: '/sign-up'
+      fullPath: '/sign-up'
+      preLoaderRoute: typeof AuthSignUpRouteImport
+      parentRoute: typeof AuthRouteRoute
+    }
     '/_auth/sign-in': {
       id: '/_auth/sign-in'
       path: '/sign-in'
       fullPath: '/sign-in'
       preLoaderRoute: typeof AuthSignInRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof AuthRouteRoute
     }
-    '/_auth/login': {
-      id: '/_auth/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof AuthLoginRouteImport
-      parentRoute: typeof rootRouteImport
+    '/_auth/reset-password': {
+      id: '/_auth/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof AuthResetPasswordRouteImport
+      parentRoute: typeof AuthRouteRoute
+    }
+    '/_auth/forgot-password': {
+      id: '/_auth/forgot-password'
+      path: '/forgot-password'
+      fullPath: '/forgot-password'
+      preLoaderRoute: typeof AuthForgotPasswordRouteImport
+      parentRoute: typeof AuthRouteRoute
     }
     '/_app/workflows': {
       id: '/_app/workflows'
@@ -1484,6 +1535,24 @@ const AppRouteRouteWithChildren = AppRouteRoute._addFileChildren(
   AppRouteRouteChildren,
 )
 
+interface AuthRouteRouteChildren {
+  AuthForgotPasswordRoute: typeof AuthForgotPasswordRoute
+  AuthResetPasswordRoute: typeof AuthResetPasswordRoute
+  AuthSignInRoute: typeof AuthSignInRoute
+  AuthSignUpRoute: typeof AuthSignUpRoute
+}
+
+const AuthRouteRouteChildren: AuthRouteRouteChildren = {
+  AuthForgotPasswordRoute: AuthForgotPasswordRoute,
+  AuthResetPasswordRoute: AuthResetPasswordRoute,
+  AuthSignInRoute: AuthSignInRoute,
+  AuthSignUpRoute: AuthSignUpRoute,
+}
+
+const AuthRouteRouteWithChildren = AuthRouteRoute._addFileChildren(
+  AuthRouteRouteChildren,
+)
+
 interface DesignSystemRouteRouteChildren {
   DesignSystemColorsRoute: typeof DesignSystemColorsRoute
   DesignSystemTypographyRoute: typeof DesignSystemTypographyRoute
@@ -1634,9 +1703,8 @@ const DesignSystemRouteRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   AppRouteRoute: AppRouteRouteWithChildren,
+  AuthRouteRoute: AuthRouteRouteWithChildren,
   DesignSystemRouteRoute: DesignSystemRouteRouteWithChildren,
-  AuthLoginRoute: AuthLoginRoute,
-  AuthSignInRoute: AuthSignInRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
