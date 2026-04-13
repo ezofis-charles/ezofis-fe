@@ -20,7 +20,7 @@ export const UserMenuTrigger = ({ className }: Props) => {
       <div className='flex h-10 w-8 shrink-0 items-center justify-center'>
         <Avatar
           className='border border-gray-3'
-          image={user.avatar}
+          image={user.avatarUrl}
           imageLabel='user picture'
           initials='CV'
           size={32}

@@ -5,11 +5,11 @@ import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { useSignInStore } from '../stores/use-sign-in-store'
 
 export const SignInMethodStep = () => {
-  const setMethod = useSignInStore((state) => state.setMethod)
+  const setSignInMethod = useSignInStore((state) => state.setSignInMethod)
   const setStep = useSignInStore((state) => state.setStep)
 
   const onEmailMethodClick = () => {
-    setMethod('email')
+    setSignInMethod('email')
     setStep('form')
   }
 
@@ -35,7 +35,7 @@ export const SignInMethodStep = () => {
           label='Continue with Google'
           size='lg'
           variant='outline'
-          onClick={() => setMethod('google')}
+          onClick={() => setSignInMethod('google')}
         />
         <Button
           className='w-full justify-center'
@@ -43,7 +43,7 @@ export const SignInMethodStep = () => {
           label='Continue with Microsoft'
           size='lg'
           variant='outline'
-          onClick={() => setMethod('microsoft')}
+          onClick={() => setSignInMethod('microsoft')}
         />
       </div>
 

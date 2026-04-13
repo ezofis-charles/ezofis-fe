@@ -12,7 +12,7 @@ interface Props extends Omit<
 > {
   value: string
   leftSection?: ReactNode
-  showPlaceholder?: boolean
+  placeholder?: string
   onBlur?: () => void
   onChange: (value: string) => void
 }
@@ -23,8 +23,8 @@ const InputPassword = forwardRef<HTMLInputElement, Props>(
       description,
       label,
       optional,
+      placeholder,
       required,
-      showPlaceholder,
       tooltip,
       tooltipWidth,
       value,
@@ -52,7 +52,7 @@ const InputPassword = forwardRef<HTMLInputElement, Props>(
         description={rest.error ? undefined : description}
         inputWrapperOrder={inputWrapperOrder}
         label={_label}
-        placeholder={showPlaceholder ? '••••••••••' : undefined}
+        placeholder={placeholder}
         ref={ref}
         value={value}
         visibilityToggleIcon={VisibilityToggleIcon}

@@ -6,13 +6,13 @@ import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { useSignInStore } from '../stores/use-sign-in-store'
 
 export const SignInOtpStep = () => {
-  const setMethod = useSignInStore((state) => state.setMethod)
+  const setSignInMethod = useSignInStore((state) => state.setSignInMethod)
   const setStep = useSignInStore((state) => state.setStep)
 
   const [otp, setOtp] = useState('')
 
   const handleBackToSignInClick = () => {
-    setMethod(null)
+    setSignInMethod('email')
     setStep('method')
   }
 
@@ -25,7 +25,7 @@ export const SignInOtpStep = () => {
         title='Two-Step Verification'
       />
 
-      <InputPin length={6} value={otp} onChange={setOtp} />
+      <InputPin length={6} placeholder='0' value={otp} onChange={setOtp} />
 
       <div className='space-y-4'>
         <Button

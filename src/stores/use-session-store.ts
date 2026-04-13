@@ -1,22 +1,44 @@
 import { create } from 'zustand'
-
-interface User {
-  avatar: string
-  email: string
-  id: string
-  name: string
-}
+import { persist } from 'zustand/middleware'
+import type { User } from '@/types/user'
 
 type Store = {
+  token: string
   user: User
+  clearSession: () => void
+  setSession: ({ token, user }: { token: string; user: User }) => void
 }
 
-export const useSessionStore = create<Store>((set) => ({
-  user: {
-    avatar: 'https://i.pravatar.cc/150?img=13',
-    email: 'charles@ezofis.com',
-    id: '1',
-    name: 'Charles Vinoth',
+const initialUserData: User = {
+  avatarUrl: '',
+  createdAt: '',
+  createdBy: '',
+  email: '',
+  id: '',
+  name: '',
+  otp: {
+    enabled: true,
+    method: 'email',
   },
-  setUser: (user: User) => set({ user }),
-}))
+  phoneNumber: '',
+  role: '',
+  signUpMethod: 'email',
+  updatedAt: '',
+  updatedBy: '',
+}
+
+export const useSessionStore = create<Store>()(
+  persist(
+    (set) => ({
+      token: '',
+      user: initialUserData,
+      clearSession: () =>
+        set(() => ({
+          token: '',
+          user: initialUserData,
+        })),
+      setSession: ({ token, user }) => set(() => ({ token, user })),
+    }),
+    { name: 'session' },
+  ),
+)

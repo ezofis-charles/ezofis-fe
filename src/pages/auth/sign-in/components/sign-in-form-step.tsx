@@ -1,25 +1,20 @@
 import { useNavigate } from '@tanstack/react-router'
-import { useState } from 'react'
 import { Button } from '@/components/base/button'
 import { InputPassword, InputText } from '@/components/base/inputs'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { getFieldError } from '@/utils/form'
+import useSignInForm from '../hooks/use-sign-in-form'
 import { useSignInStore } from '../stores/use-sign-in-store'
 
 export const SignInFormStep = () => {
   const setStep = useSignInStore((state) => state.setStep)
   const navigate = useNavigate()
-
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const { form, handleSubmit, signInMutation } = useSignInForm()
 
   const onForgotPasswordClick = () => {
     navigate({ to: '/forgot-password' })
     setStep('method')
-  }
-
-  const onSignInClick = () => {
-    setStep('otp')
   }
 
   return (
@@ -31,31 +26,66 @@ export const SignInFormStep = () => {
         title='Welcome Back'
       />
 
-      <div className='space-y-4'>
-        <InputText label='Email' size='md' value={email} onChange={setEmail} />
-        <InputPassword
-          label='Password'
-          size='md'
-          value={password}
-          onChange={setPassword}
-        />
-      </div>
+      <form className='space-y-6' onSubmit={handleSubmit}>
+        <div className='space-y-4'>
+          <form.Field
+            name='email'
+            children={(field) => (
+              <InputText
+                error={getFieldError(field.state.meta.errors)}
+                label='Email'
+                placeholder='Enter your email'
+                size='md'
+                value={field.state.value}
+                onChange={field.handleChange}
+              />
+            )}
+          />
 
-      <div className='space-y-4'>
-        <Button
-          className='w-full justify-center'
-          label='Sign in'
-          size='lg'
-          onClick={onSignInClick}
-        />
-
-        <div
-          className='cursor-pointer text-center hover:underline'
-          onClick={onForgotPasswordClick}
-        >
-          Forgot password?
+          <form.Field
+            name='password'
+            children={(field) => (
+              <InputPassword
+                error={getFieldError(field.state.meta.errors)}
+                label='Password'
+                placeholder='Enter your password'
+                size='md'
+                value={field.state.value}
+                onChange={field.handleChange}
+              />
+            )}
+          />
         </div>
-      </div>
+
+        <div className='space-y-4'>
+          <form.Subscribe
+            selector={(state) => [state.canSubmit]}
+            children={([canSubmit]) => (
+              <Button
+                className='w-full justify-center'
+                disabled={!canSubmit}
+                label='Sign in'
+                loading={signInMutation.isPending}
+                size='lg'
+                type='submit'
+              />
+            )}
+          />
+
+          <div
+            className='cursor-pointer text-center hover:underline'
+            onClick={onForgotPasswordClick}
+          >
+            Forgot password?
+          </div>
+
+          {signInMutation.isError && (
+            <div className='text-center text-red-11'>
+              {signInMutation.error?.message}
+            </div>
+          )}
+        </div>
+      </form>
     </AnimatePop>
   )
 }

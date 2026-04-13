@@ -29,7 +29,13 @@ export const ForgotPasswordFormStep = () => {
         title='Forgot your password?'
       />
 
-      <InputText label='Email' size='md' value={email} onChange={setEmail} />
+      <InputText
+        label='Email'
+        placeholder='Enter your email'
+        size='md'
+        value={email}
+        onChange={setEmail}
+      />
 
       <div className='space-y-4'>
         <Button
