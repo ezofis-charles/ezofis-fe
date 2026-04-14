@@ -1,20 +1,26 @@
-import { useNavigate } from '@tanstack/react-router'
+import { Link } from '@tanstack/react-router'
+import { useEffect } from 'react'
 import { Button } from '@/components/base/button'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
-import { useForgotPasswordStore } from '../stores/use-forgot-password-store'
-
-const resendResetLink = () => {
-  // TODO: Implement resend reset link
-}
+import useResendLinkMutation from '../hooks/use-resend-link-mutation'
 
 export const ForgotPasswordSuccessStep = () => {
-  const setStep = useForgotPasswordStore((state) => state.setStep)
-  const navigate = useNavigate()
+  const { count, resendLinkMutation, startCountdown, stopCountdown } =
+    useResendLinkMutation()
 
-  const backToSignIn = () => {
-    navigate({ to: '/sign-in' })
-    setStep('form')
+  useEffect(() => {
+    startCountdown()
+
+    return () => {
+      stopCountdown()
+    }
+  })
+
+  const resendResetLink = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    resendLinkMutation.mutate({ email: '' })
   }
 
   return (
@@ -29,17 +35,19 @@ export const ForgotPasswordSuccessStep = () => {
       <div className='space-y-4'>
         <Button
           className='w-full justify-center'
-          label='Resend reset link'
+          disabled={count !== 0}
+          label={count === 0 ? 'Resend link' : `Resend link in ${count}s`}
+          loading={resendLinkMutation.isPending}
           size='lg'
           onClick={resendResetLink}
         />
 
-        <div
-          className='cursor-pointer text-center hover:underline'
-          onClick={backToSignIn}
+        <Link
+          className='block cursor-pointer text-center hover:underline'
+          to='/sign-in'
         >
           Back to sign in
-        </div>
+        </Link>
       </div>
     </AnimatePop>
   )

@@ -5,10 +5,10 @@ import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { useSignInStore } from '../stores/use-sign-in-store'
 
 export const SignInMethodStep = () => {
-  const setSignInMethod = useSignInStore((state) => state.setSignInMethod)
-  const setStep = useSignInStore((state) => state.setStep)
-  const setIsInitialRender = useSignInStore((state) => state.setIsInitialRender)
   const isInitialRender = useSignInStore((state) => state.isInitialRender)
+  const setSignInMethod = useSignInStore((state) => state.setSignInMethod)
+  const setIsInitialRender = useSignInStore((state) => state.setIsInitialRender)
+  const setStep = useSignInStore((state) => state.setStep)
 
   const continueWithEmail = () => {
     setSignInMethod('email')
