@@ -10,7 +10,7 @@ export const SignInMethodStep = () => {
   const setIsInitialRender = useSignInStore((state) => state.setIsInitialRender)
   const isInitialRender = useSignInStore((state) => state.isInitialRender)
 
-  const onEmailMethodClick = () => {
+  const continueWithEmail = () => {
     setSignInMethod('email')
     setStep('form')
     setIsInitialRender(false)
@@ -30,7 +30,7 @@ export const SignInMethodStep = () => {
           className='w-full justify-center'
           label='Continue with Email'
           size='lg'
-          onClick={onEmailMethodClick}
+          onClick={continueWithEmail}
         />
         <Button
           className='w-full justify-center'

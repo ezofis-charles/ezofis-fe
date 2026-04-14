@@ -12,7 +12,7 @@ export const SignInFormStep = () => {
   const navigate = useNavigate()
   const { form, handleSubmit, signInMutation } = useSignInForm()
 
-  const onForgotPasswordClick = () => {
+  const forgotPassword = () => {
     navigate({ to: '/forgot-password' })
     setStep('method')
   }
@@ -74,7 +74,7 @@ export const SignInFormStep = () => {
 
           <div
             className='cursor-pointer text-center hover:underline'
-            onClick={onForgotPasswordClick}
+            onClick={forgotPassword}
           >
             Forgot password?
           </div>

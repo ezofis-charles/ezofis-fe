@@ -12,11 +12,11 @@ export const ForgotPasswordFormStep = () => {
 
   const [email, setEmail] = useState('')
 
-  const onSignInClick = () => {
+  const backToSignIn = () => {
     navigate({ to: '/sign-in' })
   }
 
-  const onSendResetLinkClick = () => {
+  const sendResetLink = () => {
     setStep('success')
   }
 
@@ -42,12 +42,12 @@ export const ForgotPasswordFormStep = () => {
           className='w-full justify-center'
           label='Send reset link'
           size='lg'
-          onClick={onSendResetLinkClick}
+          onClick={sendResetLink}
         />
 
         <div
           className='cursor-pointer text-center hover:underline'
-          onClick={onSignInClick}
+          onClick={backToSignIn}
         >
           Back to sign in
         </div>

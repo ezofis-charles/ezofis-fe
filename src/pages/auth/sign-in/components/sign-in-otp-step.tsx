@@ -10,7 +10,7 @@ export const SignInOtpStep = () => {
   const setStep = useSignInStore((state) => state.setStep)
   const { form, handleSubmit, verifyOtpMutation } = useVerifyOtpForm()
 
-  const handleBackToSignInClick = () => {
+  const backToSignIn = () => {
     setSignInMethod('email')
     setStep('method')
   }
@@ -55,7 +55,7 @@ export const SignInOtpStep = () => {
 
           <div
             className='cursor-pointer text-center hover:underline'
-            onClick={handleBackToSignInClick}
+            onClick={backToSignIn}
           >
             Resend link
           </div>
