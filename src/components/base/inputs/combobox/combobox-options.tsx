@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import type { Option } from '@/types/option'
 import { ScrollArea } from '@/components/base/scroll-area'
 import { cn } from '@/utils/cn'
-import type { SelectVariant } from '../input.types'
+import type { SelectVariant } from '../input-types'
 import { ComboboxOption } from './combobox-option'
 
 interface Props {

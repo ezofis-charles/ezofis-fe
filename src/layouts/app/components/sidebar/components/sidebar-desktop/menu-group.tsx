@@ -1,5 +1,5 @@
 import { ScrollArea } from '@/components/base/scroll-area'
-import type { SidebarMenuGroup } from '../../sidebar.types'
+import type { SidebarMenuGroup } from '../../sidebar-types'
 import { MenuGroupItem } from './menu-group-item'
 import { MenuGroupLabel } from './menu-group-label'
 

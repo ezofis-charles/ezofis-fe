@@ -1,6 +1,6 @@
 import { ButtonIcon } from '@/components/base/button'
 import { Sheet } from '@/components/base/sheet'
-import type { SidebarMenuGroup } from '../../sidebar.types'
+import type { SidebarMenuGroup } from '../../sidebar-types'
 import { UserMenu } from '../user-menu/user-menu'
 import { MenuGroup } from './menu-group'
 import { UserMenuTrigger } from './user-menu-trigger'

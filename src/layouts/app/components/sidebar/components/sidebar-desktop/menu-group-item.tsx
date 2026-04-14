@@ -5,7 +5,7 @@ import { Tooltip } from '@/components/base/tooltip'
 import { TOOLTIP_DELAY } from '@/constants'
 import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import { cn } from '@/utils/cn'
-import type { SidebarMenuItem as SidebarMenuItemType } from '../../sidebar.types'
+import type { SidebarMenuItem as SidebarMenuItemType } from '../../sidebar-types'
 import { AnimatePresence } from './animate-presence'
 
 interface Props extends SidebarMenuItemType {

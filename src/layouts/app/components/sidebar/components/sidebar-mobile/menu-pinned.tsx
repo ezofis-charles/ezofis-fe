@@ -1,7 +1,7 @@
 import { Link, useLocation } from '@tanstack/react-router'
 import { Icon } from '@/components/base/icon'
 import { cn } from '@/utils/cn'
-import type { SidebarMenuItem } from '../../sidebar.types'
+import type { SidebarMenuItem } from '../../sidebar-types'
 import { PINNED_COUNT } from './constants'
 
 interface Props {

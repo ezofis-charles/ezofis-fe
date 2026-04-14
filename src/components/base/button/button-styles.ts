@@ -1,5 +1,5 @@
 import { tv } from 'tailwind-variants'
-import type { ButtonColor, ButtonVariant } from './button.types'
+import type { ButtonColor, ButtonVariant } from './button-types'
 
 export function getVariantClassName(
   variant: ButtonVariant,

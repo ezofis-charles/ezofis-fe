@@ -1,6 +1,6 @@
 import { ScrollArea } from '@/components/base/scroll-area'
 import { cn } from '@/utils/cn'
-import type { SidebarMenuGroup } from '../../sidebar.types'
+import type { SidebarMenuGroup } from '../../sidebar-types'
 import { MenuGroupItem } from '../../menu-group-item'
 
 interface Props {

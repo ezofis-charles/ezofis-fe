@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { Tabs as Base } from '@ark-ui/react/tabs'
 import { cn } from '@/utils/cn'
-import { indicatorClassName, triggerClassName } from './tabs.styles'
+import { indicatorClassName, triggerClassName } from './tabs-styles'
 
 interface Props {
   children: ReactNode

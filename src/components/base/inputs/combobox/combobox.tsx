@@ -1,7 +1,7 @@
 import { Combobox as Base, useCombobox } from '@mantine/core'
 import { forwardRef } from 'react'
 import type { Option } from '@/types/option'
-import type { InputProps, SelectProps, SelectVariant } from '../input.types'
+import type { InputProps, SelectProps, SelectVariant } from '../input-types'
 import { ComboboxOptions } from './combobox-options'
 import { ComboboxSearch } from './combobox-search'
 import { ComboboxTarget } from './combobox-target'

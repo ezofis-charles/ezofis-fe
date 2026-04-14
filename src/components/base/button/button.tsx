@@ -2,8 +2,8 @@ import type { ComponentProps, ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { Icon } from '@/components/base/icon'
 import { cn } from '@/utils/cn'
-import type { ButtonColor, ButtonSize, ButtonVariant } from './button.types'
-import { getVariantClassName } from './button.styles'
+import type { ButtonColor, ButtonSize, ButtonVariant } from './button-types'
+import { getVariantClassName } from './button-styles'
 
 interface Props extends ComponentProps<'button'> {
   children?: ReactNode

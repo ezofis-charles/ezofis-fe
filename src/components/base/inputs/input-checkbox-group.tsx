@@ -1,14 +1,14 @@
 import { Checkbox as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import { cn } from '@/utils/cn'
-import type { SelectionGroupProps } from './input.types'
+import type { SelectionGroupProps } from './input-types'
 import { InputCheckbox } from './input-checkbox'
 import { InputLabel } from './input-label'
 import {
   classNames,
   inputWrapperOrder,
   OptionsPerLineClass,
-} from './input.constants'
+} from './input-constants'
 
 interface Props extends SelectionGroupProps {
   value: string[]

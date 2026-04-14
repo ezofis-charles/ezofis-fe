@@ -6,7 +6,9 @@ type Store = {
   token: string
   user: User
   clearSession: () => void
+
   setSession: ({ token, user }: { token: string; user: User }) => void
+  setToken: (token: string) => void
 }
 
 const initialUserData: User = {
@@ -38,6 +40,7 @@ export const useSessionStore = create<Store>()(
           user: initialUserData,
         })),
       setSession: ({ token, user }) => set(() => ({ token, user })),
+      setToken: (token) => set(() => ({ token })),
     }),
     { name: 'session' },
   ),

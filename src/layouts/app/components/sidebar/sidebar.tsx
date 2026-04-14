@@ -1,7 +1,7 @@
 import { useLingui } from '@lingui/react/macro'
 import { useViewportSize } from '@mantine/hooks'
 import { SCREEN_SIZE } from '@/constants'
-import type { SidebarMenuGroup, SidebarMode } from './sidebar.types'
+import type { SidebarMenuGroup, SidebarMode } from './sidebar-types'
 import { SidebarDesktop } from './components/sidebar-desktop'
 import { SidebarMobile } from './components/sidebar-mobile'
 import { SidebarTablet } from './components/sidebar-tablet'

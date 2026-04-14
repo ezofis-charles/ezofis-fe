@@ -1,7 +1,7 @@
 import { Combobox as Base } from '@mantine/core'
 import type { Option } from '@/types/option'
 import { cn } from '@/utils/cn'
-import type { SelectVariant } from '../input.types'
+import type { SelectVariant } from '../input-types'
 import { InputCheckboxIndicator } from '../input-checkbox-indicator'
 import { InputRadioIndicator } from '../input-radio-indicator'
 

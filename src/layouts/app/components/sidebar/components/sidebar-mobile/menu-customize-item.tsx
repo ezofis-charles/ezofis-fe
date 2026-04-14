@@ -1,6 +1,6 @@
 import { Icon } from '@/components/base/icon'
 import { Sortable } from '@/components/base/sortable'
-import type { SidebarMenuItem } from '../../sidebar.types'
+import type { SidebarMenuItem } from '../../sidebar-types'
 
 interface Props {
   index: number

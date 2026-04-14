@@ -1,7 +1,7 @@
 import { Link, useLocation } from '@tanstack/react-router'
 import { Icon } from '@/components/base/icon'
 import { cn } from '@/utils/cn'
-import type { SidebarMenuItem as SidebarMenuItemType } from './sidebar.types'
+import type { SidebarMenuItem as SidebarMenuItemType } from './sidebar-types'
 
 interface Props extends SidebarMenuItemType {
   iconClassName?: string

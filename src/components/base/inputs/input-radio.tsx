@@ -2,7 +2,7 @@ import type { ChangeEvent } from 'react'
 import { Radio as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import { cn } from '@/utils/cn'
-import type { SelectionProps as Props } from './input.types'
+import type { SelectionProps as Props } from './input-types'
 
 const InputRadio = forwardRef<HTMLInputElement, Props>(
   ({ className, error, onChange, ...rest }, ref) => {

@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import type { Option } from '@/types/option'
-import type { SelectProps } from './input.types'
+import type { SelectProps } from './input-types'
 import { Combobox } from './combobox'
 import { useLocalSearch } from './combobox/hooks/use-local-search'
 

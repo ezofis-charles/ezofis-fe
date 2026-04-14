@@ -1,4 +1,4 @@
-import type { InputWrapperOrder } from './input.types'
+import type { InputWrapperOrder } from './input-types'
 
 export const classNames = {
   description: 'mt-2 text-micro text-gray-10',

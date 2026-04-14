@@ -2,9 +2,9 @@ import { DateInput as Base } from '@mantine/dates'
 import { forwardRef } from 'react'
 import { ButtonClose } from '@/components/base/button'
 import { Icon } from '@/components/base/icon'
-import type { InputProps } from './input.types'
+import type { InputProps } from './input-types'
 import { InputLabel } from './input-label'
-import { classNames, inputWrapperOrder } from './input.constants'
+import { classNames, inputWrapperOrder } from './input-constants'
 
 interface Props extends Omit<
   InputProps,

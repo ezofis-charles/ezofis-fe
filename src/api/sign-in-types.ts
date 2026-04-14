@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { USER_OTP_METHOD, UserSchema } from '@/types/user'
-import { PasswordSchema } from './common.types'
+import { PasswordSchema } from './common-types'
 
 export const SignInRequestSchema = z.object({
   email: z.email(),
@@ -21,3 +21,14 @@ export const SignInResponseSchema = z.discriminatedUnion('status', [
   }),
 ])
 export type SignInResponse = z.infer<typeof SignInResponseSchema>
+
+export const VerifyOtpRequestSchema = z.object({
+  otp: z.string().length(6),
+})
+export type VerifyOtpRequest = z.infer<typeof VerifyOtpRequestSchema>
+
+export const VerifyOtpResponseSchema = z.object({
+  token: z.string(),
+  user: UserSchema,
+})
+export type VerifyOtpResponse = z.infer<typeof VerifyOtpResponseSchema>

@@ -1,4 +1,4 @@
-import type { ButtonSize } from './button.types'
+import type { ButtonSize } from './button-types'
 import { ButtonIcon } from './button-icon'
 
 interface Props {

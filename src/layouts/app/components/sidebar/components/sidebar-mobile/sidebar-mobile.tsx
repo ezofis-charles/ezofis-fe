@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ButtonIcon } from '@/components/base/button'
-import type { SidebarMenuGroup, SidebarMenuItem } from '../../sidebar.types'
+import type { SidebarMenuGroup, SidebarMenuItem } from '../../sidebar-types'
 import { Menu } from './menu'
 import { MenuCustomize } from './menu-customize'
 import { MenuPinned } from './menu-pinned'

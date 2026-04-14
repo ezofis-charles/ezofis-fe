@@ -1,7 +1,7 @@
 import { PinInput as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import { cn } from '@/utils/cn'
-import { classNames } from './input.constants'
+import { classNames } from './input-constants'
 
 interface Props {
   value: string

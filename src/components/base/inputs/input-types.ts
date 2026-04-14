@@ -1,7 +1,7 @@
 import type { ComboboxProps } from '@mantine/core'
 import type { ReactNode } from 'react'
 import type { Option } from '@/types/option'
-import type { OptionsPerLineClass } from './input.constants'
+import type { OptionsPerLineClass } from './input-constants'
 
 export interface InputProps {
   className?: string

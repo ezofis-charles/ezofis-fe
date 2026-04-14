@@ -1,14 +1,14 @@
 import { Radio as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import { cn } from '@/utils/cn'
-import type { SelectionGroupProps } from './input.types'
+import type { SelectionGroupProps } from './input-types'
 import { InputLabel } from './input-label'
 import { InputRadio } from './input-radio'
 import {
   classNames,
   inputWrapperOrder,
   OptionsPerLineClass,
-} from './input.constants'
+} from './input-constants'
 
 interface Props extends SelectionGroupProps {
   value: null | string

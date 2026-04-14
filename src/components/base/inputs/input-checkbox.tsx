@@ -2,7 +2,7 @@ import type { ChangeEvent } from 'react'
 import { Checkbox as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import { cn } from '@/utils/cn'
-import type { SelectionProps } from './input.types'
+import type { SelectionProps } from './input-types'
 
 interface Props extends SelectionProps {
   indeterminate?: boolean
