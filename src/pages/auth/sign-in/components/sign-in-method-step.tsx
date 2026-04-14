@@ -7,14 +7,17 @@ import { useSignInStore } from '../stores/use-sign-in-store'
 export const SignInMethodStep = () => {
   const setSignInMethod = useSignInStore((state) => state.setSignInMethod)
   const setStep = useSignInStore((state) => state.setStep)
+  const setIsInitialRender = useSignInStore((state) => state.setIsInitialRender)
+  const isInitialRender = useSignInStore((state) => state.isInitialRender)
 
   const onEmailMethodClick = () => {
     setSignInMethod('email')
     setStep('form')
+    setIsInitialRender(false)
   }
 
   return (
-    <AnimatePop className='space-y-6'>
+    <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
       <Title
         className='text-center'
         description='Choose how you want to continue'

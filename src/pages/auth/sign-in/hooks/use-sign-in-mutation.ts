@@ -13,7 +13,9 @@ export default function useSignInMutation() {
     onSuccess: (data) => {
       if (data.status === 'AUTHENTICATED') {
         setSession({ token: data.token, user: data.user })
-      } else {
+      }
+
+      if (data.status === 'VERIFY_OTP') {
         setStep('otp')
         setOtpMethod(data.method)
       }

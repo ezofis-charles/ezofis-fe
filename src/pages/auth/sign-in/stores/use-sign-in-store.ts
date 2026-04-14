@@ -7,19 +7,23 @@ type Step = 'form' | 'method' | 'otp'
 type OtpMethod = z.infer<typeof USER_OTP_METHOD>
 
 type Store = {
-  method: SignInMethod
+  isInitialRender: boolean
   otpMethod: OtpMethod
+  signInMethod: SignInMethod
   step: Step
+  setIsInitialRender: (isInitialRender: boolean) => void
   setOtpMethod: (otpMethod: OtpMethod) => void
   setSignInMethod: (method: SignInMethod) => void
   setStep: (step: Step) => void
 }
 
 export const useSignInStore = create<Store>()((set) => ({
-  method: 'email',
+  isInitialRender: true,
   otpMethod: 'email',
+  signInMethod: 'email',
   step: 'method',
+  setIsInitialRender: (isInitialRender: boolean) => set({ isInitialRender }),
   setOtpMethod: (otpMethod: OtpMethod) => set({ otpMethod }),
-  setSignInMethod: (method: SignInMethod) => set({ method }),
+  setSignInMethod: (signInMethod: SignInMethod) => set({ signInMethod }),
   setStep: (step: Step) => set({ step }),
 }))

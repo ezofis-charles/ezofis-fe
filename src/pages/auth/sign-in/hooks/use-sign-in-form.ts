@@ -7,8 +7,8 @@ export default function useSignInForm() {
   const signInMutation = useSignInMutation()
 
   const defaultValues: SignInRequest = {
-    email: '',
-    password: '',
+    email: 'charles@gmail.com',
+    password: 'Admin@123',
   }
 
   const form = useForm({
