@@ -1,25 +1,47 @@
+import { useEffect } from 'react'
 import { Button } from '@/components/base/button'
 import { InputPin } from '@/components/base/inputs'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
+import useResendOtpMutation from '../hooks/use-resend-otp-mutation'
 import useVerifyOtpForm from '../hooks/use-verify-otp-form'
 import { useSignInStore } from '../stores/use-sign-in-store'
 
 export const SignInOtpStep = () => {
-  const setSignInMethod = useSignInStore((state) => state.setSignInMethod)
-  const setStep = useSignInStore((state) => state.setStep)
   const { form, handleSubmit, verifyOtpMutation } = useVerifyOtpForm()
+  const otpMethod = useSignInStore((state) => state.otpMethod)
+  const { count, resendOtpMutation, startCountdown, stopCountdown } =
+    useResendOtpMutation()
 
-  const backToSignIn = () => {
-    setSignInMethod('email')
-    setStep('method')
+  useEffect(() => {
+    startCountdown()
+
+    return () => {
+      stopCountdown()
+    }
+  })
+
+  const description = () => {
+    const methods = {
+      app: 'Enter the code from your authenticator app',
+      email: 'Enter the 6-digit code sent to your email',
+      sms: 'Enter the 6-digit code sent to your mobile',
+    }
+
+    return methods[otpMethod]
+  }
+
+  const resendOtp = (e: React.MouseEvent, method: 'email' | 'sms') => {
+    e.preventDefault()
+    e.stopPropagation()
+    resendOtpMutation.mutate({ method })
   }
 
   return (
     <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
-        description='Enter the 6-digit code sent to your email'
+        description={description()}
         level={1}
         title='Two-Step Verification'
       />
@@ -38,7 +60,7 @@ export const SignInOtpStep = () => {
           )}
         />
 
-        <div className='space-y-4'>
+        <div className='space-y-2'>
           <form.Subscribe
             selector={(state) => [state.canSubmit]}
             children={([canSubmit]) => (
@@ -53,12 +75,23 @@ export const SignInOtpStep = () => {
             )}
           />
 
-          <div
-            className='cursor-pointer text-center hover:underline'
-            onClick={backToSignIn}
-          >
-            Resend link
-          </div>
+          {otpMethod !== 'app' && (
+            <Button
+              className='w-full justify-center font-normal text-gray-11 hover:bg-transparent hover:underline'
+              color='gray'
+              disabled={count !== 0}
+              label={count === 0 ? 'Resend link' : `Resend link in ${count}s`}
+              loading={resendOtpMutation.isPending}
+              variant='ghost'
+              onClick={(e) => resendOtp(e, otpMethod)}
+            />
+          )}
+
+          {verifyOtpMutation.isError && (
+            <div className='text-center text-red-11'>
+              {verifyOtpMutation.error?.message}
+            </div>
+          )}
         </div>
       </form>
     </AnimatePop>

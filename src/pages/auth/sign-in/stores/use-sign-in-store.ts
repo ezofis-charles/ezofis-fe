@@ -2,9 +2,9 @@ import type { z } from 'zod'
 import { create } from 'zustand'
 import type { USER_AUTH_METHOD, USER_OTP_METHOD } from '@/types/user'
 
-type SignInMethod = z.infer<typeof USER_AUTH_METHOD>
-type Step = 'form' | 'method' | 'otp'
-type OtpMethod = z.infer<typeof USER_OTP_METHOD>
+export type SignInMethod = z.infer<typeof USER_AUTH_METHOD>
+export type Step = 'form' | 'method' | 'otp'
+export type OtpMethod = z.infer<typeof USER_OTP_METHOD>
 
 type Store = {
   isInitialRender: boolean

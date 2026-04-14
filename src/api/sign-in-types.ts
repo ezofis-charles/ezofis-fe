@@ -28,6 +28,7 @@ export const VerifyOtpRequestSchema = z.object({
 export type VerifyOtpRequest = z.infer<typeof VerifyOtpRequestSchema>
 
 export const VerifyOtpResponseSchema = z.object({
+  status: z.literal('AUTHENTICATED'),
   token: z.string(),
   user: UserSchema,
 })

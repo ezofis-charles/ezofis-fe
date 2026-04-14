@@ -58,7 +58,7 @@ export const UserMenu = ({
       <Menu.Item
         icon='material-symbols:logout-rounded'
         iconClassName='text-red-11'
-        label='Log out'
+        label='Sign out'
         onClick={logout}
       />
     </Menu>

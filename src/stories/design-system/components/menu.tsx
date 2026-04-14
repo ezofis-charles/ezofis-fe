@@ -57,7 +57,7 @@ export const MenuStory = () => {
           <Menu.Item
             icon='tabler:logout'
             iconClassName='text-red-11'
-            label='Log out'
+            label='Sign out'
           />
         </Menu>
       </Section>

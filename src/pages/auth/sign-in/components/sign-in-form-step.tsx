@@ -1,21 +1,13 @@
-import { useNavigate } from '@tanstack/react-router'
+import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
 import { InputPassword, InputText } from '@/components/base/inputs'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { getFieldError } from '@/utils/form'
 import useSignInForm from '../hooks/use-sign-in-form'
-import { useSignInStore } from '../stores/use-sign-in-store'
 
 export const SignInFormStep = () => {
-  const setStep = useSignInStore((state) => state.setStep)
-  const navigate = useNavigate()
   const { form, handleSubmit, signInMutation } = useSignInForm()
-
-  const forgotPassword = () => {
-    navigate({ to: '/forgot-password' })
-    setStep('method')
-  }
 
   return (
     <AnimatePop className='space-y-6'>
@@ -72,12 +64,12 @@ export const SignInFormStep = () => {
             )}
           />
 
-          <div
-            className='cursor-pointer text-center hover:underline'
-            onClick={forgotPassword}
+          <Link
+            className='block cursor-pointer text-center hover:underline'
+            to='/forgot-password'
           >
             Forgot password?
-          </div>
+          </Link>
 
           {signInMutation.isError && (
             <div className='text-center text-red-11'>
