@@ -1,5 +1,5 @@
 import { useMutation } from '@tanstack/react-query'
-import { forgotPassword } from '@/api/forgot-password-api'
+import { forgotPassword } from '@/api/auth/forgot-password-api'
 import { showToast } from '@/components/base/toast/show-toast'
 import useCountdown from '@/hooks/use-countdown'
 

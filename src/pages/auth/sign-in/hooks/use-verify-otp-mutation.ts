@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
-import { verifyOtp } from '@/api/sign-in-api'
+import { verifyOtp } from '@/api/auth/sign-in-api'
 import { useSessionStore } from '@/stores/use-session-store'
 
 export default function useVerifyOtpMutation() {

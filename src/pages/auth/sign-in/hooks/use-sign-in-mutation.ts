@@ -1,5 +1,5 @@
 import { useMutation } from '@tanstack/react-query'
-import { signIn } from '@/api/sign-in-api'
+import { signIn } from '@/api/auth/sign-in-api'
 import { useSessionStore } from '@/stores/use-session-store'
 import { useSignInStore } from '../stores/use-sign-in-store'
 

@@ -1,6 +1,6 @@
 import { useForm } from '@tanstack/react-form'
-import type { SignInRequest } from '@/api/sign-in-types'
-import { SignInRequestSchema } from '@/api/sign-in-types'
+import type { SignInRequest } from '@/api/auth/sign-in-types'
+import { SignInRequestSchema } from '@/api/auth/sign-in-types'
 import useSignInMutation from './use-sign-in-mutation'
 
 export default function useSignInForm() {

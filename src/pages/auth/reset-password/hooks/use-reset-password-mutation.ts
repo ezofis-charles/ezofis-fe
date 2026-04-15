@@ -1,5 +1,5 @@
 import { useMutation } from '@tanstack/react-query'
-import { resetPassword } from '@/api/reset-password-api'
+import { resetPassword } from '@/api/auth/reset-password-api'
 import { useResetPasswordStore } from '../stores/use-reset-password-store'
 
 export default function useResetPasswordMutation() {

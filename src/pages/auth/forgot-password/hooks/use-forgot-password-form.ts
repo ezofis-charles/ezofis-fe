@@ -1,6 +1,6 @@
 import { useForm } from '@tanstack/react-form'
-import type { ForgotPasswordRequest } from '@/api/forgot-password-types'
-import { ForgotPasswordRequestSchema } from '@/api/forgot-password-types'
+import type { ForgotPasswordRequest } from '@/api/auth/forgot-password-types'
+import { ForgotPasswordRequestSchema } from '@/api/auth/forgot-password-types'
 import useForgotPasswordMutation from './use-forgot-password-mutation'
 
 export default function useForgotPasswordForm() {

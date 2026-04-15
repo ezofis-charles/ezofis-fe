@@ -1,5 +1,5 @@
 import { useMutation } from '@tanstack/react-query'
-import { sendOtp } from '@/api/otp-api'
+import { sendOtp } from '@/api/auth/otp-api'
 import { showToast } from '@/components/base/toast/show-toast'
 import useCountdown from '@/hooks/use-countdown'
 

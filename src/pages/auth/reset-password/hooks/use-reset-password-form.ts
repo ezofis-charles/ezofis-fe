@@ -1,6 +1,6 @@
 import { useForm } from '@tanstack/react-form'
-import type { ResetPasswordRequest } from '@/api/reset-password-types'
-import { ResetPasswordRequestSchema } from '@/api/reset-password-types'
+import type { ResetPasswordRequest } from '@/api/auth/reset-password-types'
+import { ResetPasswordRequestSchema } from '@/api/auth/reset-password-types'
 import useResetPasswordMutation from './use-reset-password-mutation'
 
 export default function useResetPasswordForm() {

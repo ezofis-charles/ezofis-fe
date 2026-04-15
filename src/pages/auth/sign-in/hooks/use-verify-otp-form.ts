@@ -1,6 +1,6 @@
 import { useForm } from '@tanstack/react-form'
-import type { VerifyOtpRequest } from '@/api/sign-in-types'
-import { VerifyOtpRequestSchema } from '@/api/sign-in-types'
+import type { VerifyOtpRequest } from '@/api/auth/sign-in-types'
+import { VerifyOtpRequestSchema } from '@/api/auth/sign-in-types'
 import useVerifyOtpMutation from './use-verify-otp-mutation'
 
 export default function useVerifyOtpForm() {
