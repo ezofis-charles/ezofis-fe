@@ -1,15 +1,15 @@
 import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
-import { InputText } from '@/components/base/inputs'
+import { InputPassword } from '@/components/base/inputs'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { getFieldError } from '@/utils/form'
-import useForgotPasswordForm from '../hooks/use-forgot-password-form'
-import { useForgotPasswordStore } from '../stores/use-forgot-password-store'
+import useResetPasswordForm from '../hooks/use-reset-password-form'
+import { useResetPasswordStore } from '../stores/use-reset-password-store'
 
-export const ForgotPasswordFormStep = () => {
-  const { forgotPasswordMutation, form, handleSubmit } = useForgotPasswordForm()
-  const isInitialRender = useForgotPasswordStore(
+export const ResetPasswordFormStep = () => {
+  const { form, handleSubmit, resetPasswordMutation } = useResetPasswordForm()
+  const isInitialRender = useResetPasswordStore(
     (state) => state.isInitialRender,
   )
 
@@ -17,19 +17,33 @@ export const ForgotPasswordFormStep = () => {
     <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
       <Title
         className='text-center'
-        description="Enter your email address and we'll send you a link to reset it."
+        description='At least 8 characters with uppercase, lowercase, a number, and a special character.'
         level={1}
-        title='Forgot your password?'
+        title='Reset your password'
       />
 
       <form className='space-y-6' onSubmit={handleSubmit}>
         <form.Field
-          name='email'
+          name='password'
           children={(field) => (
-            <InputText
+            <InputPassword
               error={getFieldError(field.state.meta.errors)}
-              label='Email'
-              placeholder='Enter your email'
+              label='Password'
+              placeholder='Enter your new password'
+              size='md'
+              value={field.state.value}
+              onChange={field.handleChange}
+            />
+          )}
+        />
+
+        <form.Field
+          name='confirmPassword'
+          children={(field) => (
+            <InputPassword
+              error={getFieldError(field.state.meta.errors)}
+              label='Confirm password'
+              placeholder='Re-enter your new password'
               size='md'
               value={field.state.value}
               onChange={field.handleChange}
@@ -44,8 +58,8 @@ export const ForgotPasswordFormStep = () => {
               <Button
                 className='w-full justify-center'
                 disabled={!canSubmit}
-                label='Send reset link'
-                loading={forgotPasswordMutation.isPending}
+                label='Reset password'
+                loading={resetPasswordMutation.isPending}
                 size='lg'
                 type='submit'
               />
@@ -59,9 +73,9 @@ export const ForgotPasswordFormStep = () => {
             Back to sign in
           </Link>
 
-          {forgotPasswordMutation.isError && (
+          {resetPasswordMutation.isError && (
             <div className='text-center text-red-11'>
-              {forgotPasswordMutation.error?.message}
+              {resetPasswordMutation.error?.message}
             </div>
           )}
         </div>

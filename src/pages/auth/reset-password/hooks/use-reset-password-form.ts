@@ -1,0 +1,33 @@
+import { useForm } from '@tanstack/react-form'
+import type { ResetPasswordRequest } from '@/api/reset-password-types'
+import { ResetPasswordRequestSchema } from '@/api/reset-password-types'
+import useResetPasswordMutation from './use-reset-password-mutation'
+
+export default function useResetPasswordForm() {
+  const resetPasswordMutation = useResetPasswordMutation()
+
+  const defaultValues: ResetPasswordRequest = {
+    confirmPassword: '',
+    password: '',
+  }
+
+  const form = useForm({
+    defaultValues,
+    validators: {
+      onSubmit: ResetPasswordRequestSchema,
+    },
+    onSubmit: async ({ value }) => resetPasswordMutation.mutate(value),
+  })
+
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    e.stopPropagation()
+    form.handleSubmit()
+  }
+
+  return {
+    form,
+    handleSubmit,
+    resetPasswordMutation,
+  }
+}

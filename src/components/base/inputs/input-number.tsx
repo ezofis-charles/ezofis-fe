@@ -2,8 +2,8 @@ import { NumberInput as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import { ButtonClose } from '@/components/base/button'
 import type { InputProps } from './input-types'
-import { InputLabel } from './input-label'
 import { classNames, inputWrapperOrder } from './input-constants'
+import { InputLabel } from './input-label'
 
 interface Props extends InputProps {
   value: number | string

@@ -3,8 +3,8 @@ import { Textarea as Base } from '@mantine/core'
 import { forwardRef, useState } from 'react'
 import { cn } from '@/utils/cn'
 import type { InputProps } from './input-types'
-import { InputLabel } from './input-label'
 import { classNames, inputWrapperOrder } from './input-constants'
+import { InputLabel } from './input-label'
 
 interface Props extends InputProps {
   value: string

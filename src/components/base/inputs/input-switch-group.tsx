@@ -2,13 +2,13 @@ import { Switch as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import { cn } from '@/utils/cn'
 import type { SelectionGroupProps } from './input-types'
-import { InputLabel } from './input-label'
-import { InputSwitch } from './input-switch'
 import {
   classNames,
   inputWrapperOrder,
   OptionsPerLineClass,
 } from './input-constants'
+import { InputLabel } from './input-label'
+import { InputSwitch } from './input-switch'
 
 interface Props extends SelectionGroupProps {
   value: string[]

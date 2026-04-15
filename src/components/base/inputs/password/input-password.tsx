@@ -2,8 +2,8 @@ import type { ChangeEvent, ReactNode } from 'react'
 import { PasswordInput as Base } from '@mantine/core'
 import { forwardRef } from 'react'
 import type { InputProps } from '../input-types'
-import { InputLabel } from '../input-label'
 import { classNames, inputWrapperOrder } from '../input-constants'
+import { InputLabel } from '../input-label'
 import { VisibilityToggleIcon } from './visibility-toggle-icon'
 
 interface Props extends Omit<

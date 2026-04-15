@@ -27,7 +27,7 @@ export const ForgotPasswordSuccessStep = () => {
     <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
-        description="We've sent a reset link to your email. Follow the instructions to set a new password"
+        description="We've sent a reset link to your email. Follow the instructions to set a new password."
         level={1}
         title='Check your email'
       />

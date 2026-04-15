@@ -6,8 +6,8 @@ import { ButtonClose } from '@/components/base/button/button-close'
 import { Icon } from '@/components/base/icon'
 import { cn } from '@/utils/cn'
 import type { InputProps, SelectVariant } from '../input-types'
-import { InputLabel } from '../input-label'
 import { classNames, inputWrapperOrder } from '../input-constants'
+import { InputLabel } from '../input-label'
 
 interface Props extends InputProps {
   value: Option[]
