@@ -15,8 +15,8 @@ export default function useResendLinkMutation() {
     onSettled: () => resetCountdown(),
     onSuccess: () => {
       showToast({
-        description: 'Check your inbox for the reset link.',
-        title: "We've sent a new reset link.",
+        description: 'Check your inbox for the verification link.',
+        title: "We've sent a new verification link.",
         variant: 'success',
       })
     },
