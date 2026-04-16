@@ -1,8 +1,10 @@
+import type { ReactNode } from 'react'
 import { cn } from '@/utils/cn'
 
 interface Props {
   title: string
   className?: string
+  customDescription?: ReactNode
   description?: string
   descriptionClassName?: string
   level?: 1 | 2 | 3
@@ -11,6 +13,7 @@ interface Props {
 
 export const Title = ({
   className,
+  customDescription,
   description,
   descriptionClassName,
   level = 3,
@@ -56,6 +59,8 @@ export const Title = ({
           {description}
         </p>
       )}
+
+      {customDescription}
     </div>
   )
 }

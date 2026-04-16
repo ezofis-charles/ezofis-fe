@@ -20,9 +20,27 @@ export const SignUpMethodStep = () => {
     <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
       <Title
         className='text-center'
-        description='Sign up to start managing your workspace'
         level={1}
         title='Create Your Account'
+        customDescription={
+          <p className='text-micro/6 text-pretty text-gray-11'>
+            By signing up, you agree to our{' '}
+            <Link
+              className='cursor-pointer hover:underline'
+              to='/terms-of-service'
+            >
+              Terms of Service
+            </Link>{' '}
+            and{' '}
+            <Link
+              className='cursor-pointer hover:underline'
+              to='/privacy-policy'
+            >
+              Privacy Policy
+            </Link>
+            .
+          </p>
+        }
       />
 
       <div className='w-full space-y-4'>
@@ -56,10 +74,6 @@ export const SignUpMethodStep = () => {
       >
         Already have an account? Sign in
       </Link>
-
-      <div className='mt-8 text-center leading-5'>
-        By signing up, you agree to our Terms of Service and Privacy Policy.
-      </div>
     </AnimatePop>
   )
 }

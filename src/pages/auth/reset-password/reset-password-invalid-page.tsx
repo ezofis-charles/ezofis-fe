@@ -13,7 +13,7 @@ export const ResetPasswordInvalidPage = () => {
     <>
       <Title
         className='text-center'
-        description='It may be broken, or the page may have been removed. Please check the URL and try again'
+        description='It may be broken, or the page may have been removed. Please check the URL and try again.'
         level={1}
         title='The link is invalid'
       />

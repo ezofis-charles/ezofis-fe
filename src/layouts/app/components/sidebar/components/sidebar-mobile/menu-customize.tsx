@@ -1,4 +1,3 @@
-import type { DragEndEvent } from '@dnd-kit/react'
 import { move } from '@dnd-kit/helpers'
 import { DragDropProvider } from '@dnd-kit/react'
 import { ScrollArea } from '@/components/base/scroll-area'
@@ -16,21 +15,21 @@ interface Props {
 }
 
 export const MenuCustomize = ({ items, open, setItems, onClose }: Props) => {
-  const handleDragEnd: DragEndEvent = (event) => {
-    if (event.canceled) return
-
-    const ids = items.map((item) => item.label)
-    const movedIds = move(ids, event)
-    const movedItems = movedIds.map(
-      (id) => items.find((item) => item.label === id)!,
-    )
-    setItems(movedItems)
-  }
-
   return (
     <Sheet open={open} onClose={onClose}>
       <ScrollArea className='h-96'>
-        <DragDropProvider onDragEnd={handleDragEnd}>
+        <DragDropProvider
+          onDragEnd={(event) => {
+            if (event.canceled) return
+
+            const ids = items.map((item) => item.label)
+            const movedIds = move(ids, event)
+            const movedItems = movedIds.map(
+              (id) => items.find((item) => item.label === id)!,
+            )
+            setItems(movedItems)
+          }}
+        >
           <MenuCustomizeLabel label='Pinned' />
           <ul className='space-y-0.5 py-2'>
             {items.map((item, index) => {
