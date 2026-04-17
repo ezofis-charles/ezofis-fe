@@ -4,7 +4,7 @@ import { OnBoardingPage } from '@/pages/auth/on-boarding/on-boarding-page'
 import { USER_AUTH_METHOD } from '@/types/user'
 
 const SearchSchema = z.object({
-  authMethod: USER_AUTH_METHOD,
+  auth: USER_AUTH_METHOD,
   token: z.string(),
 })
 

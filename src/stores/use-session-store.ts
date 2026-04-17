@@ -6,7 +6,6 @@ type Store = {
   token: string
   user: User
   clearSession: () => void
-
   setSession: ({ token, user }: { token: string; user: User }) => void
   setToken: (token: string) => void
 }
