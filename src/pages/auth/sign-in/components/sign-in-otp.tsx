@@ -7,7 +7,7 @@ import useResendOtpMutation from '../hooks/use-resend-otp-mutation'
 import useVerifyOtpForm from '../hooks/use-verify-otp-form'
 import { useSignInStore } from '../stores/use-sign-in-store'
 
-export const SignInOtpStep = () => {
+export const SignInOtp = () => {
   const { form, handleSubmit, verifyOtpMutation } = useVerifyOtpForm()
   const otpMethod = useSignInStore((state) => state.otpMethod)
   const { count, resendOtpMutation, startCountdown, stopCountdown } =

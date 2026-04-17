@@ -1,31 +1,45 @@
 import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
-import { InputText } from '@/components/base/inputs'
+import { InputPassword } from '@/components/base/inputs'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { getFieldError } from '@/utils/form'
-import useSignUpForm from '../hooks/use-sign-up-form'
+import useResetPasswordForm from '../hooks/use-reset-password-form'
 
-export const SignUpFormStep = () => {
-  const { form, handleSubmit, signUpMutation } = useSignUpForm()
+export const ResetPasswordForm = () => {
+  const { form, handleSubmit, resetPasswordMutation } = useResetPasswordForm()
 
   return (
     <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
-        description='Enter your email to continue'
+        description='At least 8 characters with uppercase, lowercase, a number, and a special character.'
         level={1}
-        title='Welcome'
+        title='Reset your password'
       />
 
       <form className='space-y-6' onSubmit={handleSubmit}>
         <form.Field
-          name='email'
+          name='password'
           children={(field) => (
-            <InputText
+            <InputPassword
               error={getFieldError(field.state.meta.errors)}
-              label='Email'
-              placeholder='Enter your email'
+              label='Password'
+              placeholder='Enter your password'
+              size='md'
+              value={field.state.value}
+              onChange={field.handleChange}
+            />
+          )}
+        />
+
+        <form.Field
+          name='confirmPassword'
+          children={(field) => (
+            <InputPassword
+              error={getFieldError(field.state.meta.errors)}
+              label='Confirm password'
+              placeholder='Re-enter your password'
               size='md'
               value={field.state.value}
               onChange={field.handleChange}
@@ -40,8 +54,8 @@ export const SignUpFormStep = () => {
               <Button
                 className='w-full justify-center'
                 disabled={!canSubmit}
-                label='Sign up'
-                loading={signUpMutation.isPending}
+                label='Reset password'
+                loading={resetPasswordMutation.isPending}
                 size='lg'
                 type='submit'
               />
@@ -52,12 +66,12 @@ export const SignUpFormStep = () => {
             className='block cursor-pointer text-center hover:underline'
             to='/sign-in'
           >
-            Already have an account? Sign in
+            Go to sign in
           </Link>
 
-          {signUpMutation.isError && (
+          {resetPasswordMutation.isError && (
             <div className='text-center text-red-11'>
-              {signUpMutation.error?.message}
+              {resetPasswordMutation.error?.message}
             </div>
           )}
         </div>

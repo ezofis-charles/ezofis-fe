@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { ResetPasswordFormStep } from './components/reset-password-form-step'
-import { ResetPasswordSuccessStep } from './components/reset-password-success-step'
-import { ResetPasswordValidateLinkStep } from './components/reset-password-validate-link-step'
+import { ResetPasswordForm } from './components/reset-password-form'
+import { ResetPasswordSuccess } from './components/reset-password-success'
+import { ResetPasswordValidateLink } from './components/reset-password-validate-link'
 import { useResetPasswordStore } from './stores/use-reset-password-store'
 
 export const ResetPasswordPage = () => {
@@ -14,9 +14,9 @@ export const ResetPasswordPage = () => {
 
   return (
     <>
-      {step === 'validateLink' && <ResetPasswordValidateLinkStep />}
-      {step === 'form' && <ResetPasswordFormStep />}
-      {step === 'success' && <ResetPasswordSuccessStep />}
+      {step === 'validateLink' && <ResetPasswordValidateLink />}
+      {step === 'form' && <ResetPasswordForm />}
+      {step === 'success' && <ResetPasswordSuccess />}
     </>
   )
 }

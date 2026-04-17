@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { SignInFormStep } from './components/sign-in-form-step'
-import { SignInMethodStep } from './components/sign-in-method-step'
-import { SignInOtpStep } from './components/sign-in-otp-step'
+import { SignInForm } from './components/sign-in-form'
+import { SignInMethod } from './components/sign-in-method'
+import { SignInOtp } from './components/sign-in-otp'
 import { useSignInStore } from './stores/use-sign-in-store'
 
 export const SignInPage = () => {
@@ -9,16 +9,14 @@ export const SignInPage = () => {
   const setStep = useSignInStore((state) => state.setStep)
 
   useEffect(() => {
-    return () => {
-      setStep('method')
-    }
+    return () => setStep('method')
   }, [setStep])
 
   return (
     <>
-      {step === 'method' && <SignInMethodStep />}
-      {step === 'form' && <SignInFormStep />}
-      {step === 'otp' && <SignInOtpStep />}
+      {step === 'method' && <SignInMethod />}
+      {step === 'form' && <SignInForm />}
+      {step === 'otp' && <SignInOtp />}
     </>
   )
 }

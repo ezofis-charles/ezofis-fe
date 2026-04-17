@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { ForgotPasswordFormStep } from './components/forgot-password-form-step'
-import { ForgotPasswordSuccessStep } from './components/forgot-password-success-step'
+import { ForgotPasswordForm } from './components/forgot-password-form'
+import { ForgotPasswordSuccess } from './components/forgot-password-success'
 import { useForgotPasswordStore } from './stores/use-forgot-password-store'
 
 export const ForgotPasswordPage = () => {
@@ -8,15 +8,13 @@ export const ForgotPasswordPage = () => {
   const setStep = useForgotPasswordStore((state) => state.setStep)
 
   useEffect(() => {
-    return () => {
-      setStep('form')
-    }
+    return () => setStep('form')
   }, [setStep])
 
   return (
     <>
-      {step === 'form' && <ForgotPasswordFormStep />}
-      {step === 'success' && <ForgotPasswordSuccessStep />}
+      {step === 'form' && <ForgotPasswordForm />}
+      {step === 'success' && <ForgotPasswordSuccess />}
     </>
   )
 }

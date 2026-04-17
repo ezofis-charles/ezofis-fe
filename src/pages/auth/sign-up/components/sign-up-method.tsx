@@ -2,16 +2,16 @@ import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
-import { useSignInStore } from '../stores/use-sign-in-store'
+import { useSignUpStore } from '../stores/use-sign-up-store'
 
-export const SignInMethodStep = () => {
-  const isInitialRender = useSignInStore((state) => state.isInitialRender)
-  const setSignInMethod = useSignInStore((state) => state.setSignInMethod)
-  const setIsInitialRender = useSignInStore((state) => state.setIsInitialRender)
-  const setStep = useSignInStore((state) => state.setStep)
+export const SignUpMethod = () => {
+  const isInitialRender = useSignUpStore((state) => state.isInitialRender)
+  const setSignUpMethod = useSignUpStore((state) => state.setSignUpMethod)
+  const setIsInitialRender = useSignUpStore((state) => state.setIsInitialRender)
+  const setStep = useSignUpStore((state) => state.setStep)
 
   const continueWithEmail = () => {
-    setSignInMethod('email')
+    setSignUpMethod('email')
     setStep('form')
     setIsInitialRender(false)
   }
@@ -20,9 +20,27 @@ export const SignInMethodStep = () => {
     <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
       <Title
         className='text-center'
-        description='Choose how you want to continue'
         level={1}
-        title='Sign in to your account'
+        title='Create Your Account'
+        customDescription={
+          <p className='text-micro/6 text-pretty text-gray-11'>
+            By signing up, you agree to our{' '}
+            <Link
+              className='cursor-pointer hover:underline'
+              to='/terms-of-service'
+            >
+              Terms of Service
+            </Link>{' '}
+            and{' '}
+            <Link
+              className='cursor-pointer hover:underline'
+              to='/privacy-policy'
+            >
+              Privacy Policy
+            </Link>
+            .
+          </p>
+        }
       />
 
       <div className='w-full space-y-4'>
@@ -38,7 +56,7 @@ export const SignInMethodStep = () => {
           label='Continue with Google'
           size='lg'
           variant='outline'
-          onClick={() => setSignInMethod('google')}
+          onClick={() => setSignUpMethod('google')}
         />
         <Button
           className='w-full justify-center'
@@ -46,15 +64,15 @@ export const SignInMethodStep = () => {
           label='Continue with Microsoft'
           size='lg'
           variant='outline'
-          onClick={() => setSignInMethod('microsoft')}
+          onClick={() => setSignUpMethod('microsoft')}
         />
       </div>
 
       <Link
         className='block cursor-pointer text-center hover:underline'
-        to='/sign-up'
+        to='/sign-in'
       >
-        Don't have an account? Sign up
+        Already have an account? Sign in
       </Link>
     </AnimatePop>
   )

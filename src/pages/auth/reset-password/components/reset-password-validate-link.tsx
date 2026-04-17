@@ -6,7 +6,7 @@ import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
 import useValidateLinkMutation from '../hooks/use-validate-link-mutation'
 
-export const ResetPasswordValidateLinkStep = () => {
+export const ResetPasswordValidateLink = () => {
   const { token } = useSearch({ from: '/_auth/reset-password' })
   const { isError, isPending, mutate } = useValidateLinkMutation()
   const router = useRouter()

@@ -6,7 +6,7 @@ import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { getFieldError } from '@/utils/form'
 import useSignInForm from '../hooks/use-sign-in-form'
 
-export const SignInFormStep = () => {
+export const SignInForm = () => {
   const { form, handleSubmit, signInMutation } = useSignInForm()
 
   return (

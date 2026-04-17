@@ -4,22 +4,18 @@ import { InputText } from '@/components/base/inputs'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { getFieldError } from '@/utils/form'
-import useForgotPasswordForm from '../hooks/use-forgot-password-form'
-import { useForgotPasswordStore } from '../stores/use-forgot-password-store'
+import useSignUpForm from '../hooks/use-sign-up-form'
 
-export const ForgotPasswordFormStep = () => {
-  const { forgotPasswordMutation, form, handleSubmit } = useForgotPasswordForm()
-  const isInitialRender = useForgotPasswordStore(
-    (state) => state.isInitialRender,
-  )
+export const SignUpForm = () => {
+  const { form, handleSubmit, signUpMutation } = useSignUpForm()
 
   return (
-    <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
+    <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
-        description="Enter your email address and we'll send you a link to reset it."
+        description='Enter your email to continue'
         level={1}
-        title='Forgot your password?'
+        title='Welcome'
       />
 
       <form className='space-y-6' onSubmit={handleSubmit}>
@@ -44,8 +40,8 @@ export const ForgotPasswordFormStep = () => {
               <Button
                 className='w-full justify-center'
                 disabled={!canSubmit}
-                label='Send reset link'
-                loading={forgotPasswordMutation.isPending}
+                label='Sign up'
+                loading={signUpMutation.isPending}
                 size='lg'
                 type='submit'
               />
@@ -56,12 +52,12 @@ export const ForgotPasswordFormStep = () => {
             className='block cursor-pointer text-center hover:underline'
             to='/sign-in'
           >
-            Go to sign in
+            Already have an account? Sign in
           </Link>
 
-          {forgotPasswordMutation.isError && (
+          {signUpMutation.isError && (
             <div className='text-center text-red-11'>
-              {forgotPasswordMutation.error?.message}
+              {signUpMutation.error?.message}
             </div>
           )}
         </div>

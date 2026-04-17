@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { SignUpFormStep } from './components/sign-up-form-step'
-import { SignUpMethodStep } from './components/sign-up-method-step'
-import { SignUpSuccessStep } from './components/sign-up-success-step'
+import { SignUpForm } from './components/sign-up-form'
+import { SignUpMethod } from './components/sign-up-method'
+import { SignUpSuccess } from './components/sign-up-success'
 import { useSignUpStore } from './stores/use-sign-up-store'
 
 export const SignUpPage = () => {
@@ -9,16 +9,14 @@ export const SignUpPage = () => {
   const setStep = useSignUpStore((state) => state.setStep)
 
   useEffect(() => {
-    return () => {
-      setStep('method')
-    }
+    return () => setStep('method')
   }, [setStep])
 
   return (
     <>
-      {step === 'method' && <SignUpMethodStep />}
-      {step === 'form' && <SignUpFormStep />}
-      {step === 'success' && <SignUpSuccessStep />}
+      {step === 'method' && <SignUpMethod />}
+      {step === 'form' && <SignUpForm />}
+      {step === 'success' && <SignUpSuccess />}
     </>
   )
 }

@@ -21,6 +21,7 @@ import { Route as DesignSystemColorsRouteImport } from './routes/design-system/c
 import { Route as AuthSignUpRouteImport } from './routes/_auth/sign-up'
 import { Route as AuthSignInRouteImport } from './routes/_auth/sign-in'
 import { Route as AuthResetPasswordRouteImport } from './routes/_auth/reset-password'
+import { Route as AuthOnBoardingRouteImport } from './routes/_auth/on-boarding'
 import { Route as AuthForgotPasswordRouteImport } from './routes/_auth/forgot-password'
 import { Route as AppWorkflowsRouteImport } from './routes/_app/workflows'
 import { Route as AppTasksRouteImport } from './routes/_app/tasks'
@@ -143,6 +144,11 @@ const AuthSignInRoute = AuthSignInRouteImport.update({
 const AuthResetPasswordRoute = AuthResetPasswordRouteImport.update({
   id: '/reset-password',
   path: '/reset-password',
+  getParentRoute: () => AuthRouteRoute,
+} as any)
+const AuthOnBoardingRoute = AuthOnBoardingRouteImport.update({
+  id: '/on-boarding',
+  path: '/on-boarding',
   getParentRoute: () => AuthRouteRoute,
 } as any)
 const AuthForgotPasswordRoute = AuthForgotPasswordRouteImport.update({
@@ -541,6 +547,7 @@ export interface FileRoutesByFullPath {
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
+  '/on-boarding': typeof AuthOnBoardingRoute
   '/reset-password': typeof AuthResetPasswordRoute
   '/sign-in': typeof AuthSignInRoute
   '/sign-up': typeof AuthSignUpRoute
@@ -617,6 +624,7 @@ export interface FileRoutesByTo {
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
+  '/on-boarding': typeof AuthOnBoardingRoute
   '/reset-password': typeof AuthResetPasswordRoute
   '/sign-in': typeof AuthSignInRoute
   '/sign-up': typeof AuthSignUpRoute
@@ -696,6 +704,7 @@ export interface FileRoutesById {
   '/_app/tasks': typeof AppTasksRoute
   '/_app/workflows': typeof AppWorkflowsRoute
   '/_auth/forgot-password': typeof AuthForgotPasswordRoute
+  '/_auth/on-boarding': typeof AuthOnBoardingRoute
   '/_auth/reset-password': typeof AuthResetPasswordRoute
   '/_auth/sign-in': typeof AuthSignInRoute
   '/_auth/sign-up': typeof AuthSignUpRoute
@@ -776,6 +785,7 @@ export interface FileRouteTypes {
     | '/tasks'
     | '/workflows'
     | '/forgot-password'
+    | '/on-boarding'
     | '/reset-password'
     | '/sign-in'
     | '/sign-up'
@@ -852,6 +862,7 @@ export interface FileRouteTypes {
     | '/tasks'
     | '/workflows'
     | '/forgot-password'
+    | '/on-boarding'
     | '/reset-password'
     | '/sign-in'
     | '/sign-up'
@@ -930,6 +941,7 @@ export interface FileRouteTypes {
     | '/_app/tasks'
     | '/_app/workflows'
     | '/_auth/forgot-password'
+    | '/_auth/on-boarding'
     | '/_auth/reset-password'
     | '/_auth/sign-in'
     | '/_auth/sign-up'
@@ -1089,6 +1101,13 @@ declare module '@tanstack/react-router' {
       path: '/reset-password'
       fullPath: '/reset-password'
       preLoaderRoute: typeof AuthResetPasswordRouteImport
+      parentRoute: typeof AuthRouteRoute
+    }
+    '/_auth/on-boarding': {
+      id: '/_auth/on-boarding'
+      path: '/on-boarding'
+      fullPath: '/on-boarding'
+      preLoaderRoute: typeof AuthOnBoardingRouteImport
       parentRoute: typeof AuthRouteRoute
     }
     '/_auth/forgot-password': {
@@ -1577,6 +1596,7 @@ const AppRouteRouteWithChildren = AppRouteRoute._addFileChildren(
 
 interface AuthRouteRouteChildren {
   AuthForgotPasswordRoute: typeof AuthForgotPasswordRoute
+  AuthOnBoardingRoute: typeof AuthOnBoardingRoute
   AuthResetPasswordRoute: typeof AuthResetPasswordRoute
   AuthSignInRoute: typeof AuthSignInRoute
   AuthSignUpRoute: typeof AuthSignUpRoute
@@ -1584,6 +1604,7 @@ interface AuthRouteRouteChildren {
 
 const AuthRouteRouteChildren: AuthRouteRouteChildren = {
   AuthForgotPasswordRoute: AuthForgotPasswordRoute,
+  AuthOnBoardingRoute: AuthOnBoardingRoute,
   AuthResetPasswordRoute: AuthResetPasswordRoute,
   AuthSignInRoute: AuthSignInRoute,
   AuthSignUpRoute: AuthSignUpRoute,

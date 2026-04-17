@@ -5,7 +5,7 @@ import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
 import useResendLinkMutation from '../hooks/use-resend-link-mutation'
 
-export const ForgotPasswordSuccessStep = () => {
+export const SignUpSuccess = () => {
   const { count, resendLinkMutation, startCountdown, stopCountdown } =
     useResendLinkMutation()
 
@@ -27,7 +27,7 @@ export const ForgotPasswordSuccessStep = () => {
     <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
-        description="We've sent a reset link to your email. Follow the instructions to set a new password."
+        description="We've sent a verification link. Follow the instructions to verify your email."
         level={1}
         title='Check your email'
       />
@@ -46,7 +46,7 @@ export const ForgotPasswordSuccessStep = () => {
           className='block cursor-pointer text-center hover:underline'
           to='/sign-in'
         >
-          Go to sign in
+          Already have an account? Sign in
         </Link>
       </div>
     </AnimatePop>
