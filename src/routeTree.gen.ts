@@ -20,6 +20,7 @@ import { Route as DesignSystemTypographyRouteImport } from './routes/design-syst
 import { Route as DesignSystemColorsRouteImport } from './routes/design-system/colors'
 import { Route as AuthSignUpRouteImport } from './routes/_auth/sign-up'
 import { Route as AuthSignInRouteImport } from './routes/_auth/sign-in'
+import { Route as AuthResetPasswordRouteImport } from './routes/_auth/reset-password'
 import { Route as AuthForgotPasswordRouteImport } from './routes/_auth/forgot-password'
 import { Route as AppWorkflowsRouteImport } from './routes/_app/workflows'
 import { Route as AppTasksRouteImport } from './routes/_app/tasks'
@@ -28,7 +29,6 @@ import { Route as AppPortalsRouteImport } from './routes/_app/portals'
 import { Route as AppFormsRouteImport } from './routes/_app/forms'
 import { Route as AppFoldersRouteImport } from './routes/_app/folders'
 import { Route as DesignSystemComponentsIndexRouteImport } from './routes/design-system/components/index'
-import { Route as AuthResetPasswordIndexRouteImport } from './routes/_auth/reset-password/index'
 import { Route as DesignSystemComponentsTreeRouteImport } from './routes/design-system/components/tree'
 import { Route as DesignSystemComponentsTourRouteImport } from './routes/design-system/components/tour'
 import { Route as DesignSystemComponentsTooltipRouteImport } from './routes/design-system/components/tooltip'
@@ -85,7 +85,6 @@ import { Route as DesignSystemComponentsAvatarRouteImport } from './routes/desig
 import { Route as DesignSystemComponentsAlertRouteImport } from './routes/design-system/components/alert'
 import { Route as DesignSystemComponentsAiIconRouteImport } from './routes/design-system/components/ai-icon'
 import { Route as DesignSystemComponentsAccordionRouteImport } from './routes/design-system/components/accordion'
-import { Route as AuthResetPasswordTokenRouteImport } from './routes/_auth/reset-password/$token'
 import { Route as AppMyAccountChar123SlugChar125RouteImport } from './routes/_app/my-account.{-$slug}'
 
 const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
@@ -141,6 +140,11 @@ const AuthSignInRoute = AuthSignInRouteImport.update({
   path: '/sign-in',
   getParentRoute: () => AuthRouteRoute,
 } as any)
+const AuthResetPasswordRoute = AuthResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => AuthRouteRoute,
+} as any)
 const AuthForgotPasswordRoute = AuthForgotPasswordRouteImport.update({
   id: '/forgot-password',
   path: '/forgot-password',
@@ -182,11 +186,6 @@ const DesignSystemComponentsIndexRoute =
     path: '/components/',
     getParentRoute: () => DesignSystemRouteRoute,
   } as any)
-const AuthResetPasswordIndexRoute = AuthResetPasswordIndexRouteImport.update({
-  id: '/reset-password/',
-  path: '/reset-password/',
-  getParentRoute: () => AuthRouteRoute,
-} as any)
 const DesignSystemComponentsTreeRoute =
   DesignSystemComponentsTreeRouteImport.update({
     id: '/components/tree',
@@ -523,11 +522,6 @@ const DesignSystemComponentsAccordionRoute =
     path: '/components/accordion',
     getParentRoute: () => DesignSystemRouteRoute,
   } as any)
-const AuthResetPasswordTokenRoute = AuthResetPasswordTokenRouteImport.update({
-  id: '/reset-password/$token',
-  path: '/reset-password/$token',
-  getParentRoute: () => AuthRouteRoute,
-} as any)
 const AppMyAccountChar123SlugChar125Route =
   AppMyAccountChar123SlugChar125RouteImport.update({
     id: '/my-account/{-$slug}',
@@ -547,13 +541,13 @@ export interface FileRoutesByFullPath {
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
+  '/reset-password': typeof AuthResetPasswordRoute
   '/sign-in': typeof AuthSignInRoute
   '/sign-up': typeof AuthSignUpRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
   '/design-system/typography': typeof DesignSystemTypographyRoute
   '/design-system/': typeof DesignSystemIndexRoute
   '/my-account/{-$slug}': typeof AppMyAccountChar123SlugChar125Route
-  '/reset-password/$token': typeof AuthResetPasswordTokenRoute
   '/design-system/components/accordion': typeof DesignSystemComponentsAccordionRoute
   '/design-system/components/ai-icon': typeof DesignSystemComponentsAiIconRoute
   '/design-system/components/alert': typeof DesignSystemComponentsAlertRoute
@@ -610,7 +604,6 @@ export interface FileRoutesByFullPath {
   '/design-system/components/tooltip': typeof DesignSystemComponentsTooltipRoute
   '/design-system/components/tour': typeof DesignSystemComponentsTourRoute
   '/design-system/components/tree': typeof DesignSystemComponentsTreeRoute
-  '/reset-password/': typeof AuthResetPasswordIndexRoute
   '/design-system/components/': typeof DesignSystemComponentsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -624,13 +617,13 @@ export interface FileRoutesByTo {
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
+  '/reset-password': typeof AuthResetPasswordRoute
   '/sign-in': typeof AuthSignInRoute
   '/sign-up': typeof AuthSignUpRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
   '/design-system/typography': typeof DesignSystemTypographyRoute
   '/design-system': typeof DesignSystemIndexRoute
   '/my-account/{-$slug}': typeof AppMyAccountChar123SlugChar125Route
-  '/reset-password/$token': typeof AuthResetPasswordTokenRoute
   '/design-system/components/accordion': typeof DesignSystemComponentsAccordionRoute
   '/design-system/components/ai-icon': typeof DesignSystemComponentsAiIconRoute
   '/design-system/components/alert': typeof DesignSystemComponentsAlertRoute
@@ -687,7 +680,6 @@ export interface FileRoutesByTo {
   '/design-system/components/tooltip': typeof DesignSystemComponentsTooltipRoute
   '/design-system/components/tour': typeof DesignSystemComponentsTourRoute
   '/design-system/components/tree': typeof DesignSystemComponentsTreeRoute
-  '/reset-password': typeof AuthResetPasswordIndexRoute
   '/design-system/components': typeof DesignSystemComponentsIndexRoute
 }
 export interface FileRoutesById {
@@ -704,6 +696,7 @@ export interface FileRoutesById {
   '/_app/tasks': typeof AppTasksRoute
   '/_app/workflows': typeof AppWorkflowsRoute
   '/_auth/forgot-password': typeof AuthForgotPasswordRoute
+  '/_auth/reset-password': typeof AuthResetPasswordRoute
   '/_auth/sign-in': typeof AuthSignInRoute
   '/_auth/sign-up': typeof AuthSignUpRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
@@ -711,7 +704,6 @@ export interface FileRoutesById {
   '/_app/': typeof AppIndexRoute
   '/design-system/': typeof DesignSystemIndexRoute
   '/_app/my-account/{-$slug}': typeof AppMyAccountChar123SlugChar125Route
-  '/_auth/reset-password/$token': typeof AuthResetPasswordTokenRoute
   '/design-system/components/accordion': typeof DesignSystemComponentsAccordionRoute
   '/design-system/components/ai-icon': typeof DesignSystemComponentsAiIconRoute
   '/design-system/components/alert': typeof DesignSystemComponentsAlertRoute
@@ -768,7 +760,6 @@ export interface FileRoutesById {
   '/design-system/components/tooltip': typeof DesignSystemComponentsTooltipRoute
   '/design-system/components/tour': typeof DesignSystemComponentsTourRoute
   '/design-system/components/tree': typeof DesignSystemComponentsTreeRoute
-  '/_auth/reset-password/': typeof AuthResetPasswordIndexRoute
   '/design-system/components/': typeof DesignSystemComponentsIndexRoute
 }
 export interface FileRouteTypes {
@@ -785,13 +776,13 @@ export interface FileRouteTypes {
     | '/tasks'
     | '/workflows'
     | '/forgot-password'
+    | '/reset-password'
     | '/sign-in'
     | '/sign-up'
     | '/design-system/colors'
     | '/design-system/typography'
     | '/design-system/'
     | '/my-account/{-$slug}'
-    | '/reset-password/$token'
     | '/design-system/components/accordion'
     | '/design-system/components/ai-icon'
     | '/design-system/components/alert'
@@ -848,7 +839,6 @@ export interface FileRouteTypes {
     | '/design-system/components/tooltip'
     | '/design-system/components/tour'
     | '/design-system/components/tree'
-    | '/reset-password/'
     | '/design-system/components/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -862,13 +852,13 @@ export interface FileRouteTypes {
     | '/tasks'
     | '/workflows'
     | '/forgot-password'
+    | '/reset-password'
     | '/sign-in'
     | '/sign-up'
     | '/design-system/colors'
     | '/design-system/typography'
     | '/design-system'
     | '/my-account/{-$slug}'
-    | '/reset-password/$token'
     | '/design-system/components/accordion'
     | '/design-system/components/ai-icon'
     | '/design-system/components/alert'
@@ -925,7 +915,6 @@ export interface FileRouteTypes {
     | '/design-system/components/tooltip'
     | '/design-system/components/tour'
     | '/design-system/components/tree'
-    | '/reset-password'
     | '/design-system/components'
   id:
     | '__root__'
@@ -941,6 +930,7 @@ export interface FileRouteTypes {
     | '/_app/tasks'
     | '/_app/workflows'
     | '/_auth/forgot-password'
+    | '/_auth/reset-password'
     | '/_auth/sign-in'
     | '/_auth/sign-up'
     | '/design-system/colors'
@@ -948,7 +938,6 @@ export interface FileRouteTypes {
     | '/_app/'
     | '/design-system/'
     | '/_app/my-account/{-$slug}'
-    | '/_auth/reset-password/$token'
     | '/design-system/components/accordion'
     | '/design-system/components/ai-icon'
     | '/design-system/components/alert'
@@ -1005,7 +994,6 @@ export interface FileRouteTypes {
     | '/design-system/components/tooltip'
     | '/design-system/components/tour'
     | '/design-system/components/tree'
-    | '/_auth/reset-password/'
     | '/design-system/components/'
   fileRoutesById: FileRoutesById
 }
@@ -1096,6 +1084,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthSignInRouteImport
       parentRoute: typeof AuthRouteRoute
     }
+    '/_auth/reset-password': {
+      id: '/_auth/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof AuthResetPasswordRouteImport
+      parentRoute: typeof AuthRouteRoute
+    }
     '/_auth/forgot-password': {
       id: '/_auth/forgot-password'
       path: '/forgot-password'
@@ -1151,13 +1146,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/design-system/components/'
       preLoaderRoute: typeof DesignSystemComponentsIndexRouteImport
       parentRoute: typeof DesignSystemRouteRoute
-    }
-    '/_auth/reset-password/': {
-      id: '/_auth/reset-password/'
-      path: '/reset-password'
-      fullPath: '/reset-password/'
-      preLoaderRoute: typeof AuthResetPasswordIndexRouteImport
-      parentRoute: typeof AuthRouteRoute
     }
     '/design-system/components/tree': {
       id: '/design-system/components/tree'
@@ -1551,13 +1539,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DesignSystemComponentsAccordionRouteImport
       parentRoute: typeof DesignSystemRouteRoute
     }
-    '/_auth/reset-password/$token': {
-      id: '/_auth/reset-password/$token'
-      path: '/reset-password/$token'
-      fullPath: '/reset-password/$token'
-      preLoaderRoute: typeof AuthResetPasswordTokenRouteImport
-      parentRoute: typeof AuthRouteRoute
-    }
     '/_app/my-account/{-$slug}': {
       id: '/_app/my-account/{-$slug}'
       path: '/my-account/{-$slug}'
@@ -1596,18 +1577,16 @@ const AppRouteRouteWithChildren = AppRouteRoute._addFileChildren(
 
 interface AuthRouteRouteChildren {
   AuthForgotPasswordRoute: typeof AuthForgotPasswordRoute
+  AuthResetPasswordRoute: typeof AuthResetPasswordRoute
   AuthSignInRoute: typeof AuthSignInRoute
   AuthSignUpRoute: typeof AuthSignUpRoute
-  AuthResetPasswordTokenRoute: typeof AuthResetPasswordTokenRoute
-  AuthResetPasswordIndexRoute: typeof AuthResetPasswordIndexRoute
 }
 
 const AuthRouteRouteChildren: AuthRouteRouteChildren = {
   AuthForgotPasswordRoute: AuthForgotPasswordRoute,
+  AuthResetPasswordRoute: AuthResetPasswordRoute,
   AuthSignInRoute: AuthSignInRoute,
   AuthSignUpRoute: AuthSignUpRoute,
-  AuthResetPasswordTokenRoute: AuthResetPasswordTokenRoute,
-  AuthResetPasswordIndexRoute: AuthResetPasswordIndexRoute,
 }
 
 const AuthRouteRouteWithChildren = AuthRouteRoute._addFileChildren(

@@ -23,9 +23,9 @@ export const SignInOtpStep = () => {
 
   const description = () => {
     const methods = {
-      app: 'Enter the code from your authenticator app',
       email: 'Enter the 6-digit code sent to your email',
       sms: 'Enter the 6-digit code sent to your mobile',
+      totp: 'Enter the code from your authenticator app',
     }
 
     return methods[otpMethod]
@@ -75,7 +75,7 @@ export const SignInOtpStep = () => {
             )}
           />
 
-          {otpMethod !== 'app' && (
+          {otpMethod !== 'totp' && (
             <Button
               className='w-full justify-center font-normal text-gray-11 hover:bg-transparent hover:underline'
               color='gray'

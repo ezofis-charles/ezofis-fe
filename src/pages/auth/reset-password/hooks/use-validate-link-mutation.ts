@@ -1,12 +1,12 @@
 import { useMutation } from '@tanstack/react-query'
-import { resetPassword } from '@/api/auth/reset-password-api'
+import { validateLink } from '@/api/auth/reset-password-api'
 import { useResetPasswordStore } from '../stores/use-reset-password-store'
 
-export default function useResetPasswordMutation() {
+export default function useValidateLinkMutation() {
   const setStep = useResetPasswordStore((state) => state.setStep)
 
   return useMutation({
-    mutationFn: resetPassword,
-    onSuccess: () => setStep('success'),
+    mutationFn: validateLink,
+    onSuccess: () => setStep('form'),
   })
 }

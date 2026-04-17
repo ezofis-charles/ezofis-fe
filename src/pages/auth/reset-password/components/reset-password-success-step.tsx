@@ -6,7 +6,7 @@ import { AnimatePop } from '@/components/common/animated/animate-pop'
 export const ResetPasswordSuccessStep = () => {
   const navigate = useNavigate()
 
-  const backToSignIn = () => {
+  const goToSignIn = () => {
     navigate({ to: '/sign-in' })
   }
 
@@ -21,9 +21,9 @@ export const ResetPasswordSuccessStep = () => {
 
       <Button
         className='w-full justify-center'
-        label='Back to sign in'
+        label='Go to sign in'
         size='lg'
-        onClick={backToSignIn}
+        onClick={goToSignIn}
       />
     </AnimatePop>
   )

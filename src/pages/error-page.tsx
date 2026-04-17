@@ -3,7 +3,7 @@ import { Button } from '@/components/base/button'
 import { Title } from '@/components/base/title'
 import { Logo } from '@/components/common/logo'
 
-export const NotFoundPage = () => {
+export const ErrorPage = () => {
   const router = useRouter()
 
   const goToHome = () => {
@@ -17,9 +17,9 @@ export const NotFoundPage = () => {
 
         <Title
           className='text-center'
-          description="The page you're looking for doesn't exist or may have been moved."
+          description="We're having some trouble loading this page. Please try again later."
           level={1}
-          title='Page not found'
+          title='Something went wrong'
         />
 
         <Button

@@ -8,7 +8,7 @@ interface Props {
 export const IconSpinner = ({ className }: Props) => {
   return (
     <Icon
-      className={cn('size-12 animate-spin text-primary-11', className)}
+      className={cn('size-8 animate-spin text-primary-11 xl:size-8', className)}
       name='fa:spinner'
     />
   )

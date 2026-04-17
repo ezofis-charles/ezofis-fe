@@ -46,7 +46,7 @@ export const ForgotPasswordSuccessStep = () => {
           className='block cursor-pointer text-center hover:underline'
           to='/sign-in'
         >
-          Back to sign in
+          Go to sign in
         </Link>
       </div>
     </AnimatePop>

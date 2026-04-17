@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { ItemListSchema, ItemSchema } from './item'
 
 export const USER_AUTH_METHOD = z.enum(['email', 'google', 'microsoft'])
-export const USER_OTP_METHOD = z.enum(['app', 'email', 'sms'])
+export const USER_OTP_METHOD = z.enum(['totp', 'email', 'sms'])
 
 export const UserSchema = ItemSchema.extend({
   avatarUrl: z.httpUrl().optional(),

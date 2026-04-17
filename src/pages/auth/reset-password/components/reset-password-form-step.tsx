@@ -5,16 +5,12 @@ import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
 import { getFieldError } from '@/utils/form'
 import useResetPasswordForm from '../hooks/use-reset-password-form'
-import { useResetPasswordStore } from '../stores/use-reset-password-store'
 
 export const ResetPasswordFormStep = () => {
   const { form, handleSubmit, resetPasswordMutation } = useResetPasswordForm()
-  const isInitialRender = useResetPasswordStore(
-    (state) => state.isInitialRender,
-  )
 
   return (
-    <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
+    <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
         description='At least 8 characters with uppercase, lowercase, a number, and a special character.'
@@ -29,7 +25,7 @@ export const ResetPasswordFormStep = () => {
             <InputPassword
               error={getFieldError(field.state.meta.errors)}
               label='Password'
-              placeholder='Enter your new password'
+              placeholder='Enter your password'
               size='md'
               value={field.state.value}
               onChange={field.handleChange}
@@ -43,7 +39,7 @@ export const ResetPasswordFormStep = () => {
             <InputPassword
               error={getFieldError(field.state.meta.errors)}
               label='Confirm password'
-              placeholder='Re-enter your new password'
+              placeholder='Re-enter your password'
               size='md'
               value={field.state.value}
               onChange={field.handleChange}
@@ -70,7 +66,7 @@ export const ResetPasswordFormStep = () => {
             className='block cursor-pointer text-center hover:underline'
             to='/sign-in'
           >
-            Back to sign in
+            Go to sign in
           </Link>
 
           {resetPasswordMutation.isError && (

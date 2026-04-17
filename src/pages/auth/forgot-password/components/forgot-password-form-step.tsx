@@ -56,7 +56,7 @@ export const ForgotPasswordFormStep = () => {
             className='block cursor-pointer text-center hover:underline'
             to='/sign-in'
           >
-            Back to sign in
+            Go to sign in
           </Link>
 
           {forgotPasswordMutation.isError && (
