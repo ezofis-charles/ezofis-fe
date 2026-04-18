@@ -4,7 +4,7 @@ import { AppLayout } from '@/layouts/app/app-layout'
 export const Route = createFileRoute('/_app')({
   beforeLoad: ({ context: { isAuthenticated } }) => {
     if (!isAuthenticated()) {
-      throw redirect({ to: '/sign-in' })
+      throw redirect({ replace: true, to: '/sign-in' })
     }
   },
   component: () => (

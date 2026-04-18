@@ -24,7 +24,7 @@ export const ErrorPage = () => {
 
         <Button
           className='w-full justify-center'
-          label='Go to home'
+          label='Go to dashboard'
           size='lg'
           onClick={goToHome}
         />

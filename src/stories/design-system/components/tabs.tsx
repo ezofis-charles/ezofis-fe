@@ -28,7 +28,7 @@ export const TabsStory = () => {
 
       <Section title='With Icon'>
         <Tabs value={value} onChange={setValue}>
-          <Tabs.Tab icon='tabler:home' label='Home' value='tab1' />
+          <Tabs.Tab icon='tabler:dashboard' label='Home' value='tab1' />
           <Tabs.Tab icon='tabler:user' label='Users' value='tab2' />
           <Tabs.Tab icon='tabler:settings' label='Settings' value='tab3' />
         </Tabs>
