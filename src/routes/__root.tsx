@@ -7,6 +7,7 @@ import { NotFoundPage } from '@/pages/not-found-page'
 
 interface RouterContext {
   queryClient: QueryClient
+  isAuthenticated: () => boolean
 }
 
 export const Route = createRootRouteWithContext<RouterContext>()({

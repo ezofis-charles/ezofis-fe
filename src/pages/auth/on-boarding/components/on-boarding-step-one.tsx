@@ -2,6 +2,7 @@ import { useSearch } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
 import { Title } from '@/components/base/title'
 import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { USER_AUTH_METHOD } from '@/types/user'
 import { useOnBoardingStore } from '../stores/use-on-boarding-store'
 
 export const OnBoardingStepOne = () => {
@@ -9,7 +10,7 @@ export const OnBoardingStepOne = () => {
   const setStep = useOnBoardingStore((state) => state.setStep)
 
   const handleContinue = () => {
-    setStep(auth === 'email' ? 'stepTwo' : 'stepThree')
+    setStep(auth === USER_AUTH_METHOD.enum.email ? 'stepTwo' : 'stepThree')
   }
 
   return (

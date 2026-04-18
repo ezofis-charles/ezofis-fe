@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Menu } from '@/components/base/menu'
+import { useSessionStore } from '@/stores/use-session-store'
 import { LanguageSwitcher } from './language-switcher'
 import { ThemeSwitcher } from './theme-switcher'
 
@@ -18,12 +19,14 @@ export const UserMenu = ({
   withinPortal = true,
 }: Props) => {
   const navigate = useNavigate()
+  const clearSession = useSessionStore((state) => state.clearSession)
 
   const goto = (slug: string) => {
     navigate({ params: { slug }, to: '/my-account/{-$slug}' })
   }
 
   const logout = () => {
+    clearSession()
     navigate({ replace: true, to: '/sign-in' })
   }
 

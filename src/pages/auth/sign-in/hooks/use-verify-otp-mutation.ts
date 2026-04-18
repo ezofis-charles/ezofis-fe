@@ -10,7 +10,7 @@ export default function useVerifyOtpMutation() {
   return useMutation({
     mutationFn: verifyOtp,
     onSuccess: (data) => {
-      setSession({ token: data.token, user: data.user })
+      setSession(data)
       navigate({ replace: true, to: '/' })
     },
   })
