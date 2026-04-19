@@ -5,6 +5,7 @@ import { tanstackQueryClient } from '../tanstack-query'
 export const router = createRouter({
   context: {
     queryClient: tanstackQueryClient,
+    isAuthenticated: () => false,
   },
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,

@@ -20,6 +20,7 @@ export const SidebarToggle = () => {
         className='hidden md:inline-flex'
         color='gray'
         icon='tabler-menu-3'
+        size='sm'
         variant='ghost'
         onClick={toggleSidebar}
       />

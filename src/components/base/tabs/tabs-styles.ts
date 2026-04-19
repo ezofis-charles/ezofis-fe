@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants'
 
 export const triggerClassName = tv({
-  base: '**:data-[part=trigger]:px-3 **:data-[part=trigger]:py-2',
+  base: '**:data-[part=trigger]:p-2',
   compoundVariants: [
     {
       class:
@@ -43,17 +43,32 @@ export const indicatorClassName = tv({
     {
       class: 'bg-gray-9',
       color: 'gray',
-      variant: ['solid', 'outline'],
+      variant: 'solid',
     },
     {
       class: 'bg-primary-9',
       color: 'primary',
-      variant: ['solid', 'outline'],
+      variant: 'solid',
     },
     {
       class: 'bg-secondary-9',
       color: 'secondary',
-      variant: ['solid', 'outline'],
+      variant: 'solid',
+    },
+    {
+      class: 'bg-gray-11',
+      color: 'gray',
+      variant: 'outline',
+    },
+    {
+      class: 'bg-primary-11',
+      color: 'primary',
+      variant: 'outline',
+    },
+    {
+      class: 'bg-secondary-11',
+      color: 'secondary',
+      variant: 'outline',
     },
     {
       class: 'bg-gray-3',

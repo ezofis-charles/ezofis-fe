@@ -21,17 +21,17 @@ export const SegmentGroupStory = () => {
       <Section title='With Icon'>
         <SegmentGroup value={value} onChange={setValue}>
           <SegmentGroup.Item
-            icon='tabler:text-align-start'
+            icon='tabler:align-left'
             label='Left'
             value='Left'
           />
           <SegmentGroup.Item
-            icon='tabler:text-align-center'
+            icon='tabler:align-center'
             label='Center'
             value='Center'
           />
           <SegmentGroup.Item
-            icon='tabler:text-align-end'
+            icon='tabler:align-right'
             label='Right'
             value='Right'
           />
@@ -40,9 +40,9 @@ export const SegmentGroupStory = () => {
 
       <Section title='Icon Only'>
         <SegmentGroup value={value} onChange={setValue}>
-          <SegmentGroup.Item icon='tabler:text-align-start' value='Left' />
-          <SegmentGroup.Item icon='tabler:text-align-center' value='Center' />
-          <SegmentGroup.Item icon='tabler:text-align-end' value='Right' />
+          <SegmentGroup.Item icon='tabler:align-left' value='Left' />
+          <SegmentGroup.Item icon='tabler:align-center' value='Center' />
+          <SegmentGroup.Item icon='tabler:align-right' value='Right' />
         </SegmentGroup>
       </Section>
 

@@ -24,7 +24,7 @@ export const Tabs = ({
     <Base.Root value={value} onValueChange={(e) => onChange(e.value)}>
       <Base.List
         className={cn(
-          'relative flex h-12 items-center gap-1',
+          'relative flex h-12 items-center gap-2',
           triggerClassName({ color, variant }),
           noPadding && 'gap-6 **:data-[part=trigger]:px-0',
         )}

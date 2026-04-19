@@ -22,7 +22,7 @@ export const SegmentGroup = ({
       disabled={disabled}
       value={value}
       className={cn(
-        'relative inline-flex h-9 overflow-hidden rounded border border-gray-4 bg-surface-raised data-disabled:opacity-50',
+        'relative inline-flex h-8 overflow-hidden rounded border border-gray-4 bg-surface-muted data-disabled:opacity-50',
         className,
       )}
       onValueChange={(e) => onChange(e.value)}

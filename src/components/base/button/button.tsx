@@ -22,11 +22,11 @@ interface Props extends ComponentProps<'button'> {
 }
 
 const sizeClassName: Record<ButtonSize, string> = {
-  xs: 'h-6 px-2 text-xs',
-  sm: 'h-7 px-2.5 text-xs',
-  md: 'h-8 px-3 text-micro',
-  lg: 'h-9 px-3.5 text-micro',
-  xl: 'h-10 px-4 text-mini',
+  xs: 'h-6 px-2 text-xs gap-1',
+  sm: 'h-7 px-2.5 text-xs gap-1.5',
+  md: 'h-8 px-3 text-micro gap-2',
+  lg: 'h-9 px-3.5 text-micro gap-2',
+  xl: 'h-10 px-4 text-mini gap-2',
 }
 
 const Button = forwardRef<HTMLButtonElement, Props>(

@@ -24,7 +24,7 @@ export const Tab = ({
       disabled={disabled}
       value={value}
       className={cn(
-        'flex h-8 items-center gap-2 rounded font-medium text-gray-10 transition-colors hover:cursor-pointer hover:text-gray-12 focus-visible:ring-2 focus-visible:ring-primary-8 focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50',
+        'flex h-8 items-center gap-2 rounded font-medium text-gray-11 transition-colors hover:cursor-pointer hover:text-gray-12 focus-visible:ring-2 focus-visible:ring-primary-8 focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50',
         className,
       )}
     >

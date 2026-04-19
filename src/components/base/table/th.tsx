@@ -12,7 +12,7 @@ export const Th = ({
       colSpan={colSpan}
       rowSpan={rowSpan}
       className={cn(
-        'bg-surface-raised px-4 py-3 text-left align-middle text-micro font-medium text-gray-13',
+        'px-4 py-2 text-left align-middle text-xs font-medium text-gray-10',
         className,
       )}
       {...props}

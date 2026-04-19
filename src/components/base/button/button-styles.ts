@@ -6,7 +6,7 @@ export function getVariantClassName(
   color: ButtonColor,
 ) {
   const className = tv({
-    base: 'flex shrink-0 cursor-pointer appearance-none items-center gap-2 rounded border border-transparent font-medium outline-primary-8 transition-colors select-none focus-visible:outline-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 data-loading:pointer-events-none data-loading:opacity-75',
+    base: 'flex shrink-0 cursor-pointer appearance-none items-center rounded border border-transparent font-medium outline-primary-8 transition-colors select-none focus-visible:outline-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 data-loading:pointer-events-none data-loading:opacity-75',
     compoundVariants: [
       {
         class: 'bg-gray-9 hover:bg-gray-10',
