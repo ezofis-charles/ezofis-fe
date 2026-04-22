@@ -23,7 +23,7 @@ export const SegmentGroupItem = ({
     <Base.Item
       value={value}
       className={cn(
-        'group z-1 flex items-center border-r border-gray-5 transition-colors last:border-r-0 hover:cursor-pointer data-focus-visible:outline data-focus-visible:outline-primary-8 data-[state=checked]:bg-gray-3',
+        'group border-gray-5 data-focus-visible:outline-primary-8 z-1 flex items-center border-r transition-colors last:border-r-0 hover:cursor-pointer data-focus-visible:outline data-[state=checked]:bg-gray-200',
         label && 'px-3',
         icon && label && 'gap-2',
         icon && !label && 'w-8 justify-center',
@@ -38,7 +38,7 @@ export const SegmentGroupItem = ({
       {label && (
         <Base.ItemText
           className={cn(
-            'z-1 font-medium text-gray-11 transition-colors group-hover:text-gray-12 data-[state=checked]:text-gray-13',
+            'group-hover:text-gray-12 z-1 font-medium text-gray transition-colors data-[state=checked]:text-gray-900',
             labelClassName,
           )}
         >

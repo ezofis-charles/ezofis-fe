@@ -16,25 +16,25 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
         {(nodeState) =>
           node.children ? (
             <TreeView.Branch className='relative'>
-              <TreeView.BranchControl className='user-select-none flex items-center gap-1.5 rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
-                <TreeView.BranchIndicator className='flex size-5 items-center justify-center text-gray-9 transition-transform data-[state=open]:rotate-90'>
+              <TreeView.BranchControl className='user-select-none outline-primary-8 flex items-center gap-1.5 rounded p-2 hover:cursor-pointer hover:bg-gray-200 data-selected:bg-gray-200'>
+                <TreeView.BranchIndicator className='text-gray-9 flex size-5 items-center justify-center transition-transform data-[state=open]:rotate-90'>
                   <Icon name='tabler:chevron-right' />
                 </TreeView.BranchIndicator>
                 <TreeView.BranchText className='flex items-center gap-2'>
-                  <div className='flex size-5 items-center justify-center text-gray-10'>
+                  <div className='text-gray-10 flex size-5 items-center justify-center'>
                     {nodeState.expanded ? (
                       <Icon name='tabler:folder-open' />
                     ) : (
                       <Icon name='tabler:folder' />
                     )}
                   </div>
-                  <div className='text-micro font-medium text-gray-12'>
+                  <div className='text-gray-12 text-14 font-medium xl:text-13'>
                     {node.name}
                   </div>
                 </TreeView.BranchText>
               </TreeView.BranchControl>
               <TreeView.BranchContent className='pl-6.5'>
-                <TreeView.BranchIndentGuide className='absolute top-8 left-[17.25px] h-[calc(100%-36px)] border-l border-gray-3' />
+                <TreeView.BranchIndentGuide className='absolute top-8 left-[17.25px] h-[calc(100%-36px)] border-l border-gray-200' />
                 {node.children.map((child, index) => (
                   <TreeNode
                     indexPath={[...indexPath, index]}
@@ -45,12 +45,12 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
               </TreeView.BranchContent>
             </TreeView.Branch>
           ) : (
-            <TreeView.Item className='rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
+            <TreeView.Item className='outline-primary-8 rounded p-2 hover:cursor-pointer hover:bg-gray-200 data-selected:bg-gray-200'>
               <TreeView.ItemText className='flex items-center gap-2'>
-                <div className='flex size-5 items-center justify-center text-gray-10'>
+                <div className='text-gray-10 flex size-5 items-center justify-center'>
                   <Icon name='tabler:file' />
                 </div>
-                <div className='text-micro font-medium text-gray-12'>
+                <div className='text-gray-12 text-14 font-medium xl:text-13'>
                   {node.name}
                 </div>
               </TreeView.ItemText>

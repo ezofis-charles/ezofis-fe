@@ -23,13 +23,13 @@ export const IconIllustrated = ({
       <div
         className={cn(
           'flex size-18 items-center justify-center rounded-full transition-colors',
-          color === 'gray' ? 'bg-gray-3' : 'bg-red-3',
+          color === 'gray' ? 'bg-gray-200' : 'bg-red-3',
           ringClass,
         )}
       >
         <div
           className={cn(
-            'bg-gray flex size-12 items-center justify-center rounded-full bg-surface-raised shadow-xs transition-colors',
+            'flex size-12 items-center justify-center rounded-full bg-gray bg-surface-raised shadow-xs transition-colors',
             surfaceClass,
           )}
         >
@@ -37,7 +37,7 @@ export const IconIllustrated = ({
             name={icon}
             className={cn(
               'size-5.5 transition-colors lg:size-5.5',
-              color === 'gray' ? 'text-gray-11' : 'text-red-11',
+              color === 'gray' ? 'text-gray' : 'text-red',
               iconClass,
             )}
           />

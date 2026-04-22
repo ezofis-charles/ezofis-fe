@@ -50,7 +50,7 @@ export const PaginationControls = ({
               variant={_page === page ? 'subtle' : 'ghost'}
               className={cn(
                 'min-w-8 justify-center p-2 font-medium',
-                _page === page && 'text-gray-13',
+                _page === page && 'text-gray-900',
               )}
               onClick={() => setPage(_page)}
             />

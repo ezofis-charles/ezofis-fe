@@ -23,7 +23,7 @@ export const SignUpMethod = () => {
         level={1}
         title='Create Your Account'
         customDescription={
-          <p className='text-micro/6 text-pretty text-gray-11'>
+          <p className='text-14 text-pretty text-gray xl:text-13/6'>
             By signing up, you agree to our{' '}
             <Link
               className='cursor-pointer hover:underline'

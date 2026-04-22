@@ -18,14 +18,14 @@ const InputSwitch = forwardRef<HTMLInputElement, Props>(
         withThumbIndicator={false}
         classNames={{
           body: 'inline-flex',
-          description: 'mt-1 pl-2 text-micro text-gray-10',
+          description: 'text-gray-10 mt-1 pl-2 text-14 xl:text-13',
           input: 'peer',
-          label: 'pl-2 text-micro/5 font-medium text-gray-12',
+          label: 'text-gray-12 pl-2 text-14 font-medium xl:text-13/5',
           labelWrapper: 'data-[disabled]:opacity-50',
           thumb: 'bg-white shadow-sm',
           track: cn(
-            'mt-0.5 bg-gray-6 peer-checked:bg-primary-9 focus-within:outline-primary-8',
-            Boolean(error) && 'border border-red-9',
+            'bg-gray-6 focus-within:outline-primary-8 mt-0.5 peer-checked:bg-primary',
+            Boolean(error) && 'border-red-9 border',
           ),
         }}
         onChange={handleChange}

@@ -32,7 +32,7 @@ export const OnBoardingStepFour = () => {
         />
 
         <Button
-          className='w-full justify-center font-normal text-gray-11 hover:bg-transparent hover:underline'
+          className='w-full justify-center font-normal text-gray hover:bg-transparent hover:underline'
           color='gray'
           label='Skip for now'
           size='lg'

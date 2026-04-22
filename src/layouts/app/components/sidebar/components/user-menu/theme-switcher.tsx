@@ -17,7 +17,7 @@ export const ThemeSwitcher = () => {
           key={option.value}
           label={option.label}
           iconClassName={
-            option.value === colorScheme ? 'text-primary-11' : 'text-gray-9'
+            option.value === colorScheme ? 'text-primary' : 'text-gray-9'
           }
           onClick={handleColorSchemeChange(option.value)}
         />

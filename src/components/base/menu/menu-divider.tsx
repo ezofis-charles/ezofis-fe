@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const MenuDivider = ({ className }: Props) => {
-  return <Base.Divider className={cn('my-1.5 border-gray-4', className)} />
+  return <Base.Divider className={cn('border-gray-4 my-1.5', className)} />
 }

@@ -22,7 +22,7 @@ export const Modal = ({
   const classNames = {
     body: 'p-0',
     content: cn(
-      'border border-gray-4 bg-surface shadow-xl',
+      'border-gray-4 border bg-surface shadow-xl',
       fullScreen ? 'rounded-none' : 'rounded-xl',
     ),
     overlay: 'bg-black/40',

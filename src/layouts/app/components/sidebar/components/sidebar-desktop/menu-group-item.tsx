@@ -37,7 +37,7 @@ export const MenuGroupItem = ({
       <Link
         to={route}
         className={cn(
-          'group flex items-center rounded outline-0 transition-colors hover:bg-gray-4 focus-visible:bg-gray-4',
+          'group hover:bg-gray-4 focus-visible:bg-gray-4 flex items-center rounded outline-0 transition-colors',
           isActive && 'bg-gray-4',
           className,
         )}
@@ -47,15 +47,13 @@ export const MenuGroupItem = ({
             name={isActive ? activeIcon : icon}
             className={cn(
               'transition-colors',
-              isActive
-                ? 'text-primary-11'
-                : 'text-gray-11 group-hover:text-gray-12',
+              isActive ? 'text-primary' : 'group-hover:text-gray-12 text-gray',
             )}
           />
         </div>
 
         <AnimatePresence>
-          <div className='pr-2 font-medium whitespace-nowrap text-gray-12'>
+          <div className='text-gray-12 pr-2 font-medium whitespace-nowrap'>
             {label}
           </div>
         </AnimatePresence>

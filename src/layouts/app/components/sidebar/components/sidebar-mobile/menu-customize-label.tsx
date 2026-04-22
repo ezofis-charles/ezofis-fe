@@ -9,7 +9,7 @@ export const MenuCustomizeLabel = ({ className, label }: Props) => {
   return (
     <div
       className={cn(
-        'px-4 py-2 text-xs font-medium whitespace-nowrap text-gray-10',
+        'text-gray-10 px-4 py-2 text-12 font-medium whitespace-nowrap',
         className,
       )}
     >

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Title } from '@/components/base/title'
 import { cn } from '@/utils/cn'
 
 interface Props {
@@ -10,9 +11,11 @@ interface Props {
 export const Section = ({ children, className, title }: Props) => {
   return (
     <div className={cn('mb-16', className)}>
-      <h2 className='mb-8 border-b border-gray-3 pb-2 text-micro/7 font-semibold text-gray-12'>
-        # {title}
-      </h2>
+      <Title
+        level={3}
+        title={`# ${title}`}
+        titleClassName='mb-8 border-b border-gray-200 pb-2 text-gray xl:text-14 text-gray-700'
+      />
 
       {children}
     </div>

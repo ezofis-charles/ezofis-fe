@@ -16,12 +16,12 @@ const InputRadio = forwardRef<HTMLInputElement, Props>(
         ref={ref}
         size='xs'
         classNames={{
-          description: 'mt-1 pl-2 text-micro text-balance text-gray-10',
+          description: 'text-gray-10 mt-1 pl-2 text-14 text-balance xl:text-13',
           icon: 'text-white',
           inner: 'flex size-5 items-center justify-center',
-          label: 'pl-2 text-micro/5 font-medium text-gray-12',
+          label: 'text-gray-12 pl-2 text-14 font-medium xl:text-13/5',
           radio: cn(
-            'border-gray-8 bg-surface-raised checked:border-primary-9 checked:bg-primary-9 focus-within:outline-primary-8 disabled:opacity-50',
+            'border-gray-8 focus-within:outline-primary-8 bg-surface-raised checked:border-primary checked:bg-primary disabled:opacity-50',
             Boolean(error) && 'border-red-9',
           ),
         }}

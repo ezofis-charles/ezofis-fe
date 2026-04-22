@@ -97,17 +97,17 @@ export const FormsPage = () => {
   return (
     <div>
       <FormsPageHeader />
-      <div className='divide-y divide-gray-3 px-6 py-4'>
+      <div className='divide-y divide-gray-200 px-6 py-4'>
         <div className='flex h-12 items-center pl-0'>
           <Icon name='tabler:chevron-right' />
-          <h2 className='mr-2 ml-4 text-micro font-semibold text-gray-12'>
+          <h2 className='text-gray-12 mr-2 ml-4 text-14 font-semibold xl:text-13'>
             Published
           </h2>
           <Badge className='h-5' color='gray' label='3' />
         </div>
         <div className='flex h-12 items-center pl-0'>
           <Icon name='tabler:chevron-down' />
-          <h2 className='mr-2 ml-4 text-micro font-semibold text-gray-12'>
+          <h2 className='text-gray-12 mr-2 ml-4 text-14 font-semibold xl:text-13'>
             Draft
           </h2>
           <Badge className='h-5' color='gray' label='5' />

@@ -11,7 +11,7 @@ export const Highlight = ({ children, words }: Props) => {
       highlight={words}
       inherit
       highlightStyles={{
-        backgroundColor: 'var(--primary-9)',
+        backgroundColor: 'var(--primary)',
         borderRadius: '1px',
         color: 'white',
       }}

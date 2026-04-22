@@ -15,9 +15,9 @@ export const MenuCustomizeItem = ({ index, item }: Props) => {
       id={item.label}
       index={index}
     >
-      <Icon className='text-gray-11' name={item.icon} />
+      <Icon className='text-gray' name={item.icon} />
 
-      <div className='flex-1 font-medium whitespace-nowrap text-gray-12'>
+      <div className='text-gray-12 flex-1 font-medium whitespace-nowrap'>
         {item.label}
       </div>
 

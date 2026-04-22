@@ -6,7 +6,7 @@ export const FormsPageHeader = () => {
   const [value, setValue] = useState<null | string>('all')
 
   return (
-    <div className='flex h-12 items-center justify-between border-b border-gray-3 px-6'>
+    <div className='flex h-12 items-center justify-between border-b border-gray-200 px-6'>
       <Tabs value={value} noPadding onChange={setValue}>
         <Tabs.Tab label='All' value='all' />
         <Tabs.Tab label='Favourites' value='favourites' />

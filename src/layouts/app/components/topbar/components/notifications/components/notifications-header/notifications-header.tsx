@@ -8,9 +8,9 @@ export const NotificationsHeader = () => {
   const [value, setValue] = useState<null | string>('Unread')
 
   return (
-    <div className='border-b border-gray-3 pr-2 pl-3'>
+    <div className='border-b border-gray-200 pr-2 pl-3'>
       <div className='flex flex-wrap items-center'>
-        <div className='text-15 flex-1 font-semibold text-gray-12'>
+        <div className='text-gray-12 flex-1 text-15 font-semibold'>
           Notifications
         </div>
         <Search />

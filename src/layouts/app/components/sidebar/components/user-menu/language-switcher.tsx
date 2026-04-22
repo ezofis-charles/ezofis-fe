@@ -11,7 +11,7 @@ export const LanguageSwitcher = () => {
           key={code}
           label={name}
           suffixIcon={language === code ? 'material-symbols:check-rounded' : ''}
-          suffixIconClassName='text-primary-11'
+          suffixIconClassName='text-primary'
           onClick={() => setLanguage(code)}
         />
       ))}

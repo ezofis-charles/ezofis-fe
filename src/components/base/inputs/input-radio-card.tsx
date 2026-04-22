@@ -36,7 +36,7 @@ export const InputRadioCard = ({
       radius='md'
       value={value}
       className={cn(
-        'rounded border-gray-4 bg-surface-raised p-4 outline-primary-8 disabled:pointer-events-none disabled:opacity-50 data-checked:border-primary-9',
+        'border-gray-4 outline-primary-8 rounded bg-surface-raised p-4 disabled:pointer-events-none disabled:opacity-50 data-checked:border-primary',
         className,
       )}
       onClick={onClick}
@@ -45,7 +45,7 @@ export const InputRadioCard = ({
       {!children && (
         <div className='flex items-center gap-3'>
           {icon && (
-            <div className='flex size-11 items-center justify-center rounded-full bg-gray-3 text-gray-11'>
+            <div className='flex size-11 items-center justify-center rounded-full bg-gray-200 text-gray'>
               <Icon className='lg:size-5' name={icon} />
             </div>
           )}
@@ -60,20 +60,20 @@ export const InputRadioCard = ({
             <InputRadioIndicator checked={checked} />
           </div>
 
-          <div className='flex-1 space-y-1 text-micro'>
+          <div className='flex-1 space-y-1 text-14 xl:text-13'>
             {labelSlot}
             {label && (
               <div
                 className={cn(
                   'font-medium',
-                  description ? 'text-gray-13' : 'text-gray-12',
+                  description ? 'text-gray-900' : 'text-gray-12',
                 )}
               >
                 {label}
               </div>
             )}
             {description && (
-              <div className='text-pretty text-gray-10'>{description}</div>
+              <div className='text-gray-10 text-pretty'>{description}</div>
             )}
           </div>
         </div>

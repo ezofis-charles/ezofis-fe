@@ -17,7 +17,7 @@ export const Main = ({ children }: Props) => {
         sidebarState === 'collapsed' ? 'xl:ml-12' : 'xl:ml-60',
       )}
     >
-      <div className='overflow-hidden bg-surface xl:rounded-xl xl:border xl:border-gray-3'>
+      <div className='overflow-hidden bg-surface xl:rounded-xl xl:border xl:border-gray-200'>
         <Topbar />
         <div
           className='scrollbar overflow-y-auto'

@@ -23,7 +23,7 @@ type TooltipColor = 'gray' | 'primary' | 'red' | 'secondary'
 
 const colorClassName: Record<TooltipColor, string> = {
   gray: 'bg-gray-12 text-gray-0',
-  primary: 'bg-primary-9',
+  primary: 'bg-primary',
   red: 'bg-red-9',
   secondary: 'bg-secondary-9',
 }
@@ -58,7 +58,7 @@ export const Tooltip = ({
       withArrow={withArrow}
       classNames={{
         tooltip: cn(
-          'rounded-sm px-2 py-1 text-xs text-balance text-white',
+          'rounded-sm px-2 py-1 text-12 text-balance text-white',
           colorClassName[color],
         ),
       }}

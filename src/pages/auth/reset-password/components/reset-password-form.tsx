@@ -70,7 +70,7 @@ export const ResetPasswordForm = () => {
           </Link>
 
           {resetPasswordMutation.isError && (
-            <div className='text-center text-red-11'>
+            <div className='text-center text-red'>
               {resetPasswordMutation.error?.message}
             </div>
           )}

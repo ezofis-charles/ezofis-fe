@@ -22,7 +22,7 @@ export const MenuPinned = ({ items }: Props) => {
           key={item.route}
           to={item.route}
           className={cn(
-            'group flex size-8 items-center justify-center rounded outline-primary-8 hover:bg-gray-4',
+            'group outline-primary-8 hover:bg-gray-4 flex size-8 items-center justify-center rounded',
             pathname === item.route && 'bg-gray-4',
           )}
         >
@@ -30,8 +30,8 @@ export const MenuPinned = ({ items }: Props) => {
             name={pathname === item.route ? item.activeIcon : item.icon}
             className={
               pathname === item.route
-                ? 'text-primary-11'
-                : 'text-gray-11 group-hover:text-gray-12'
+                ? 'text-primary'
+                : 'group-hover:text-gray-12 text-gray'
             }
           />
         </Link>

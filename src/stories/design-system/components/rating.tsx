@@ -42,10 +42,10 @@ export const RatingStory = () => {
         <Rating
           value={value}
           emptyIcon={
-            <Icon className='size-8 text-gray-4' name='tabler:heart-filled' />
+            <Icon className='text-gray-4 size-8' name='tabler:heart-filled' />
           }
           fullIcon={
-            <Icon className='size-8 text-red-9' name='tabler:heart-filled' />
+            <Icon className='text-red-9 size-8' name='tabler:heart-filled' />
           }
           onChange={setValue}
         />

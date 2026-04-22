@@ -243,11 +243,11 @@ export const IndexStory = () => {
 
       <div className='grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4'>
         {components.map((group, index) => (
-          <ul className='space-y-4' key={index}>
+          <ul className='space-y-6' key={index}>
             {group.map((item) => (
               <li key={item.route}>
                 <Link
-                  className='text-micro/7 font-medium text-gray-11 transition-colors hover:text-gray-13'
+                  className='text-14 font-medium text-gray transition-colors hover:text-gray-900'
                   to={item.route}
                 >
                   {item.label}

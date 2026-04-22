@@ -9,7 +9,7 @@ interface Props {
 
 export const MenuLabel = ({ children, className }: Props) => {
   return (
-    <Base.Label className={cn('px-2 py-0 text-xs/6 text-gray-10', className)}>
+    <Base.Label className={cn('text-gray-10 px-2 py-0 text-12/6', className)}>
       {children}
     </Base.Label>
   )

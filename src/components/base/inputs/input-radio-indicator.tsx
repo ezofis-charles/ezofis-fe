@@ -10,7 +10,7 @@ export const InputRadioIndicator = ({ checked, disabled }: Props) => {
     <div className='flex size-5 items-center justify-center'>
       <Base.Indicator
         checked={checked}
-        className='group border-gray-8 bg-surface-raised data-checked:border-primary-9 data-checked:bg-primary-9'
+        className='group border-gray-8 bg-surface-raised data-checked:border-primary data-checked:bg-primary'
         disabled={disabled}
         size='xs'
         classNames={{

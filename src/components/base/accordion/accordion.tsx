@@ -19,9 +19,9 @@ export const Accordion = ({
   variant = 'default',
 }: Props) => {
   const controlClassName = {
-    contained: 'hover:bg-gray-3 p-2',
+    contained: 'hover:bg-gray-200 p-2',
     default: 'hover:bg-transparent hover:underline px-0 py-2',
-    separated: 'hover:bg-gray-3 p-2',
+    separated: 'hover:bg-gray-200 p-2',
   }
 
   return (

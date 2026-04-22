@@ -59,10 +59,10 @@ const InputPassword = forwardRef<HTMLInputElement, Props>(
         classNames={{
           description: classNames.description,
           error: classNames.error,
-          innerInput: 'placeholder:font-normal placeholder:text-gray-8',
+          innerInput: 'placeholder:text-gray-8 placeholder:font-normal',
           input: classNames.input,
           label: classNames.label,
-          visibilityToggle: 'group size-6 hover:bg-gray-4',
+          visibilityToggle: 'group hover:bg-gray-4 size-6',
           wrapper: classNames.wrapper,
         }}
         onChange={handleChange}

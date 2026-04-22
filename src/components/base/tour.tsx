@@ -16,12 +16,12 @@ export const Tour = ({ tour }: Props) => {
         <Base.Backdrop className='z-(--z-index) bg-black/40' />
         <Base.Spotlight className='rounded!' />
         <Base.Positioner className='fixed z-(--z-index) data-[type=dialog]:inset-0 data-[type=dialog]:flex data-[type=dialog]:transform-none! data-[type=dialog]:items-center data-[type=dialog]:justify-center'>
-          <Base.Content className='rounded-lg border border-gray-4 bg-surface-raised p-4 shadow-xl'>
-            <Base.Title className='text-base font-semibold text-gray-13' />
-            <Base.Description className='py-3 text-micro/6 text-gray-11' />
+          <Base.Content className='border-gray-4 rounded-lg border bg-surface-raised p-4 shadow-xl'>
+            <Base.Title className='text-base font-semibold text-gray-900' />
+            <Base.Description className='py-3 text-14 text-gray xl:text-13/6' />
 
-            <div className='mt-1 flex flex-wrap items-center justify-between gap-2 border-t border-gray-3 pt-4'>
-              <Base.ProgressText className='text-micro/6 text-gray-11' />
+            <div className='mt-1 flex flex-wrap items-center justify-between gap-2 border-t border-gray-200 pt-4'>
+              <Base.ProgressText className='text-14 text-gray xl:text-13/6' />
               <Base.Control className='flex items-center gap-2'>
                 <Base.Actions>
                   {(actions) =>

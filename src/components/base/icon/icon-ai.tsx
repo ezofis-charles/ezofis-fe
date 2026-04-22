@@ -20,7 +20,7 @@ export const IconAI = ({ animate, className, color = 'default' }: Props) => {
   const isSolid = color !== 'default'
   const solidColorClass =
     color === 'primary'
-      ? 'fill-primary-9'
+      ? 'fill-primary'
       : color === 'secondary'
         ? 'fill-secondary-9'
         : color === 'white'

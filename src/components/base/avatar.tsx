@@ -22,7 +22,7 @@ export const Avatar = ({
       size={size}
       src={image}
       classNames={{
-        placeholder: 'border-none bg-gray-3 font-semibold text-gray-11',
+        placeholder: 'border-none bg-gray-200 font-semibold text-gray',
       }}
     >
       {initials}

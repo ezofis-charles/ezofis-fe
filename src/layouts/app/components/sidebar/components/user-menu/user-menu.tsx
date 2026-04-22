@@ -60,7 +60,7 @@ export const UserMenu = ({
       <Menu.Divider />
       <Menu.Item
         icon='material-symbols:logout-rounded'
-        iconClassName='text-red-11'
+        iconClassName='text-red'
         label='Sign out'
         onClick={logout}
       />
