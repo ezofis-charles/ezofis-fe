@@ -2,7 +2,6 @@
   font-family: Inter, sans-serif;
   font-feature-settings:
     'liga' 1,
-    'cv05' 1,
     'cv11' 1,
     'calt' 1; /* fix for Chrome */
 }

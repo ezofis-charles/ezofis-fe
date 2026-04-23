@@ -41,12 +41,12 @@ export const Menu = ({
       returnFocus
       classNames={{
         dropdown: cn(
-          'border-gray-4 space-y-0.5 rounded-lg border bg-surface-raised p-1 shadow-xl',
+          'space-y-0.5 rounded-lg border border-gray-4 bg-surface p-1 shadow-xl',
           className,
         ),
-        item: 'group text-gray-12 hover:bg-gray-4 focus-visible:bg-gray-4 flex h-8 items-center gap-2 rounded px-2 transition-colors hover:text-gray-900 focus-visible:outline-0',
-        itemLabel: 'text-14 font-medium transition-colors xl:text-13',
-        itemSection: 'm-0 text-gray transition-colors group-hover:text-gray',
+        item: 'group flex h-9 items-center gap-2 rounded px-2 font-medium text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 focus-visible:bg-gray-4 focus-visible:outline-0 xl:h-8',
+        itemLabel: 'text-14 transition-colors xl:text-13',
+        itemSection: 'group-hover:text-gray m-0 text-gray-11 transition-colors',
       }}
     >
       <Base.Target>

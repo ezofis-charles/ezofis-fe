@@ -13,12 +13,12 @@ export const UserMenuTrigger = () => {
     <div
       className={cn(
         'mx-1 flex cursor-pointer items-center p-1',
-        sidebarState === 'expanded' && 'hover:bg-gray-4 rounded',
+        sidebarState === 'expanded' && 'rounded hover:bg-gray-4',
       )}
     >
       <div className='flex h-10 w-8 shrink-0 items-center justify-center'>
         <Avatar
-          className='border border-gray-200'
+          className='border border-gray-3'
           image={user.avatarUrl}
           imageLabel='user picture'
           initials='CV'
@@ -29,7 +29,7 @@ export const UserMenuTrigger = () => {
       <AnimatePresence className='ml-2.5 flex-1'>
         <div className='flex items-center select-none'>
           <div className='min-w-0 flex-1'>
-            <div className='text-gray-12 truncate text-14 font-medium xl:text-13/5'>
+            <div className='truncate text-14 font-medium text-gray-12 xl:text-13/5'>
               {user.name}
             </div>
             <div className='truncate text-12/5'>{user.email}</div>

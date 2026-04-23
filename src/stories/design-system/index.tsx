@@ -24,7 +24,7 @@ export const IndexStory = () => {
         {routes.map((item) => (
           <li key={item.route}>
             <Link
-              className='text-14 font-medium text-gray transition-colors hover:text-gray-900'
+              className='text-14 font-medium text-gray-11 transition-colors hover:text-gray-12'
               to={item.route}
             >
               {item.label}

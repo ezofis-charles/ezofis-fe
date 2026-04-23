@@ -27,7 +27,7 @@ export const Drawer = ({
     body: 'p-0',
     content: cn(
       'bg-surface',
-      offset !== 0 && 'border-gray-4 rounded-xl border shadow-xl',
+      offset !== 0 && 'rounded-xl border border-gray-4 shadow-xl',
     ),
     overlay: 'bg-black/40',
   }

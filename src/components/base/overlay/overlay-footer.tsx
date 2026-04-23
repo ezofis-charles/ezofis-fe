@@ -21,16 +21,10 @@ export const OverlayFooter = ({
       <Button
         color='gray'
         label={cancelLabel}
-        size='md'
         variant='outline'
         onClick={onCancel}
       />
-      <Button
-        color={saveButtonColor}
-        label={saveLabel}
-        size='md'
-        onClick={onSave}
-      />
+      <Button color={saveButtonColor} label={saveLabel} onClick={onSave} />
     </OverlayFooterWrapper>
   )
 }

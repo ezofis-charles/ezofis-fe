@@ -46,7 +46,7 @@ export const AiChat = () => {
         {isAiChatOpen && (
           <motion.div
             {...aiChatContentMotion}
-            className='fixed top-1 right-1 bottom-1 w-96 rounded-xl border border-gray-200 bg-surface p-4'
+            className='fixed top-1 right-1 bottom-1 w-96 rounded-xl border border-gray-3 bg-surface p-4'
           ></motion.div>
         )}
       </AnimatePresence>

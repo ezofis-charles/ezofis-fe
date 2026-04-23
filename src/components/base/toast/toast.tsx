@@ -24,16 +24,14 @@ export const Toast = ({ description, id, title, variant = 'info' }: Props) => {
   const { className, name } = iconMap[variant]
 
   return (
-    <div className='border-gray-4 flex items-start gap-2 rounded-lg border bg-surface-raised p-4 shadow-xl'>
+    <div className='flex items-start gap-2 rounded-lg border border-gray-4 bg-surface p-4 shadow-xl'>
       <div className='flex size-5 items-center justify-center'>
         <Icon className={className} name={name} />
       </div>
 
       <div className='mr-3 flex-1'>
-        <p className='text-14 font-medium text-gray-900 xl:text-13/5'>
-          {title}
-        </p>
-        <p className='text-14 text-gray xl:text-13/5'>{description}</p>
+        <p className='text-14 font-medium text-gray-13 xl:text-13/5'>{title}</p>
+        <p className='text-gray text-14 xl:text-13/5'>{description}</p>
       </div>
 
       <ButtonClose size='sm' onClick={() => sonnerToast.dismiss(id)} />

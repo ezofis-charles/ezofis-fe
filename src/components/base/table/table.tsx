@@ -19,12 +19,12 @@ export const Table = ({
   return (
     <div
       className={cn(
-        'overflow-hidden rounded border-gray-200',
+        'overflow-hidden rounded border-gray-3',
         tableBorder && 'border',
         rowBorder &&
-          '[&_tr_th]:border-b [&_tr_th]:border-gray-200 [&_tr:not(:last-child)_td]:border-b [&_tr:not(:last-child)_td]:border-gray-200',
+          '[&_tr_th]:border-b [&_tr_th]:border-gray-3 [&_tr:not(:last-child)_td]:border-b [&_tr:not(:last-child)_td]:border-gray-3',
         columnBorder &&
-          '[&_tr>*:not(:last-child)]:border-r [&_tr>*:not(:last-child)]:border-gray-200',
+          '[&_tr>*:not(:last-child)]:border-r [&_tr>*:not(:last-child)]:border-gray-3',
         striped && '[&_tbody_tr:nth-child(even)>*]:bg-gray-2',
       )}
     >

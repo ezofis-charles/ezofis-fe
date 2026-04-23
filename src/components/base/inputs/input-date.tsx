@@ -77,25 +77,25 @@ const InputDate = forwardRef<HTMLInputElement, Props>(
         allowDeselect
         classNames={{
           calendarHeaderControl:
-            'hover:bg-gray-4 hover:text-gray-12 text-gray transition-colors data-[disabled]:opacity-50',
+            'text-gray transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50',
           calendarHeaderLevel:
-            'hover:bg-gray-4 hover:text-gray-12 text-14 font-semibold text-gray transition-colors xl:text-13',
-          day: 'hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:hover:text-gray-12 data-[today]:bg-primary-4 text-14 text-gray transition-colors data-[outside]:opacity-100 data-[selected]:!bg-primary data-[selected]:!font-medium data-[selected]:!text-white data-[today]:font-medium data-[today]:text-primary xl:text-13',
+            'text-gray text-14 font-semibold transition-colors hover:bg-gray-4 hover:text-gray-12 xl:text-13',
+          day: 'text-gray data-[selected]:!bg-primary data-[today]:text-primary text-14 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:opacity-100 data-[outside]:hover:text-gray-12 data-[selected]:!font-medium data-[selected]:!text-white data-[today]:bg-primary-4 data-[today]:font-medium xl:text-13',
           description: classNames.description,
           error: classNames.error,
           input: classNames.input,
           label: classNames.label,
           monthsListControl:
-            'hover:bg-gray-4 hover:text-gray-12 text-gray transition-colors data-[disabled]:opacity-50 data-[selected]:!bg-primary data-[selected]:!font-medium data-[selected]:!text-white',
-          weekday: 'text-gray-10 p-2 text-14 xl:text-13',
+            'text-gray data-[selected]:!bg-primary transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!font-medium data-[selected]:!text-white',
+          weekday: 'p-2 text-14 text-gray-10 xl:text-13',
           wrapper: classNames.wrapper,
           yearsListControl:
-            'hover:bg-gray-4 hover:text-gray-12 text-gray transition-colors data-[disabled]:opacity-50 data-[selected]:!bg-primary data-[selected]:!font-medium data-[selected]:!text-white',
+            'text-gray data-[selected]:!bg-primary transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!font-medium data-[selected]:!text-white',
         }}
         popoverProps={{
           classNames: {
             dropdown:
-              'border border-gray-4 bg-surface-raised p-3 rounded-lg shadow-xl',
+              'border border-gray-4 bg-surface p-3 rounded-lg shadow-xl',
           },
         }}
         onChange={onChange}

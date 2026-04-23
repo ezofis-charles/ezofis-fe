@@ -56,7 +56,7 @@ export const MenuStory = () => {
           <Menu.Divider />
           <Menu.Item
             icon='tabler:logout'
-            iconClassName='text-red'
+            iconClassName='text-red-11'
             label='Sign out'
           />
         </Menu>
@@ -87,7 +87,7 @@ export const MenuStory = () => {
           <Menu.Divider />
           <Menu.Item
             icon='tabler:trash'
-            iconClassName='text-red'
+            iconClassName='text-red-11'
             label='Delete'
           />
         </Menu>

@@ -30,9 +30,8 @@ export const Popover = ({
       width={width}
       withArrow={withArrow}
       classNames={{
-        arrow: 'bg-surface-raised',
-        dropdown:
-          'border-gray-4 rounded-lg border bg-surface-raised p-0 shadow-xl',
+        arrow: 'bg-surface',
+        dropdown: 'rounded-lg border border-gray-4 bg-surface p-0 shadow-xl',
       }}
     >
       <Base.Target>{target}</Base.Target>

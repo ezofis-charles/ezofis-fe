@@ -34,19 +34,19 @@ export const Stepper = ({
       orientation={orientation}
       size='xs'
       classNames={{
-        separator: 'rounded-full bg-gray-200',
+        separator: 'rounded-full bg-gray-3',
         step: 'disabled:opacity-50!',
         stepBody: 'ml-4',
         stepCompletedIcon: 'text-primary [&>svg]:!size-3.5',
-        stepDescription: 'text-gray-10 m-0 text-12/5',
+        stepDescription: 'm-0 text-12/5 text-gray-10',
         stepIcon:
-          'data-[completed]:bg-primary-4 size-8 min-h-8 min-w-8 border-0 bg-gray-200 text-14 font-semibold text-gray data-[progress]:bg-primary data-[progress]:text-white xl:text-13/5',
+          'text-gray data-[progress]:bg-primary size-8 min-h-8 min-w-8 border-0 bg-gray-3 text-14 font-semibold data-[completed]:bg-primary-4 data-[progress]:text-white xl:text-13/5',
         stepLabel: cn(
-          'text-gray-12 text-14 font-medium xl:text-13',
+          'text-14 font-medium text-gray-12 xl:text-13',
           orientation === 'vertical' && 'flex min-h-8.5 items-center',
         ),
-        stepLoader: 'after:border-gray-11 mt-1 after:border-t-transparent',
-        verticalSeparator: 'rounded-full border-gray-200 bg-gray-200',
+        stepLoader: 'mt-1 after:border-gray-11 after:border-t-transparent',
+        verticalSeparator: 'rounded-full border-gray-3 bg-gray-3',
       }}
       onStepClick={setActive}
     >

@@ -8,7 +8,7 @@ export const UserMenuTrigger = () => {
     <div className='flex flex-1 cursor-pointer items-center gap-3'>
       <div className='flex h-10 w-8 shrink-0 items-center justify-center'>
         <Avatar
-          className='border border-gray-200'
+          className='border border-gray-3'
           image={user.avatarUrl}
           imageLabel='user picture'
           initials='CV'
@@ -17,7 +17,7 @@ export const UserMenuTrigger = () => {
       </div>
 
       <div className='flex-1 select-none'>
-        <div className='text-gray-12 truncate text-14 font-medium xl:text-13/5'>
+        <div className='truncate text-14 font-medium text-gray-12 xl:text-13/5'>
           {user.name}
         </div>
         <div className='truncate text-12/5'>{user.email}</div>

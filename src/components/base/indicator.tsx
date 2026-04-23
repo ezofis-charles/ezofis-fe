@@ -17,9 +17,9 @@ interface Props {
 }
 
 const colorClassName: Record<IndicatorColor, string> = {
-  primary: 'bg-primary before:bg-primary',
-  red: 'bg-red before:bg-red',
-  secondary: 'bg-secondary before:bg-secondary',
+  primary: 'bg-primary-11 before:bg-primary-11',
+  red: 'bg-red-11 before:bg-red-11',
+  secondary: 'bg-secondary-11 before:bg-secondary-11',
 }
 
 export const Indicator = ({

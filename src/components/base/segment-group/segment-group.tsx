@@ -22,12 +22,12 @@ export const SegmentGroup = ({
       disabled={disabled}
       value={value}
       className={cn(
-        'border-gray-4 relative inline-flex h-8 overflow-hidden rounded border bg-surface-muted data-disabled:opacity-50',
+        'relative inline-flex h-8 overflow-hidden rounded border border-gray-4 bg-surface-muted data-disabled:opacity-50',
         className,
       )}
       onValueChange={(e) => onChange(e.value)}
     >
-      <Base.Indicator className='absolute top-(--top) left-(--left) z-0 h-(--height) w-(--width) bg-gray-200' />
+      <Base.Indicator className='absolute top-(--top) left-(--left) z-0 h-(--height) w-(--width) bg-gray-3' />
       {children}
     </Base.Root>
   )

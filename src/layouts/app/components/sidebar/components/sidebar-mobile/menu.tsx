@@ -17,7 +17,7 @@ export const Menu = ({ menuGroup, open, onClose, onCustomize }: Props) => {
     <Sheet open={open} onClose={onClose}>
       <MenuGroup menuGroup={menuGroup} />
 
-      <div className='mr-4 mb-4 ml-5 flex items-center border-t border-gray-200 pt-4'>
+      <div className='mr-4 mb-4 ml-5 flex items-center border-t border-gray-3 pt-4'>
         <UserMenu
           alignmentAxis={0}
           trigger={<UserMenuTrigger />}

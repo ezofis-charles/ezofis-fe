@@ -31,13 +31,13 @@ export const ScrollArea = ({
           <>
             {orientation !== 'horizontal' && context.hasOverflowY && (
               <Base.Scrollbar orientation='vertical'>
-                <Base.Thumb className='bg-gray-8 w-1 rounded' />
+                <Base.Thumb className='w-1 rounded bg-gray-8' />
               </Base.Scrollbar>
             )}
 
             {orientation !== 'vertical' && context.hasOverflowX && (
               <Base.Scrollbar orientation='horizontal'>
-                <Base.Thumb className='bg-gray-8 h-1 rounded' />
+                <Base.Thumb className='h-1 rounded bg-gray-8' />
               </Base.Scrollbar>
             )}
           </>

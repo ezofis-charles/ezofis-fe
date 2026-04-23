@@ -29,7 +29,7 @@ export const ComboboxSearch = ({
       value={search}
       classNames={{
         input:
-          'placeholder:text-gray-8 m-0 h-9 w-full border-gray-200 bg-transparent',
+          'm-0 h-9 w-full border-gray-3 bg-transparent placeholder:text-gray-8',
       }}
       onChange={handleChange}
     />

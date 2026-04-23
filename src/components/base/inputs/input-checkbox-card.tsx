@@ -36,7 +36,7 @@ export const InputCheckboxCard = ({
       radius='md'
       value={value}
       className={cn(
-        'border-gray-4 outline-primary-8 rounded bg-surface-raised p-4 disabled:pointer-events-none disabled:opacity-50 data-checked:border-primary',
+        'data-checked:border-primary rounded border-gray-4 bg-surface p-4 outline-primary-8 disabled:pointer-events-none disabled:opacity-50',
         className,
       )}
       onClick={onClick}
@@ -45,7 +45,7 @@ export const InputCheckboxCard = ({
       {!children && (
         <div className='flex items-center gap-3'>
           {icon && (
-            <div className='flex size-12 items-center justify-center rounded-full bg-gray-200 text-gray'>
+            <div className='text-gray flex size-12 items-center justify-center rounded-full bg-gray-3'>
               <Icon className='lg:size-5' name={icon} />
             </div>
           )}
@@ -66,14 +66,14 @@ export const InputCheckboxCard = ({
               <div
                 className={cn(
                   'font-medium',
-                  description ? 'text-gray-900' : 'text-gray-12',
+                  description ? 'text-gray-13' : 'text-gray-12',
                 )}
               >
                 {label}
               </div>
             )}
             {description && (
-              <div className='text-gray-10 text-pretty'>{description}</div>
+              <div className='text-pretty text-gray-10'>{description}</div>
             )}
           </div>
         </div>

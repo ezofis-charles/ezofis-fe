@@ -21,7 +21,7 @@ export const Divider = ({
       orientation={orientation}
       classNames={{
         label:
-          'before:border-gray-4 after:border-gray-4 text-14 text-gray xl:text-13',
+          'text-14 text-gray-10 before:border-gray-4 after:border-gray-4 xl:text-13',
         root: 'border-gray-4',
       }}
     />

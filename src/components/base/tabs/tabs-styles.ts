@@ -5,7 +5,7 @@ export const triggerClassName = tv({
   compoundVariants: [
     {
       class:
-        '**:data-selected:text-gray-900 hover:**:data-selected:text-gray-900',
+        '**:data-selected:text-gray-13 hover:**:data-selected:text-gray-13',
       color: 'gray',
       variant: 'subtle',
     },
@@ -30,7 +30,7 @@ export const triggerClassName = tv({
     },
     variant: {
       outline:
-        '**:data-selected:text-gray-900 hover:**:data-selected:text-gray-900',
+        '**:data-selected:text-gray-13 hover:**:data-selected:text-gray-13',
       solid: '**:data-selected:text-white hover:**:data-selected:text-white',
       subtle: '',
     },
@@ -71,7 +71,7 @@ export const indicatorClassName = tv({
       variant: 'outline',
     },
     {
-      class: 'bg-gray-200',
+      class: 'bg-gray-3',
       color: 'gray',
       variant: 'subtle',
     },

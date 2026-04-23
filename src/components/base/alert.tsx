@@ -10,10 +10,10 @@ interface Props {
 }
 
 const colorClassNames: Record<IconColor, string> = {
-  green: 'bg-green-3 text-green',
-  primary: 'bg-primary-3 text-primary',
-  red: 'bg-red-3 text-red',
-  secondary: 'bg-secondary-3 text-secondary',
+  green: 'bg-green-3 text-green-11',
+  primary: 'bg-primary-3 text-primary-11',
+  red: 'bg-red-3 text-red-11',
+  secondary: 'bg-secondary-3 text-secondary-11',
 }
 
 const colorIconNames: Record<IconColor, string> = {
@@ -33,7 +33,7 @@ export const Alert = ({ className, color = 'primary', text }: Props) => {
       )}
     >
       <Icon name={colorIconNames[color]} />
-      <div className='text-14 font-medium xl:text-13'>{text}</div>
+      <div className='text-14 font-medium text-balance xl:text-13'>{text}</div>
     </div>
   )
 }

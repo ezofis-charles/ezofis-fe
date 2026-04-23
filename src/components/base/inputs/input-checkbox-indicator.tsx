@@ -15,7 +15,7 @@ export const InputCheckboxIndicator = ({
     <div className='flex size-5 items-center justify-center'>
       <Base.Indicator
         checked={checked}
-        className='group border-gray-8 rounded-[3px] bg-surface-raised data-checked:border-primary data-checked:bg-primary'
+        className='group data-checked:border-primary data-checked:bg-primary rounded-[3px] border-gray-8 bg-surface'
         disabled={disabled}
         indeterminate={indeterminate}
         size='xs'

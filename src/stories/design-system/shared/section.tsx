@@ -14,7 +14,7 @@ export const Section = ({ children, className, title }: Props) => {
       <Title
         level={3}
         title={`# ${title}`}
-        titleClassName='mb-8 border-b border-gray-200 pb-2 text-gray xl:text-14 text-gray-700'
+        titleClassName='mb-8 border-b border-gray-3 pb-2 text-gray-11 font-medium'
       />
 
       {children}

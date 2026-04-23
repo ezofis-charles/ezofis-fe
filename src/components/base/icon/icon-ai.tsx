@@ -20,7 +20,7 @@ export const IconAI = ({ animate, className, color = 'default' }: Props) => {
   const isSolid = color !== 'default'
   const solidColorClass =
     color === 'primary'
-      ? 'fill-primary'
+      ? 'fill-primary-9'
       : color === 'secondary'
         ? 'fill-secondary-9'
         : color === 'white'
@@ -41,15 +41,15 @@ export const IconAI = ({ animate, className, color = 'default' }: Props) => {
         <defs>
           <linearGradient id='g1' x2='0' y2='1'>
             <stop offset='0%' stopColor='#19C1D4' />
-            <stop offset='100%' stopColor='#9D0FFF' />
+            <stop offset='100%' stopColor='#8747d4' />
           </linearGradient>
           <linearGradient id='g2' x2='0' y2='1'>
-            <stop offset='0%' stopColor='#9D0FFF' />
-            <stop offset='100%' stopColor='#5D66EA' />
+            <stop offset='0%' stopColor='#8747d4' />
+            <stop offset='100%' stopColor='#5B8ED6' />
           </linearGradient>
           <linearGradient id='g3' x2='0' y2='1'>
             <stop offset='0%' stopColor='#19C1D4' />
-            <stop offset='100%' stopColor='#5D66EA' />
+            <stop offset='100%' stopColor='#5B8ED6' />
           </linearGradient>
         </defs>
       )}

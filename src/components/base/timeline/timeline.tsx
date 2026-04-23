@@ -21,9 +21,9 @@ export const Timeline = ({ children, className, color = 'primary' }: Props) => {
       className={className}
       lineWidth={2}
       classNames={{
-        item: 'pl-2.5 before:border-gray-200',
+        item: 'pl-2.5 before:border-gray-3',
         itemBullet: cn('border-4', colorClass[color]),
-        itemTitle: 'text-gray-12 mb-2 font-medium',
+        itemTitle: 'mb-2 font-medium text-gray-12',
       }}
     >
       {children}
