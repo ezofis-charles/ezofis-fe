@@ -18,9 +18,9 @@ export const OnBoardingStepThree = () => {
     <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
-        description='Ezofis is an AI-first workflow platform. Design, automate, and orchestrate processes that adapt and improve over time.'
+        description='This helps us tailor workflows and recommendations for you.'
         level={1}
-        title='Step Three'
+        title='Tell us about you'
       />
 
       <div className='space-y-2'>
@@ -32,7 +32,7 @@ export const OnBoardingStepThree = () => {
         />
 
         <Button
-          className='text-gray w-full justify-center font-normal hover:bg-transparent hover:underline'
+          className='w-full justify-center text-gray-11 hover:bg-transparent hover:underline'
           color='gray'
           label='Skip for now'
           size='lg'

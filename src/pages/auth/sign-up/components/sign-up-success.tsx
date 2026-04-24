@@ -43,7 +43,7 @@ export const SignUpSuccess = () => {
         />
 
         <Link
-          className='block cursor-pointer text-center hover:underline'
+          className='block cursor-pointer text-center font-medium hover:underline'
           to='/sign-in'
         >
           Already have an account? Sign in

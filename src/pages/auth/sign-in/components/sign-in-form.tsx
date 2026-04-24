@@ -65,14 +65,14 @@ export const SignInForm = () => {
           />
 
           <Link
-            className='block cursor-pointer text-center hover:underline'
+            className='block cursor-pointer text-center font-medium hover:underline'
             to='/forgot-password'
           >
             Forgot password?
           </Link>
 
           {signInMutation.isError && (
-            <div className='text-red text-center'>
+            <div className='text-center text-red-11'>
               {signInMutation.error?.message}
             </div>
           )}

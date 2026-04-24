@@ -1,12 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { z } from 'zod'
+import { ValidateLinkRequestSchema } from '@/api/auth/reset-password-types'
+import { InvalidLink } from '@/pages/auth/invalid-link'
 import { ResetPasswordPage } from '@/pages/auth/reset-password/reset-password-page'
-
-const SearchSchema = z.object({
-  token: z.string(),
-})
 
 export const Route = createFileRoute('/_auth/reset-password')({
   component: ResetPasswordPage,
-  validateSearch: SearchSchema,
+  errorComponent: InvalidLink,
+  validateSearch: ValidateLinkRequestSchema,
 })

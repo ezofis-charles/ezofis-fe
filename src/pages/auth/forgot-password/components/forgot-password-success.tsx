@@ -43,7 +43,7 @@ export const ForgotPasswordSuccess = () => {
         />
 
         <Link
-          className='block cursor-pointer text-center hover:underline'
+          className='block cursor-pointer text-center font-medium hover:underline'
           to='/sign-in'
         >
           Go to sign in

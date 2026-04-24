@@ -46,7 +46,8 @@ export const Menu = ({
         ),
         item: 'group flex h-9 items-center gap-2 rounded px-2 font-medium text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 focus-visible:bg-gray-4 focus-visible:outline-0 xl:h-8',
         itemLabel: 'text-14 transition-colors xl:text-13',
-        itemSection: 'group-hover:text-gray m-0 text-gray-11 transition-colors',
+        itemSection:
+          'm-0 text-gray-11 transition-colors group-hover:text-gray-11',
       }}
     >
       <Base.Target>

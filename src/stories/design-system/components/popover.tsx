@@ -18,7 +18,7 @@ export const PopoverStory = () => {
             <h1 className='mb-2 text-16 font-semibold text-gray-13 xl:text-15'>
               Get Started
             </h1>
-            <p className='text-gray border-b border-gray-4 pb-4 leading-6 text-balance'>
+            <p className='border-b border-gray-4 pb-4 leading-6 text-balance text-gray-11'>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Consequatur possimus cupiditate molestias dolore, quasi ipsam
               rerum.

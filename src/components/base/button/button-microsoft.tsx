@@ -11,6 +11,7 @@ export const ButtonMicrosoft = ({ onClick }: Props) => {
       color='gray'
       icon='logos:microsoft-icon'
       label='Continue with Microsoft'
+      size='lg'
       variant='outline'
       onClick={onClick}
     />

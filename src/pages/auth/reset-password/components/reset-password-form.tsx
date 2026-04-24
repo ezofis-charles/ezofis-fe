@@ -63,14 +63,14 @@ export const ResetPasswordForm = () => {
           />
 
           <Link
-            className='block cursor-pointer text-center hover:underline'
+            className='block cursor-pointer text-center font-medium hover:underline'
             to='/sign-in'
           >
             Go to sign in
           </Link>
 
           {resetPasswordMutation.isError && (
-            <div className='text-red text-center'>
+            <div className='text-center text-red-11'>
               {resetPasswordMutation.error?.message}
             </div>
           )}

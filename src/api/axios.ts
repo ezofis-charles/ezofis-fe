@@ -10,6 +10,9 @@ declare module 'axios' {
 
 const axiosInstance = axios.create({
   baseURL: 'https://dummyjson.com/',
+  headers: {
+    'access-control-allow-origin': '*', // dev only
+  },
 })
 
 interface AxiosRequestConfig extends InternalAxiosRequestConfig {

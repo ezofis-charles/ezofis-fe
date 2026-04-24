@@ -15,7 +15,7 @@ export const SignUpForm = () => {
         className='text-center'
         description='Enter your email to continue'
         level={1}
-        title='Welcome'
+        title='Welcome to ezofis'
       />
 
       <form className='space-y-6' onSubmit={handleSubmit}>
@@ -49,14 +49,14 @@ export const SignUpForm = () => {
           />
 
           <Link
-            className='block cursor-pointer text-center hover:underline'
+            className='block cursor-pointer text-center font-medium hover:underline'
             to='/sign-in'
           >
             Already have an account? Sign in
           </Link>
 
           {signUpMutation.isError && (
-            <div className='text-red text-center'>
+            <div className='text-center text-red-11'>
               {signUpMutation.error?.message}
             </div>
           )}

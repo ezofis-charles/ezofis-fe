@@ -77,7 +77,7 @@ export const SignInOtp = () => {
 
           {otpMethod !== 'totp' && (
             <Button
-              className='text-gray w-full justify-center font-normal hover:bg-transparent hover:underline'
+              className='w-full justify-center font-normal text-gray-11 hover:bg-transparent hover:underline'
               color='gray'
               disabled={count !== 0}
               label={count === 0 ? 'Resend link' : `Resend link in ${count}s`}
@@ -88,7 +88,7 @@ export const SignInOtp = () => {
           )}
 
           {verifyOtpMutation.isError && (
-            <div className='text-red text-center'>
+            <div className='text-center text-red-11'>
               {verifyOtpMutation.error?.message}
             </div>
           )}

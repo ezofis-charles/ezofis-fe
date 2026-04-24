@@ -51,7 +51,7 @@ export const SignInMethod = () => {
       </div>
 
       <Link
-        className='block cursor-pointer text-center hover:underline'
+        className='block cursor-pointer text-center font-medium hover:underline'
         to='/sign-up'
       >
         Don't have an account? Sign up

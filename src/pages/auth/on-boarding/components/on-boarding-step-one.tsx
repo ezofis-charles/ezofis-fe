@@ -6,25 +6,27 @@ import { USER_AUTH_METHOD } from '@/types/user'
 import { useOnBoardingStore } from '../stores/use-on-boarding-store'
 
 export const OnBoardingStepOne = () => {
-  const { auth } = useSearch({ from: '/_auth/on-boarding' })
+  const { authMethod } = useSearch({ from: '/_auth/on-boarding' })
   const setStep = useOnBoardingStore((state) => state.setStep)
 
   const handleContinue = () => {
-    setStep(auth === USER_AUTH_METHOD.enum.email ? 'stepTwo' : 'stepThree')
+    setStep(
+      authMethod === USER_AUTH_METHOD.enum.email ? 'stepTwo' : 'stepThree',
+    )
   }
 
   return (
     <AnimatePop className='space-y-6'>
       <Title
         className='text-center'
-        description='Ezofis is an AI-first workflow platform. Design, automate, and orchestrate processes that adapt and improve over time.'
+        description="Build, automate, and scale your workflows with AI-powered precision. We'll set things up in a few quick steps so you can start creating smarter workflows right away."
         level={1}
-        title='Welcome to Ezofis'
+        title='Welcome to ezofis'
       />
 
       <Button
         className='w-full justify-center'
-        label='Continue'
+        label='Get started'
         size='lg'
         onClick={handleContinue}
       />

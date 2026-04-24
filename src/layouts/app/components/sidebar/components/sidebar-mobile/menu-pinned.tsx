@@ -31,7 +31,7 @@ export const MenuPinned = ({ items }: Props) => {
             className={
               pathname === item.route
                 ? 'text-primary'
-                : 'text-gray group-hover:text-gray-12'
+                : 'text-gray-11 group-hover:text-gray-12'
             }
           />
         </Link>
