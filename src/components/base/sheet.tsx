@@ -23,11 +23,11 @@ export const Sheet = ({ children, open, onClose }: Props) => {
         <Base.Overlay className='fixed inset-0 bg-black/40' />
         <Base.Content
           aria-describedby='bottom sheet'
-          className='border-gray-4 fixed right-0 bottom-0 left-0 z-250 h-fit rounded-t-2xl border-t bg-surface outline-none'
+          className='fixed right-0 bottom-0 left-0 z-250 h-fit rounded-t-2xl border-t border-gray-4 bg-surface outline-none'
         >
           <Base.Title className='hidden'>Sheet</Base.Title>
           <Base.Description className='hidden'>Sheet</Base.Description>
-          <Base.Handle className='bg-gray-6! my-2 w-12! rounded-full opacity-100!' />
+          <Base.Handle className='my-2 w-12! rounded-full bg-gray-6! opacity-100!' />
           {children}
         </Base.Content>
       </Base.Portal>

@@ -1,15 +1,19 @@
 import type { ReactNode } from 'react'
 import { Tabs as Base } from '@ark-ui/react/tabs'
 import { cn } from '@/utils/cn'
-import { indicatorClassName, triggerClassName } from './tabs-styles'
 
 interface Props {
   children: ReactNode
   value: null | string
   color?: 'gray' | 'primary' | 'secondary'
   noPadding?: boolean
-  variant?: 'outline' | 'solid' | 'subtle'
   onChange: (value: null | string) => void
+}
+
+const indicatorClassNameMap = {
+  gray: 'bg-gray-11',
+  primary: 'bg-primary-11',
+  secondary: 'bg-secondary-9',
 }
 
 export const Tabs = ({
@@ -17,20 +21,24 @@ export const Tabs = ({
   color = 'primary',
   noPadding = false,
   value,
-  variant = 'outline',
   onChange,
 }: Props) => {
   return (
     <Base.Root value={value} onValueChange={(e) => onChange(e.value)}>
       <Base.List
+        data-color={color}
         className={cn(
-          'relative flex h-12 items-center gap-2',
-          triggerClassName({ color, variant }),
+          'group/tabs relative flex h-11 items-center gap-2',
           noPadding && 'gap-6 **:data-[part=trigger]:px-0',
         )}
       >
         {children}
-        <Base.Indicator className={indicatorClassName({ color, variant })} />
+        <Base.Indicator
+          className={cn(
+            'bottom-0 h-0.5 w-(--width) rounded',
+            indicatorClassNameMap[color],
+          )}
+        />
       </Base.List>
     </Base.Root>
   )

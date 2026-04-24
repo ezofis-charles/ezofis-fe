@@ -28,7 +28,7 @@ export const PasswordRequirements = ({ password }: Props) => {
   )
 
   return (
-    <ul className='text-gray-10 space-y-2 text-12' role='list'>
+    <ul className='space-y-2 text-12 text-gray-10' role='list'>
       {requirements.map(({ id, isValid, label }) => (
         <li className='flex items-center gap-x-2' key={id} role='listitem'>
           <Icon

@@ -72,7 +72,7 @@ export const SignInForm = () => {
           </Link>
 
           {signInMutation.isError && (
-            <div className='text-center text-red'>
+            <div className='text-red text-center'>
               {signInMutation.error?.message}
             </div>
           )}

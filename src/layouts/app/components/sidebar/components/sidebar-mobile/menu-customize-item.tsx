@@ -17,7 +17,7 @@ export const MenuCustomizeItem = ({ index, item }: Props) => {
     >
       <Icon className='text-gray' name={item.icon} />
 
-      <div className='text-gray-12 flex-1 font-medium whitespace-nowrap'>
+      <div className='flex-1 font-medium whitespace-nowrap text-gray-12'>
         {item.label}
       </div>
 

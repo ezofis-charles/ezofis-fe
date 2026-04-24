@@ -1,8 +1,8 @@
 import { toast as sonnerToast } from 'sonner'
-import type { Props } from './toast'
+import type { ToastProps } from './toast'
 import { Toast } from './toast'
 
-export const showToast = (toast: Omit<Props, 'id'>) => {
+export const showToast = (toast: Omit<ToastProps, 'id'>) => {
   return sonnerToast.custom((id) => (
     <Toast
       description={toast.description}

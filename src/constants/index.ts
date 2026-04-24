@@ -7,6 +7,7 @@ export const SCREEN_SIZE = {
 } as const
 
 export const TOOLTIP_DELAY = 500
+
 export const ANIMATE_NORMAL = 0.15
 export const ANIMATE_FAST = 0.1
 export const ANIMATE_SLOW = 0.2

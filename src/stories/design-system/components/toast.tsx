@@ -15,6 +15,19 @@ export const ToastStory = () => {
           variant='outline'
           onClick={() =>
             showToast({
+              title: 'Event created successfully',
+            })
+          }
+        />
+      </Section>
+
+      <Section title='With Description'>
+        <Button
+          color='gray'
+          label='Default'
+          variant='outline'
+          onClick={() =>
+            showToast({
               description: 'Monday, March 3rd at 6.30 PM',
               title: 'Event created successfully',
             })
@@ -30,7 +43,6 @@ export const ToastStory = () => {
             variant='outline'
             onClick={() =>
               showToast({
-                description: 'Monday, March 3rd at 6.30 PM',
                 title: 'Event created successfully',
                 variant: 'success',
               })
@@ -42,7 +54,6 @@ export const ToastStory = () => {
             variant='outline'
             onClick={() =>
               showToast({
-                description: 'Monday, March 3rd at 6.30 PM',
                 title: 'Event already exists',
                 variant: 'warning',
               })
@@ -54,7 +65,6 @@ export const ToastStory = () => {
             variant='outline'
             onClick={() =>
               showToast({
-                description: 'Monday, March 3rd at 6.30 PM',
                 title: 'Error creating event',
                 variant: 'error',
               })
@@ -70,7 +80,6 @@ export const ToastStory = () => {
           variant='outline'
           onClick={() => {
             showToast({
-              description: 'Monday, March 3rd at 6.30 PM',
               title: 'Creating new event',
               variant: 'loading',
             })

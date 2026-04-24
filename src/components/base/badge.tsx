@@ -39,7 +39,7 @@ const colorClassName: Record<BadgeColor, string> = {
 
 export const Badge = ({ className, color = 'gray', label }: Props) => {
   const _className = cn(
-    'inline-flex h-6 w-fit shrink-0 items-center justify-center rounded px-2 text-12 font-medium whitespace-nowrap',
+    'inline-flex h-6 w-fit shrink-0 items-center justify-center rounded px-2 text-12 font-medium whitespace-nowrap transition-colors',
     colorClassName[color],
     className,
   )

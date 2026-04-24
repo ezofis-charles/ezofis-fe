@@ -56,7 +56,7 @@ export const SignUpForm = () => {
           </Link>
 
           {signUpMutation.isError && (
-            <div className='text-center text-red'>
+            <div className='text-red text-center'>
               {signUpMutation.error?.message}
             </div>
           )}

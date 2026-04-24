@@ -16,7 +16,7 @@ export const ProgressSemiCircleStory = () => {
           size={100}
           value={50}
           label={
-            <div className='text-gray-12 text-center font-semibold'>50%</div>
+            <div className='text-center font-semibold text-gray-12'>50%</div>
           }
         />
       </Section>

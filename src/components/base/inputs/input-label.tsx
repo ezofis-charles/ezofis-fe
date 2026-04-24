@@ -22,17 +22,17 @@ export const InputLabel = ({
   return (
     <div
       className={cn(
-        'flex items-center gap-1 text-14 font-medium text-gray xl:text-13',
+        'text-gray flex items-center gap-1 text-14 font-medium xl:text-13',
         className,
       )}
     >
       {label}
-      {optional && <span className='text-gray-10 font-normal'>(optional)</span>}
+      {optional && <span className='font-normal text-gray-10'>(optional)</span>}
       {required && <span className='text-red'>*</span>}
       {tooltip && (
         <Tooltip content={tooltip} position='top-start' width={tooltipWidth}>
           <Icon
-            className='text-gray-9 -mt-0.5 cursor-pointer transition-colors hover:text-gray'
+            className='hover:text-gray -mt-0.5 cursor-pointer text-gray-9 transition-colors'
             name='tabler:help'
           />
         </Tooltip>

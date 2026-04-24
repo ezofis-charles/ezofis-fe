@@ -12,108 +12,62 @@ export const TabsStory = () => {
 
       <Section title='Default'>
         <Tabs value={value} onChange={setValue}>
-          <Tabs.Tab label='Home' value='tab1' />
-          <Tabs.Tab label='Users' value='tab2' />
-          <Tabs.Tab label='Settings' value='tab3' />
+          <Tabs.Tab label='Inbox' value='tab1' />
+          <Tabs.Tab label='Sent' value='tab2' />
+          <Tabs.Tab label='Closed' value='tab3' />
         </Tabs>
       </Section>
 
       <Section title='Disabled'>
         <Tabs value={value} onChange={setValue}>
-          <Tabs.Tab label='Home' value='tab1' />
-          <Tabs.Tab label='Users' value='tab2' disabled />
-          <Tabs.Tab label='Settings' value='tab3' />
+          <Tabs.Tab label='Inbox' value='tab1' />
+          <Tabs.Tab label='Sent' value='tab2' disabled />
+          <Tabs.Tab label='Closed' value='tab3' />
         </Tabs>
       </Section>
 
       <Section title='With Icon'>
         <Tabs value={value} onChange={setValue}>
-          <Tabs.Tab icon='tabler:dashboard' label='Home' value='tab1' />
-          <Tabs.Tab icon='tabler:user' label='Users' value='tab2' />
-          <Tabs.Tab icon='tabler:settings' label='Settings' value='tab3' />
+          <Tabs.Tab icon='tabler:message-2' label='Inbox' value='tab1' />
+          <Tabs.Tab icon='tabler:message-2-share' label='Sent' value='tab2' />
+          <Tabs.Tab icon='tabler:message-2-check' label='Closed' value='tab3' />
+        </Tabs>
+      </Section>
+
+      <Section title='With Badge'>
+        <Tabs value={value} onChange={setValue}>
+          <Tabs.Tab badgeLabel='10' label='Inbox' value='tab1' />
+          <Tabs.Tab badgeLabel='5' label='Sent' value='tab2' />
+          <Tabs.Tab badgeLabel='0' label='Closed' value='tab3' />
         </Tabs>
       </Section>
 
       <Section title='No Padding'>
         <Tabs value={value} noPadding onChange={setValue}>
-          <Tabs.Tab label='Home' value='tab1' />
-          <Tabs.Tab label='Users' value='tab2' />
-          <Tabs.Tab label='Settings' value='tab3' />
+          <Tabs.Tab label='Inbox' value='tab1' />
+          <Tabs.Tab label='Sent' value='tab2' />
+          <Tabs.Tab label='Closed' value='tab3' />
         </Tabs>
       </Section>
 
-      <Section title='Primary'>
+      <Section title='Colors'>
         <div className='space-y-4'>
           <Tabs value={value} onChange={setValue}>
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
+            <Tabs.Tab label='Inbox' value='tab1' />
+            <Tabs.Tab label='Sent' value='tab2' />
+            <Tabs.Tab label='Closed' value='tab3' />
           </Tabs>
 
-          <Tabs value={value} variant='subtle' onChange={setValue}>
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
-          </Tabs>
-
-          <Tabs value={value} variant='solid' onChange={setValue}>
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
-          </Tabs>
-        </div>
-      </Section>
-
-      <Section title='Secondary'>
-        <div className='space-y-4'>
           <Tabs color='secondary' value={value} onChange={setValue}>
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
+            <Tabs.Tab label='Inbox' value='tab1' />
+            <Tabs.Tab label='Sent' value='tab2' />
+            <Tabs.Tab label='Closed' value='tab3' />
           </Tabs>
 
-          <Tabs
-            color='secondary'
-            value={value}
-            variant='subtle'
-            onChange={setValue}
-          >
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
-          </Tabs>
-
-          <Tabs
-            color='secondary'
-            value={value}
-            variant='solid'
-            onChange={setValue}
-          >
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
-          </Tabs>
-        </div>
-      </Section>
-
-      <Section title='Gray'>
-        <div className='space-y-4'>
           <Tabs color='gray' value={value} onChange={setValue}>
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
-          </Tabs>
-
-          <Tabs color='gray' value={value} variant='subtle' onChange={setValue}>
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
-          </Tabs>
-
-          <Tabs color='gray' value={value} variant='solid' onChange={setValue}>
-            <Tabs.Tab label='Home' value='tab1' />
-            <Tabs.Tab label='Users' value='tab2' />
-            <Tabs.Tab label='Settings' value='tab3' />
+            <Tabs.Tab label='Inbox' value='tab1' />
+            <Tabs.Tab label='Sent' value='tab2' />
+            <Tabs.Tab label='Closed' value='tab3' />
           </Tabs>
         </div>
       </Section>

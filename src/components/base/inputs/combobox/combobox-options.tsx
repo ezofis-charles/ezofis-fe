@@ -65,7 +65,7 @@ export const ComboboxOptions = ({
     <Base.Options className='p-1'>
       <ScrollArea className='h-54'>
         {!hasOptions && !creatable && (
-          <div className='flex h-10 items-center justify-center text-14 text-gray xl:text-13'>
+          <div className='text-gray flex h-10 items-center justify-center text-14 xl:text-13'>
             No data found
           </div>
         )}

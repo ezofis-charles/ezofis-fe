@@ -27,7 +27,7 @@ export const Menu = ({ menuGroup, open, onClose, onCustomize }: Props) => {
         <ButtonIcon
           color='gray'
           icon='material-symbols:page-info-outline-rounded'
-          size='xl'
+          size='lg'
           variant='ghost'
           onClick={onCustomize}
         />

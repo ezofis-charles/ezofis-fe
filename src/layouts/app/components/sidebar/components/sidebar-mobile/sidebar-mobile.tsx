@@ -28,7 +28,7 @@ export const SidebarMobile = ({ menuGroup }: Props) => {
         <ButtonIcon
           color='gray'
           icon='material-symbols:unfold-more-rounded'
-          size='xl'
+          size='lg'
           variant='ghost'
           onClick={() => setOpen(true)}
         />
