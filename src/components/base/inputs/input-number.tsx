@@ -63,6 +63,7 @@ const InputNumber = forwardRef<HTMLInputElement, Props>(
         classNames={{
           control:
             'text-gray border-gray-5 transition-colors hover:bg-gray-4 hover:text-gray-12',
+          controls: 'h-full!',
           description: classNames.description,
           error: classNames.error,
           input: classNames.input,

@@ -39,8 +39,11 @@ export const FloatingPanel = ({
         <Base.Content className='rounded-lg border border-gray-4 bg-surface p-0 shadow-xl data-maximized:rounded-none data-maximized:border-0'>
           <Base.DragTrigger>
             <Base.Header className='flex h-13 flex-wrap items-center gap-1 pr-2 pl-4'>
-              <Icon name='tabler:grip-vertical' />
-              <Base.Title className='ml-1 flex-1 text-14 font-semibold text-gray-13 xl:text-13/6'>
+              <Icon
+                className='text-gray-11'
+                name='material-symbols:drag-indicator'
+              />
+              <Base.Title className='ml-1 flex-1 text-14 font-semibold text-gray-13 xl:text-13'>
                 {title}
               </Base.Title>
               <Base.Control>

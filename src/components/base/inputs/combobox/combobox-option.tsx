@@ -25,7 +25,7 @@ export const ComboboxOption = ({
       disabled={disabled}
       value={id}
       className={cn(
-        'group flex min-h-8 gap-2.5 rounded px-1.5 py-1 transition-colors hover:bg-gray-4 data-combobox-selected:bg-gray-4',
+        'group flex min-h-9 gap-2.5 rounded px-1.5 py-1 transition-colors hover:bg-gray-4 data-combobox-selected:bg-gray-4 xl:min-h-8',
         !description && 'items-center',
       )}
     >
@@ -36,11 +36,11 @@ export const ComboboxOption = ({
       )}
 
       <div>
-        <div className='text-14 font-medium text-gray-12 xl:text-13/5'>
+        <div className='text-14 font-medium text-gray-11 xl:text-13'>
           {name}
         </div>
         {description && (
-          <div className='text-14 text-gray-10 xl:text-13/5'>{description}</div>
+          <div className='text-14 text-gray-10 xl:text-13'>{description}</div>
         )}
       </div>
     </Base.Option>

@@ -35,11 +35,11 @@ export const Slider = ({
       step={step}
       value={value}
       classNames={{
-        bar: 'bg-primary',
-        label: 'bg-primary rounded text-white',
-        mark: 'data-filled:border-primary border-gray-4 bg-white',
-        markLabel: 'text-gray text-12/6',
-        thumb: 'border-primary bg-white shadow',
+        bar: 'bg-primary-9',
+        label: 'rounded bg-primary-9 text-white',
+        mark: 'border-gray-4 bg-white data-filled:border-primary-9',
+        markLabel: 'text-12/6 text-gray-11',
+        thumb: 'border-primary-9 bg-white shadow',
         track: 'before:bg-gray-4',
         trackContainer: 'data-disabled:opacity-50',
       }}

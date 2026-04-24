@@ -15,7 +15,7 @@ interface Props {
 
 const colorClassNames: Record<ProgressColor, string> = {
   green: 'last:stroke-green-9',
-  primary: 'last:stroke-primary',
+  primary: 'last:stroke-primary-9',
   red: 'last:stroke-red-9',
   secondary: 'last:stroke-secondary-9',
 }

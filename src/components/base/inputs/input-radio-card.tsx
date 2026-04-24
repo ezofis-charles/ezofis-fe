@@ -36,7 +36,7 @@ export const InputRadioCard = ({
       radius='md'
       value={value}
       className={cn(
-        'data-checked:border-primary rounded border-gray-4 bg-surface p-4 outline-primary-8 disabled:pointer-events-none disabled:opacity-50',
+        'rounded border-gray-4 bg-surface p-4 outline-primary-8 disabled:pointer-events-none disabled:opacity-50 data-checked:border-primary-8',
         className,
       )}
       onClick={onClick}
@@ -45,8 +45,8 @@ export const InputRadioCard = ({
       {!children && (
         <div className='flex items-center gap-3'>
           {icon && (
-            <div className='text-gray flex size-11 items-center justify-center rounded-full bg-gray-3'>
-              <Icon className='lg:size-5' name={icon} />
+            <div className='flex size-10 items-center justify-center rounded-full bg-gray-3 text-gray-11'>
+              <Icon className='size-5 xl:size-5' name={icon} />
             </div>
           )}
 

@@ -19,10 +19,10 @@ const InputRadio = forwardRef<HTMLInputElement, Props>(
           description: 'mt-1 pl-2 text-14 text-balance text-gray-10 xl:text-13',
           icon: 'text-white',
           inner: 'flex size-5 items-center justify-center',
-          label: 'pl-2 text-14 font-medium text-gray-12 xl:text-13/5',
+          label: 'pl-2 text-14 font-medium text-gray-12 xl:text-13',
           radio: cn(
-            'checked:border-primary checked:bg-primary border-gray-8 bg-surface focus-within:outline-primary-8 disabled:opacity-50',
-            Boolean(error) && 'border-red-9',
+            'border-gray-8 bg-surface checked:border-primary-9 checked:bg-primary-9 focus-within:outline-primary-8 disabled:opacity-50',
+            Boolean(error) && 'border-red-8',
           ),
         }}
         onChange={handleChange}

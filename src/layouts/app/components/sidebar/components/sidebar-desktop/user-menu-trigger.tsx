@@ -29,7 +29,7 @@ export const UserMenuTrigger = () => {
       <AnimatePresence className='ml-2.5 flex-1'>
         <div className='flex items-center select-none'>
           <div className='min-w-0 flex-1'>
-            <div className='truncate text-14 font-medium text-gray-12 xl:text-13/5'>
+            <div className='truncate text-14 font-medium text-gray-12 xl:text-13'>
               {user.name}
             </div>
             <div className='truncate text-12/5'>{user.email}</div>

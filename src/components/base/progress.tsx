@@ -15,7 +15,7 @@ interface Props {
 
 const colorClassNames: Record<ProgressColor, string> = {
   green: 'bg-green-9',
-  primary: 'bg-primary',
+  primary: 'bg-primary-9',
   red: 'bg-red-9',
   secondary: 'bg-secondary-9',
 }

@@ -44,7 +44,7 @@ export const InputCheckboxCardStory = () => {
           <InputCheckboxCard
             checked={selected.includes(1)}
             description='Lorem ipsum dolor sit'
-            icon='tabler:smartphone'
+            icon='tabler:device-mobile'
             label='Label'
             onClick={() => handleClick(1)}
           />

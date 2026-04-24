@@ -50,7 +50,7 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
                 <div className='flex size-5 items-center justify-center text-gray-10'>
                   <Icon name='tabler:file' />
                 </div>
-                <div className='text-14 font-medium text-gray-12 xl:text-13'>
+                <div className='text-14 font-medium text-gray-11 xl:text-13'>
                   {node.name}
                 </div>
               </TreeView.ItemText>

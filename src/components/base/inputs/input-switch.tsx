@@ -20,11 +20,11 @@ const InputSwitch = forwardRef<HTMLInputElement, Props>(
           body: 'inline-flex',
           description: 'mt-1 pl-2 text-14 text-gray-10 xl:text-13',
           input: 'peer',
-          label: 'pl-2 text-14 font-medium text-gray-12 xl:text-13/5',
+          label: 'pl-2 text-14 font-medium text-gray-12 xl:text-13',
           labelWrapper: 'data-[disabled]:opacity-50',
           thumb: 'bg-white shadow-sm',
           track: cn(
-            'peer-checked:bg-primary mt-0.5 bg-gray-6 focus-within:outline-primary-8',
+            'mt-0.5 bg-gray-6 peer-checked:bg-primary-9 focus-within:outline-primary-8',
             Boolean(error) && 'border border-red-9',
           ),
         }}

@@ -17,11 +17,11 @@ export const Tour = ({ tour }: Props) => {
         <Base.Spotlight className='rounded!' />
         <Base.Positioner className='fixed z-(--z-index) data-[type=dialog]:inset-0 data-[type=dialog]:flex data-[type=dialog]:transform-none! data-[type=dialog]:items-center data-[type=dialog]:justify-center'>
           <Base.Content className='rounded-lg border border-gray-4 bg-surface p-4 shadow-xl'>
-            <Base.Title className='text-base font-semibold text-gray-13' />
-            <Base.Description className='text-gray py-3 text-14 xl:text-13/6' />
+            <Base.Title className='mb-2 text-16 font-semibold text-gray-13 xl:text-15' />
+            <Base.Description className='text-14 leading-6 text-gray-11 xl:text-13' />
 
-            <div className='mt-1 flex flex-wrap items-center justify-between gap-2 border-t border-gray-3 pt-4'>
-              <Base.ProgressText className='text-gray text-14 xl:text-13/6' />
+            <div className='mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-gray-3 pt-4'>
+              <Base.ProgressText className='text-14 text-gray-11 xl:text-13' />
               <Base.Control className='flex items-center gap-2'>
                 <Base.Actions>
                   {(actions) =>

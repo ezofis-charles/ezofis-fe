@@ -17,7 +17,7 @@ export const UserMenuTrigger = () => {
       </div>
 
       <div className='flex-1 select-none'>
-        <div className='truncate text-14 font-medium text-gray-12 xl:text-13/5'>
+        <div className='truncate text-14 font-medium text-gray-12 xl:text-13'>
           {user.name}
         </div>
         <div className='truncate text-12/5'>{user.email}</div>

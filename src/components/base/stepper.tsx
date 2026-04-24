@@ -37,10 +37,10 @@ export const Stepper = ({
         separator: 'rounded-full bg-gray-3',
         step: 'disabled:opacity-50!',
         stepBody: 'ml-4',
-        stepCompletedIcon: 'text-primary [&>svg]:!size-3.5',
+        stepCompletedIcon: 'text-primary-11 [&>svg]:!size-3.5',
         stepDescription: 'm-0 text-12/5 text-gray-10',
         stepIcon:
-          'text-gray data-[progress]:bg-primary size-8 min-h-8 min-w-8 border-0 bg-gray-3 text-14 font-semibold data-[completed]:bg-primary-4 data-[progress]:text-white xl:text-13/5',
+          'size-8 min-h-8 min-w-8 border-0 bg-gray-3 text-14 font-semibold text-gray-11 data-[completed]:bg-primary-4 data-[progress]:bg-primary-9 data-[progress]:text-white xl:text-13',
         stepLabel: cn(
           'text-14 font-medium text-gray-12 xl:text-13',
           orientation === 'vertical' && 'flex min-h-8.5 items-center',

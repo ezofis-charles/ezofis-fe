@@ -77,20 +77,20 @@ const InputDate = forwardRef<HTMLInputElement, Props>(
         allowDeselect
         classNames={{
           calendarHeaderControl:
-            'text-gray transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50',
+            'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50',
           calendarHeaderLevel:
-            'text-gray text-14 font-semibold transition-colors hover:bg-gray-4 hover:text-gray-12 xl:text-13',
-          day: 'text-gray data-[selected]:!bg-primary data-[today]:text-primary text-14 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:opacity-100 data-[outside]:hover:text-gray-12 data-[selected]:!font-medium data-[selected]:!text-white data-[today]:bg-primary-4 data-[today]:font-medium xl:text-13',
+            'text-14 font-semibold text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 xl:text-13',
+          day: 'text-14 text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:opacity-100 data-[outside]:hover:text-gray-12 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white data-[today]:bg-primary-4 data-[today]:font-medium data-[today]:text-primary-11 xl:text-13',
           description: classNames.description,
           error: classNames.error,
           input: classNames.input,
           label: classNames.label,
           monthsListControl:
-            'text-gray data-[selected]:!bg-primary transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!font-medium data-[selected]:!text-white',
+            'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',
           weekday: 'p-2 text-14 text-gray-10 xl:text-13',
           wrapper: classNames.wrapper,
           yearsListControl:
-            'text-gray data-[selected]:!bg-primary transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!font-medium data-[selected]:!text-white',
+            'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',
         }}
         popoverProps={{
           classNames: {

@@ -29,11 +29,11 @@ const InputCheckbox = forwardRef<HTMLInputElement, Props>(
           icon: 'w-[50%] text-white',
           inner: 'flex size-5 items-center justify-center',
           input: cn(
-            'checked:border-primary checked:bg-primary data-[indeterminate]:border-primary data-[indeterminate]:bg-primary rounded-[3px] border-gray-8 bg-surface focus-within:outline-primary-8 disabled:opacity-50',
-            Boolean(error) && 'border-red-9',
+            'rounded-[3px] border-gray-8 bg-surface checked:border-primary-9 checked:bg-primary-9 focus-within:outline-primary-8 disabled:opacity-50 data-indeterminate:border-primary-9 data-indeterminate:bg-primary-9',
+            Boolean(error) && 'border-red-8',
           ),
           label: cn(
-            'pl-2 text-14 font-medium text-gray-12 xl:text-13/5',
+            'pl-2 text-14 font-medium text-gray-12 xl:text-13',
             labelClassName,
           ),
         }}

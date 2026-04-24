@@ -10,7 +10,7 @@ interface Props {
 
 const colorClass = {
   gray: 'border-gray-4 bg-gray-9',
-  primary: 'border-primary-4 bg-primary',
+  primary: 'border-primary-4 bg-primary-9',
   secondary: 'border-secondary-4 bg-secondary-9',
 }
 
@@ -23,7 +23,7 @@ export const Timeline = ({ children, className, color = 'primary' }: Props) => {
       classNames={{
         item: 'pl-2.5 before:border-gray-3',
         itemBullet: cn('border-4', colorClass[color]),
-        itemTitle: 'mb-2 font-medium text-gray-12',
+        itemTitle: 'mb-2 leading-4 font-medium text-gray-12',
       }}
     >
       {children}

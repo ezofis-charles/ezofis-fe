@@ -241,7 +241,7 @@ export const IndexStory = () => {
     <>
       <Header title='Components' />
 
-      <div className='grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4'>
+      <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4'>
         {components.map((group, index) => (
           <ul className='space-y-6' key={index}>
             {group.map((item) => (

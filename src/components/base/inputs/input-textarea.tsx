@@ -87,7 +87,7 @@ const InputTextarea = forwardRef<HTMLTextAreaElement, Props>(
           error: classNames.error,
           input: cn(
             classNames.input,
-            'py-1 group-data-[size=sm]:h-auto group-data-[size=sm]:min-h-auto',
+            'xl:group-data-[size=sm]:min-h-autogroup-data-[size=sm]:min-h-auto py-1 group-data-[size=sm]:h-auto xl:group-data-[size=sm]:h-auto',
           ),
           label: classNames.label,
           wrapper: classNames.wrapper,

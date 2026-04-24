@@ -42,7 +42,7 @@ export const TimelineStory = () => {
         <Timeline>
           {items.map((item) => (
             <Timeline.Item key={item.title} title={item.title}>
-              <div className='text-gray text-12'>{item.description}</div>
+              <div className='text-12 text-gray-11'>{item.description}</div>
             </Timeline.Item>
           ))}
         </Timeline>

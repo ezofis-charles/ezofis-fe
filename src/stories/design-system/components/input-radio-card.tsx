@@ -36,7 +36,7 @@ export const InputRadioCardStory = () => {
           <InputRadioCard
             checked={value === 1}
             description='Lorem ipsum dolor sit'
-            icon='tabler:smartphone'
+            icon='tabler:device-mobile'
             label='Label'
             onClick={() => setValue(1)}
           />
