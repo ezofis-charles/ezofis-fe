@@ -66,7 +66,7 @@ export const InputRadioCard = ({
               <div
                 className={cn(
                   'font-medium',
-                  description ? 'text-gray-13' : 'text-gray-12',
+                  description ? 'text-gray-12' : 'text-gray-11',
                 )}
               >
                 {label}

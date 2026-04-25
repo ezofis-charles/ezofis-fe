@@ -9,7 +9,7 @@ export const OnBoardingStepTwo = () => {
 
   return (
     <AnimatePop
-      description='Create a strong password to protect your workspace.'
+      description='Choose a strong password to keep your workspace safe.'
       title='Secure your account'
     >
       <form className='space-y-6' onSubmit={handleSubmit}>

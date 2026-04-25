@@ -1,44 +1,40 @@
-import { useState } from 'react'
 import type { Option } from '@/types/option'
 import { Button } from '@/components/base/button'
 import { InputRadioCard } from '@/components/base/inputs'
 import { AnimatePop } from '@/pages/auth/animate-pop'
 import { useOnBoardingStore } from '../stores/use-on-boarding-store'
 
-const automationExperienceOptions: Option[] = [
+const experienceOptions: Option[] = [
   {
-    description: 'Just getting started (no automation yet).',
-    id: 'beginner',
+    description: 'Just getting started.',
+    id: 'Beginner',
     name: 'Beginner',
   },
   {
-    description: 'Some workflows automated (team-level).',
-    id: 'intermediate',
+    description: 'Some workflows automated.',
+    id: 'Intermediate',
     name: 'Intermediate',
   },
   {
-    description: 'Department-level automation in place.',
-    id: 'advanced',
+    description: 'Department-level automation.',
+    id: 'Advanced',
     name: 'Advanced',
   },
   {
-    description: 'Company-wide automation at scale.',
-    id: 'enterprise',
+    description: 'Company-wide automation.',
+    id: 'Enterprise',
     name: 'Enterprise',
   },
 ]
 
 export const OnBoardingStepFour = () => {
   const setStep = useOnBoardingStore((state) => state.setStep)
-  const setOnboardingData = useOnBoardingStore(
-    (state) => state.setOnboardingData,
-  )
-  const [value, setValue] = useState<null | string>(null)
+  const experience = useOnBoardingStore((state) => state.experience)
+  const setExperience = useOnBoardingStore((state) => state.setExperience)
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
     e.stopPropagation()
-    setOnboardingData('automationExperience', value || '')
     setStep('stepFive')
   }
 
@@ -49,13 +45,13 @@ export const OnBoardingStepFour = () => {
     >
       <form className='space-y-6' onSubmit={handleSubmit}>
         <div className='space-y-4'>
-          {automationExperienceOptions.map((option) => (
+          {experienceOptions.map((option) => (
             <InputRadioCard
-              checked={value === option.id}
+              checked={experience === option.id}
               description={option.description}
               key={option.id}
               label={option.name}
-              onClick={() => setValue(option.id)}
+              onClick={() => setExperience(option.id)}
             />
           ))}
         </div>

@@ -16,7 +16,7 @@ export const OnBoardingStepOne = () => {
 
   return (
     <AnimatePop
-      description="Build, automate, and scale your workflows with AI-powered precision. We'll set things up in a few quick steps so you can start creating smarter workflows right away."
+      description="Build, automate, and scale your workflows with AI. A few quick steps and you're ready to go."
       title='Welcome to ezofis'
     >
       <Button

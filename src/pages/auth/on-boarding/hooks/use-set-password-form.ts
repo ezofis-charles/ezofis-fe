@@ -17,8 +17,9 @@ type SetPasswordRequest = z.infer<typeof SetPasswordRequestSchema>
 
 export default function useResetPasswordForm() {
   const setStep = useOnBoardingStore((state) => state.setStep)
-  const setOnboardingData = useOnBoardingStore(
-    (state) => state.setOnboardingData,
+  const setPassword = useOnBoardingStore((state) => state.setPassword)
+  const setConfirmPassword = useOnBoardingStore(
+    (state) => state.setConfirmPassword,
   )
 
   const defaultValues: SetPasswordRequest = {
@@ -32,8 +33,8 @@ export default function useResetPasswordForm() {
       onSubmit: SetPasswordRequestSchema,
     },
     onSubmit: async ({ value }) => {
-      setOnboardingData('password', value.password)
-      setOnboardingData('confirmPassword', value.confirmPassword)
+      setPassword(value.password)
+      setConfirmPassword(value.confirmPassword)
       setStep('stepThree')
     },
   })
