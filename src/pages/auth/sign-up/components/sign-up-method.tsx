@@ -1,7 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 import { useSignUpStore } from '../stores/use-sign-up-store'
 
 export const SignUpMethod = () => {
@@ -17,32 +16,26 @@ export const SignUpMethod = () => {
   }
 
   return (
-    <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
-      <Title
-        className='text-center'
-        level={1}
-        title='Create Your Account'
-        customDescription={
-          <p className='text-14 text-pretty text-gray-11 xl:text-13/6'>
-            By signing up, you agree to our{' '}
-            <Link
-              className='cursor-pointer hover:underline'
-              to='/terms-of-service'
-            >
-              Terms of Service
-            </Link>{' '}
-            and{' '}
-            <Link
-              className='cursor-pointer hover:underline'
-              to='/privacy-policy'
-            >
-              Privacy Policy
-            </Link>
-            .
-          </p>
-        }
-      />
-
+    <AnimatePop
+      disableInitialAnimation={isInitialRender}
+      title='Create Your Account'
+      customDescription={
+        <p className='text-14 text-pretty text-gray-11 xl:text-13/6'>
+          By signing up, you agree to our{' '}
+          <Link
+            className='cursor-pointer hover:underline'
+            to='/terms-of-service'
+          >
+            Terms of Service
+          </Link>{' '}
+          and{' '}
+          <Link className='cursor-pointer hover:underline' to='/privacy-policy'>
+            Privacy Policy
+          </Link>
+          .
+        </p>
+      }
+    >
       <div className='w-full space-y-4'>
         <Button
           className='w-full justify-center'

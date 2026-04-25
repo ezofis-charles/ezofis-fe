@@ -1,8 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { useEffect } from 'react'
 import { Button } from '@/components/base/button'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 import useResendLinkMutation from '../hooks/use-resend-link-mutation'
 
 export const ForgotPasswordSuccess = () => {
@@ -24,14 +23,10 @@ export const ForgotPasswordSuccess = () => {
   }
 
   return (
-    <AnimatePop className='space-y-6'>
-      <Title
-        className='text-center'
-        description="We've sent a reset link to your email. Follow the instructions to set a new password."
-        level={1}
-        title='Check your email'
-      />
-
+    <AnimatePop
+      description="We've sent a reset link to your email. Follow the instructions to set a new password."
+      title='Check your email'
+    >
       <div className='space-y-4'>
         <Button
           className='w-full justify-center'

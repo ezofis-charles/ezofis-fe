@@ -1,8 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
 import { InputText } from '@/components/base/inputs'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 import { getFieldError } from '@/utils/form'
 import useSignUpForm from '../hooks/use-sign-up-form'
 
@@ -10,14 +9,10 @@ export const SignUpForm = () => {
   const { form, handleSubmit, signUpMutation } = useSignUpForm()
 
   return (
-    <AnimatePop className='space-y-6'>
-      <Title
-        className='text-center'
-        description='Enter your email to continue'
-        level={1}
-        title='Welcome to ezofis'
-      />
-
+    <AnimatePop
+      description='Enter your email to continue'
+      title='Welcome to ezofis'
+    >
       <form className='space-y-6' onSubmit={handleSubmit}>
         <form.Field
           name='email'

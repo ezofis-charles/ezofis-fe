@@ -1,7 +1,6 @@
 import { useRouter } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 
 export const OnBoardingStepFive = () => {
   const router = useRouter()
@@ -15,14 +14,10 @@ export const OnBoardingStepFive = () => {
   }
 
   return (
-    <AnimatePop className='space-y-6'>
-      <Title
-        className='text-center'
-        description='Select the areas where you need the most help.'
-        level={1}
-        title='Business challenges'
-      />
-
+    <AnimatePop
+      description='Select the areas where you need the most help.'
+      title='Business challenges'
+    >
       <div className='space-y-2'>
         <Button
           className='w-full justify-center'

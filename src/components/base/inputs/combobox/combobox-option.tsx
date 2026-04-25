@@ -36,7 +36,7 @@ export const ComboboxOption = ({
       )}
 
       <div>
-        <div className='text-14 font-medium text-gray-11 xl:text-13'>
+        <div className='text-14 font-medium text-gray-12 xl:text-13'>
           {name}
         </div>
         {description && (

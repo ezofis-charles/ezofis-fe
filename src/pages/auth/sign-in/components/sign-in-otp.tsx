@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
 import { Button } from '@/components/base/button'
 import { InputPin } from '@/components/base/inputs'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 import useResendOtpMutation from '../hooks/use-resend-otp-mutation'
 import useVerifyOtpForm from '../hooks/use-verify-otp-form'
 import { useSignInStore } from '../stores/use-sign-in-store'
@@ -38,14 +37,7 @@ export const SignInOtp = () => {
   }
 
   return (
-    <AnimatePop className='space-y-6'>
-      <Title
-        className='text-center'
-        description={description()}
-        level={1}
-        title='Two-Step Verification'
-      />
-
+    <AnimatePop description={description()} title='Two-Step Verification'>
       <form className='space-y-6' onSubmit={handleSubmit}>
         <form.Field
           name='otp'

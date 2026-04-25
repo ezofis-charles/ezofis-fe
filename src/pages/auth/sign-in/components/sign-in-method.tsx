@@ -1,7 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 import { useSignInStore } from '../stores/use-sign-in-store'
 
 export const SignInMethod = () => {
@@ -17,14 +16,11 @@ export const SignInMethod = () => {
   }
 
   return (
-    <AnimatePop className='space-y-6' disableInitialAnimation={isInitialRender}>
-      <Title
-        className='text-center'
-        description='Choose how you want to continue'
-        level={1}
-        title='Sign in to your account'
-      />
-
+    <AnimatePop
+      description='Choose how you want to continue'
+      disableInitialAnimation={isInitialRender}
+      title='Sign in to your account'
+    >
       <div className='w-full space-y-4'>
         <Button
           className='w-full justify-center'

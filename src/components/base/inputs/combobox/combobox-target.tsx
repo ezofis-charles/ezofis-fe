@@ -81,7 +81,7 @@ const ComboboxTarget = forwardRef<HTMLButtonElement, Props>(
       }
 
       return (
-        <div className='flex items-center gap-1 py-1'>
+        <div className='flex h-9 items-center gap-1 py-1'>
           <div className='truncate rounded bg-gray-4 px-2 py-0.5 text-14 font-medium whitespace-nowrap text-gray-12 xl:text-13'>
             {firstValue?.name}
           </div>

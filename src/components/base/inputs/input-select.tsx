@@ -6,6 +6,7 @@ import { useLocalSearch } from './combobox/hooks/use-local-search'
 
 interface Props extends SelectProps {
   value: null | Option
+  size?: 'md' | 'sm'
   onChange: (value: null | Option) => void
 }
 

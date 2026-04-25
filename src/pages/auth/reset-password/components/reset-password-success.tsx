@@ -1,7 +1,6 @@
 import { useNavigate } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 
 export const ResetPasswordSuccess = () => {
   const navigate = useNavigate()
@@ -11,14 +10,10 @@ export const ResetPasswordSuccess = () => {
   }
 
   return (
-    <AnimatePop className='space-y-6'>
-      <Title
-        className='text-center'
-        description='Your password has been reset. You can now sign in with your new password.'
-        level={1}
-        title='Password reset successful'
-      />
-
+    <AnimatePop
+      description='Your password has been reset. You can now sign in with your new password.'
+      title='Password reset successful'
+    >
       <Button
         className='w-full justify-center'
         label='Go to sign in'

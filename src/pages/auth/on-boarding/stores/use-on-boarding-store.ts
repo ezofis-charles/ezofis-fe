@@ -8,16 +8,38 @@ type Step =
   | 'stepTwo'
   | 'validateLink'
 
-type Store = {
+type OnboardingData = {
+  automationExperience: string
+  companySize: string
+  confirmPassword: string
+  department: string
   password: string
+  role: string
+}
+
+type Store = {
+  onboardingData: OnboardingData
   step: Step
-  setPassword: (password: string) => void
+  setOnboardingData: <K extends keyof OnboardingData>(
+    key: K,
+    value: OnboardingData[K],
+  ) => void
   setStep: (step: Step) => void
 }
 
 export const useOnBoardingStore = create<Store>()((set) => ({
-  password: '',
   step: 'validateLink',
-  setPassword: (password: string) => set({ password }),
+  setOnboardingData: (key, value) =>
+    set((state) => ({
+      onboardingData: { ...state.onboardingData, [key]: value },
+    })),
   setStep: (step: Step) => set({ step }),
+  onboardingData: {
+    automationExperience: '',
+    companySize: '',
+    confirmPassword: '',
+    department: '',
+    password: '',
+    role: '',
+  },
 }))

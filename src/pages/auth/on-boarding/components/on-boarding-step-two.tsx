@@ -1,7 +1,6 @@
 import { Button } from '@/components/base/button'
 import { InputPassword } from '@/components/base/inputs'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 import { getFieldError } from '@/utils/form'
 import useSetPasswordForm from '../hooks/use-set-password-form'
 
@@ -9,14 +8,10 @@ export const OnBoardingStepTwo = () => {
   const { form, handleSubmit } = useSetPasswordForm()
 
   return (
-    <AnimatePop className='space-y-6'>
-      <Title
-        className='text-center'
-        description='Create a strong password to protect your workspace.'
-        level={1}
-        title='Secure your account'
-      />
-
+    <AnimatePop
+      description='Create a strong password to protect your workspace.'
+      title='Secure your account'
+    >
       <form className='space-y-6' onSubmit={handleSubmit}>
         <form.Field
           name='password'

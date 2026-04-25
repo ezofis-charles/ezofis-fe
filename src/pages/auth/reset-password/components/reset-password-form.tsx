@@ -1,8 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { Button } from '@/components/base/button'
 import { InputPassword } from '@/components/base/inputs'
-import { Title } from '@/components/base/title'
-import { AnimatePop } from '@/components/common/animated/animate-pop'
+import { AnimatePop } from '@/pages/auth/animate-pop'
 import { getFieldError } from '@/utils/form'
 import useResetPasswordForm from '../hooks/use-reset-password-form'
 
@@ -10,14 +9,10 @@ export const ResetPasswordForm = () => {
   const { form, handleSubmit, resetPasswordMutation } = useResetPasswordForm()
 
   return (
-    <AnimatePop className='space-y-6'>
-      <Title
-        className='text-center'
-        description='At least 8 characters with uppercase, lowercase, a number, and a special character.'
-        level={1}
-        title='Reset your password'
-      />
-
+    <AnimatePop
+      description='At least 8 characters with uppercase, lowercase, a number, and a special character.'
+      title='Reset your password'
+    >
       <form className='space-y-6' onSubmit={handleSubmit}>
         <form.Field
           name='password'
