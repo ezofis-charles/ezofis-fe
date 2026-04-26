@@ -1,7 +1,9 @@
+import { useSearch } from '@tanstack/react-router'
 import type { Option } from '@/types/option'
 import { Button } from '@/components/base/button'
 import { InputSelect } from '@/components/base/inputs'
 import { AnimatePop } from '@/pages/auth/animate-pop'
+import { USER_AUTH_METHOD } from '@/types/user'
 import { useOnBoardingStore } from '../stores/use-on-boarding-store'
 
 const roles: Option[] = [
@@ -38,13 +40,10 @@ const companySizes: Option[] = [
 ]
 
 export const OnBoardingStepThree = () => {
-  const setCompanySize = useOnBoardingStore((state) => state.setCompanySize)
-  const setDepartment = useOnBoardingStore((state) => state.setDepartment)
-  const setRole = useOnBoardingStore((state) => state.setRole)
+  const { authMethod } = useSearch({ from: '/_auth/on-boarding' })
   const setStep = useOnBoardingStore((state) => state.setStep)
-  const companySize = useOnBoardingStore((state) => state.companySize)
-  const department = useOnBoardingStore((state) => state.department)
-  const role = useOnBoardingStore((state) => state.role)
+  const formData = useOnBoardingStore((state) => state.formData)
+  const updateFormData = useOnBoardingStore((state) => state.updateFormData)
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -52,9 +51,13 @@ export const OnBoardingStepThree = () => {
     setStep('stepFour')
   }
 
+  const handleBack = () => {
+    setStep(authMethod === USER_AUTH_METHOD.enum.email ? 'stepTwo' : 'stepOne')
+  }
+
   return (
     <AnimatePop
-      description='Help us personalize your experience from day one.'
+      description='Help us personalize your experience.'
       title='Tell us about you'
     >
       <form className='space-y-6' onSubmit={handleSubmit}>
@@ -64,8 +67,8 @@ export const OnBoardingStepThree = () => {
             options={roles}
             placeholder='Select your role'
             size='md'
-            value={role}
-            onChange={setRole}
+            value={formData.role}
+            onChange={(role) => updateFormData({ role })}
           />
 
           <InputSelect
@@ -73,8 +76,8 @@ export const OnBoardingStepThree = () => {
             options={departments}
             placeholder='Select your department'
             size='md'
-            value={department}
-            onChange={setDepartment}
+            value={formData.department}
+            onChange={(department) => updateFormData({ department })}
           />
 
           <InputSelect
@@ -82,8 +85,8 @@ export const OnBoardingStepThree = () => {
             options={companySizes}
             placeholder='Select your company size'
             size='md'
-            value={companySize}
-            onChange={setCompanySize}
+            value={formData.companySize}
+            onChange={(companySize) => updateFormData({ companySize })}
           />
         </div>
 
@@ -94,6 +97,15 @@ export const OnBoardingStepThree = () => {
           type='submit'
         />
       </form>
+
+      <Button
+        className='-mt-4 w-full justify-center'
+        color='gray'
+        label='Back'
+        size='lg'
+        variant='ghost'
+        onClick={handleBack}
+      />
     </AnimatePop>
   )
 }

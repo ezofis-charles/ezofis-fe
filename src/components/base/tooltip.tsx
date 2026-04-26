@@ -58,7 +58,7 @@ export const Tooltip = ({
       withArrow={withArrow}
       classNames={{
         tooltip: cn(
-          'rounded-sm px-2 py-1 text-12 text-balance text-white',
+          'rounded-sm px-2 py-1 text-12 text-pretty text-white',
           colorClassName[color],
         ),
       }}

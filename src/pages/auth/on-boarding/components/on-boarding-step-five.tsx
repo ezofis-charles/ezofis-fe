@@ -14,8 +14,8 @@ const challengeOptions = [
 
 export const OnBoardingStepFive = () => {
   const setStep = useOnBoardingStore((state) => state.setStep)
-  const challenges = useOnBoardingStore((state) => state.challenges)
-  const setChallenges = useOnBoardingStore((state) => state.setChallenges)
+  const formData = useOnBoardingStore((state) => state.formData)
+  const updateFormData = useOnBoardingStore((state) => state.updateFormData)
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -24,11 +24,15 @@ export const OnBoardingStepFive = () => {
   }
 
   const handleSelectChallenge = (challenge: string) => {
-    const isSelected = challenges.includes(challenge)
+    const isSelected = formData.challenges.includes(challenge)
     if (isSelected) {
-      setChallenges(challenges.filter((c) => c !== challenge))
+      updateFormData({
+        challenges: formData.challenges.filter((c) => c !== challenge),
+      })
     } else {
-      setChallenges([...challenges, challenge])
+      updateFormData({
+        challenges: [...formData.challenges, challenge],
+      })
     }
   }
 
@@ -41,7 +45,7 @@ export const OnBoardingStepFive = () => {
         <div className='space-y-4'>
           {challengeOptions.map((option) => (
             <InputCheckboxCard
-              checked={challenges.includes(option)}
+              checked={formData.challenges.includes(option)}
               key={option}
               label={option}
               onClick={() => handleSelectChallenge(option)}
@@ -56,6 +60,15 @@ export const OnBoardingStepFive = () => {
           type='submit'
         />
       </form>
+
+      <Button
+        className='-mt-4 w-full justify-center'
+        color='gray'
+        label='Back'
+        size='lg'
+        variant='ghost'
+        onClick={() => setStep('stepFour')}
+      />
     </AnimatePop>
   )
 }

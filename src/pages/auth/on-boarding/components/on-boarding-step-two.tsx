@@ -3,9 +3,11 @@ import { InputPassword } from '@/components/base/inputs'
 import { AnimatePop } from '@/pages/auth/animate-pop'
 import { getFieldError } from '@/utils/form'
 import useSetPasswordForm from '../hooks/use-set-password-form'
+import { useOnBoardingStore } from '../stores/use-on-boarding-store'
 
 export const OnBoardingStepTwo = () => {
   const { form, handleSubmit } = useSetPasswordForm()
+  const setStep = useOnBoardingStore((state) => state.setStep)
 
   return (
     <AnimatePop
@@ -56,6 +58,15 @@ export const OnBoardingStepTwo = () => {
           />
         </div>
       </form>
+
+      <Button
+        className='-mt-4 w-full justify-center'
+        color='gray'
+        label='Back'
+        size='lg'
+        variant='ghost'
+        onClick={() => setStep('stepOne')}
+      />
     </AnimatePop>
   )
 }

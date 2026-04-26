@@ -16,7 +16,7 @@ const InputRadio = forwardRef<HTMLInputElement, Props>(
         ref={ref}
         size='xs'
         classNames={{
-          description: 'mt-1 pl-2 text-14 text-balance text-gray-10 xl:text-13',
+          description: 'mt-1 pl-2 text-14 text-pretty text-gray-10 xl:text-13',
           icon: 'text-white',
           inner: 'flex size-5 items-center justify-center',
           label: 'pl-2 text-14 font-medium text-gray-12 xl:text-13',

@@ -29,8 +29,8 @@ const experienceOptions: Option[] = [
 
 export const OnBoardingStepFour = () => {
   const setStep = useOnBoardingStore((state) => state.setStep)
-  const experience = useOnBoardingStore((state) => state.experience)
-  const setExperience = useOnBoardingStore((state) => state.setExperience)
+  const formData = useOnBoardingStore((state) => state.formData)
+  const updateFormData = useOnBoardingStore((state) => state.updateFormData)
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -40,18 +40,20 @@ export const OnBoardingStepFour = () => {
 
   return (
     <AnimatePop
-      description='How familiar are you with automation and workflows?'
-      title='Your automation experience'
+      description='How familiar are you with workflows?'
+      title='Automation experience'
     >
       <form className='space-y-6' onSubmit={handleSubmit}>
         <div className='space-y-4'>
           {experienceOptions.map((option) => (
             <InputRadioCard
-              checked={experience === option.id}
+              checked={formData.experience === option.id}
               description={option.description}
               key={option.id}
               label={option.name}
-              onClick={() => setExperience(option.id)}
+              onClick={() =>
+                updateFormData({ experience: option.id as string })
+              }
             />
           ))}
         </div>
@@ -63,6 +65,15 @@ export const OnBoardingStepFour = () => {
           type='submit'
         />
       </form>
+
+      <Button
+        className='-mt-4 w-full justify-center'
+        color='gray'
+        label='Back'
+        size='lg'
+        variant='ghost'
+        onClick={() => setStep('stepThree')}
+      />
     </AnimatePop>
   )
 }

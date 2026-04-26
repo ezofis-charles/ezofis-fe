@@ -8,11 +8,10 @@ export const OnBoardingStepOne = () => {
   const { authMethod } = useSearch({ from: '/_auth/on-boarding' })
   const setStep = useOnBoardingStore((state) => state.setStep)
 
-  const handleContinue = () => {
+  const handleContinue = () =>
     setStep(
       authMethod === USER_AUTH_METHOD.enum.email ? 'stepTwo' : 'stepThree',
     )
-  }
 
   return (
     <AnimatePop

@@ -1,16 +1,19 @@
 import { create } from 'zustand'
 import type { Option } from '@/types/option'
 
-type Step =
-  | 'stepFive'
-  | 'stepFour'
-  | 'stepOne'
-  | 'stepSix'
-  | 'stepThree'
-  | 'stepTwo'
-  | 'validateLink'
+export const OnBoardingSteps = [
+  'validateLink',
+  'stepOne',
+  'stepTwo',
+  'stepThree',
+  'stepFour',
+  'stepFive',
+  'stepSix',
+] as const
 
-type Store = {
+export type OnBoardingStep = (typeof OnBoardingSteps)[number]
+
+export type OnBoardingFormData = {
   challenges: string[]
   companySize: null | Option
   confirmPassword: string
@@ -19,19 +22,17 @@ type Store = {
   password: string
   recommendation: string
   role: null | Option
-  step: Step
-  setChallenges: (challenges: string[]) => void
-  setCompanySize: (companySize: null | Option) => void
-  setConfirmPassword: (confirmPassword: string) => void
-  setDepartment: (department: null | Option) => void
-  setExperience: (experience: string) => void
-  setPassword: (password: string) => void
-  setRecommendation: (recommendation: string) => void
-  setRole: (role: null | Option) => void
-  setStep: (step: Step) => void
 }
 
-export const useOnBoardingStore = create<Store>()((set) => ({
+type Store = {
+  formData: OnBoardingFormData
+  step: OnBoardingStep
+  resetStore: () => void
+  setStep: (step: OnBoardingStep) => void
+  updateFormData: (data: Partial<OnBoardingFormData>) => void
+}
+
+const initialFormData: OnBoardingFormData = {
   challenges: [],
   companySize: null,
   confirmPassword: '',
@@ -40,14 +41,28 @@ export const useOnBoardingStore = create<Store>()((set) => ({
   password: '',
   recommendation: '',
   role: null,
+}
+
+export const useOnBoardingStore = create<Store>()((set) => ({
+  formData: initialFormData,
   step: 'validateLink',
-  setChallenges: (challenges: string[]) => set({ challenges }),
-  setCompanySize: (companySize: null | Option) => set({ companySize }),
-  setConfirmPassword: (confirmPassword: string) => set({ confirmPassword }),
-  setDepartment: (department: null | Option) => set({ department }),
-  setExperience: (experience: string) => set({ experience }),
-  setPassword: (password: string) => set({ password }),
-  setRecommendation: (recommendation: string) => set({ recommendation }),
-  setRole: (role: null | Option) => set({ role }),
-  setStep: (step: Step) => set({ step }),
+  resetStore: () => set({ formData: initialFormData, step: 'validateLink' }),
+  updateFormData: (data: Partial<OnBoardingFormData>) =>
+    set((state) => ({
+      formData: { ...state.formData, ...data },
+    })),
+  setStep: (step: OnBoardingStep) => set({ step }),
 }))
+
+export const getVisibleSteps = (
+  authMethod: string | undefined,
+): OnBoardingStep[] => {
+  if (authMethod === 'email') {
+    return OnBoardingSteps.filter(
+      (s) => s !== 'validateLink' && s !== 'stepOne',
+    )
+  }
+  return OnBoardingSteps.filter(
+    (s) => s !== 'validateLink' && s !== 'stepOne' && s !== 'stepTwo',
+  )
+}

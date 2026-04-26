@@ -26,7 +26,7 @@ export const AnimatePop = ({
     <motion.div
       {...rest}
       animate={{ opacity: 1, scale: 1 }}
-      className={cn('w-80 space-y-6 py-12', className)}
+      className={cn('w-80 space-y-6 py-12 xl:w-74', className)}
       initial={disableInitialAnimation ? false : { opacity: 0, scale: 0.9 }}
     >
       <Logo className='justify-center' hideText />
