@@ -30,7 +30,7 @@ export const MenuPinned = ({ items }: Props) => {
             name={pathname === item.route ? item.activeIcon : item.icon}
             className={
               pathname === item.route
-                ? 'text-primary'
+                ? 'text-primary-11'
                 : 'text-gray-11 group-hover:text-gray-12'
             }
           />

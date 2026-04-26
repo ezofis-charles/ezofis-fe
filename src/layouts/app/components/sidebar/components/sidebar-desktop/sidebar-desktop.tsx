@@ -22,7 +22,7 @@ export const SidebarDesktop = ({ menuGroup }: Props) => {
   return (
     <motion.aside
       animate={{ width }}
-      className='fixed inset-y-0 left-0 h-dvh min-h-svh bg-surface-muted py-1'
+      className='fixed inset-y-0 left-0 h-dvh min-h-svh bg-surface-muted'
       initial={{ width }}
       transition={{ duration: ANIMATE_NORMAL }}
     >

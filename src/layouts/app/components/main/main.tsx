@@ -13,19 +13,12 @@ export const Main = ({ children }: Props) => {
   return (
     <main
       className={cn(
-        'h-dvh min-h-svh overflow-hidden transition-all duration-150 ease-out xl:py-1 xl:pr-1',
+        'border-l border-gray-3 transition-[margin-left] xl:min-h-svh',
         sidebarState === 'collapsed' ? 'xl:ml-12' : 'xl:ml-60',
       )}
     >
-      <div className='overflow-hidden bg-surface xl:rounded-xl xl:border xl:border-gray-3'>
-        <Topbar />
-        <div
-          className='scrollbar overflow-y-auto'
-          style={{ height: 'calc(100dvh - 56px)' }}
-        >
-          {children}
-        </div>
-      </div>
+      <Topbar />
+      {children}
     </main>
   )
 }

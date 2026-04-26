@@ -25,4 +25,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        changeOrigin: true,
+        target: 'https://dummyjson.com',
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 })
