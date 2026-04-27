@@ -31,7 +31,7 @@ export const MenuCustomize = ({ items, open, setItems, onClose }: Props) => {
           }}
         >
           <MenuCustomizeLabel label='Pinned' />
-          <ul className='space-y-0.5 py-2'>
+          <ul className='space-y-1 py-2'>
             {items.map((item, index) => {
               return (
                 <>

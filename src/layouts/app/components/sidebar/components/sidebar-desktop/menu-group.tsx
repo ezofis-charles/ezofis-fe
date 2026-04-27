@@ -15,7 +15,7 @@ export const MenuGroup = ({ menuGroup }: Props) => {
           <div key={group.label}>
             <MenuGroupLabel index={index} label={group.label} />
 
-            <ul className='space-y-0.5'>
+            <ul className={'space-y-1'}>
               {group.items.map((item) => (
                 <li className='px-2' key={item.label}>
                   <MenuGroupItem {...item} />

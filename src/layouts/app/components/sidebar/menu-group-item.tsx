@@ -7,13 +7,7 @@ interface Props extends SidebarMenuItemType {
   iconClassName?: string
 }
 
-export const MenuGroupItem = ({
-  activeIcon,
-  icon,
-  iconClassName,
-  label,
-  route,
-}: Props) => {
+export const MenuGroupItem = ({ icon, iconClassName, label, route }: Props) => {
   const pathname = useLocation({
     select: (location) => location.pathname,
   })
@@ -23,7 +17,7 @@ export const MenuGroupItem = ({
     <Link
       to={route}
       className={cn(
-        'group flex items-center rounded outline-0 transition-colors hover:bg-gray-4 focus-visible:bg-gray-4',
+        'flex items-center gap-1 rounded outline-0 transition-colors hover:bg-gray-4 focus-visible:bg-gray-4',
         isActive && 'bg-gray-4',
       )}
     >
@@ -34,12 +28,10 @@ export const MenuGroupItem = ({
         )}
       >
         <Icon
-          name={isActive ? activeIcon : icon}
+          name={icon}
           className={cn(
             'transition-colors',
-            isActive
-              ? 'text-primary-11'
-              : 'text-gray-11 group-hover:text-gray-12',
+            isActive ? 'text-primary-11' : 'text-gray-11',
           )}
         />
       </div>

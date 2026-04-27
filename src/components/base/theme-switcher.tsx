@@ -49,7 +49,7 @@ export const ThemeSwitcher = () => {
       </Menu.Label>
       {ColorSchemeOptions.map((option) => (
         <Menu.Item
-          icon={option.value === colorScheme ? option.activeIcon : option.icon}
+          icon={option.icon}
           key={option.value}
           label={option.label}
           iconClassName={

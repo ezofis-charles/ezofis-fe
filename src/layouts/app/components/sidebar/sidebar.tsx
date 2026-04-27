@@ -12,14 +12,12 @@ export const Sidebar = () => {
     {
       items: [
         {
-          activeIcon: 'material-symbols:dashboard-rounded',
-          icon: 'material-symbols:dashboard-outline-rounded',
+          icon: 'tabler:layout-dashboard',
           label: t`Dashboard`,
           route: '/',
         },
         {
-          activeIcon: 'material-symbols:inbox-rounded',
-          icon: 'material-symbols:inbox-outline-rounded',
+          icon: 'tabler:inbox',
           label: t`Requests`,
           route: '/requests',
         },
@@ -29,32 +27,27 @@ export const Sidebar = () => {
     {
       items: [
         {
-          activeIcon: 'material-symbols:account-tree-rounded',
-          icon: 'material-symbols:account-tree-outline-rounded',
+          icon: 'lucide:workflow',
           label: 'Workflows',
           route: '/workflows',
         },
         {
-          activeIcon: 'material-symbols:assignment-rounded',
-          icon: 'material-symbols:assignment-outline-rounded',
+          icon: 'tabler:clipboard',
           label: 'Forms',
           route: '/forms',
         },
         {
-          activeIcon: 'material-symbols:folder-rounded',
-          icon: 'material-symbols:folder-outline-rounded',
+          icon: 'tabler:folder',
           label: 'Folders',
           route: '/folders',
         },
         {
-          activeIcon: 'material-symbols:deployed-code',
-          icon: 'material-symbols:deployed-code-outline',
+          icon: 'tabler:box',
           label: 'Tasks',
           route: '/tasks',
         },
         {
-          activeIcon: 'material-symbols:toolbar',
-          icon: 'material-symbols:toolbar-outline',
+          icon: 'tabler:picture-in-picture',
           label: 'Portals',
           route: '/portals',
         },

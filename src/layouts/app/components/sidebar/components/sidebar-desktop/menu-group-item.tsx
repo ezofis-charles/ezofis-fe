@@ -14,7 +14,6 @@ interface Props extends SidebarMenuItemType {
 }
 
 export const MenuGroupItem = ({
-  activeIcon,
   className,
   icon,
   label,
@@ -44,12 +43,12 @@ export const MenuGroupItem = ({
       >
         <div className='flex size-8 shrink-0 items-center justify-center'>
           <Icon
-            name={isActive ? activeIcon : icon}
+            name={icon}
             className={cn(
               'transition-colors',
               isActive
                 ? 'text-primary-11'
-                : 'text-gray-11 group-hover:text-gray-12',
+                : 'text-gray-11 group-hover:text-gray-11',
             )}
           />
         </div>

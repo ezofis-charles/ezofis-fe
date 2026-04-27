@@ -9,7 +9,6 @@ export const GlobalSearch = () => {
         ariaLabel='search'
         color='gray'
         icon='tabler:search'
-        size='md'
         variant='ghost'
       />
     </Tooltip>

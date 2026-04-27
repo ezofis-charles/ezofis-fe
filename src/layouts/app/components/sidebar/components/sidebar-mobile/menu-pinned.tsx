@@ -27,7 +27,7 @@ export const MenuPinned = ({ items }: Props) => {
           )}
         >
           <Icon
-            name={pathname === item.route ? item.activeIcon : item.icon}
+            name={item.icon}
             className={
               pathname === item.route
                 ? 'text-primary-11'

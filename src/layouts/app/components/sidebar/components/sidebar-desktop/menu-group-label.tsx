@@ -25,7 +25,7 @@ export const MenuGroupLabel = ({ index, label }: Props) => {
       <AnimatePresence initial={false}>
         {sidebarState === 'collapsed' && index !== 0 && (
           <motion.div {...animationConfig}>
-            <Divider className='mx-3 my-2' />
+            <Divider className='mx-auto my-3 w-7' />
           </motion.div>
         )}
       </AnimatePresence>
@@ -35,7 +35,7 @@ export const MenuGroupLabel = ({ index, label }: Props) => {
           <motion.div {...animationConfig}>
             <div
               className={cn(
-                'px-4 py-2 text-12 font-medium whitespace-nowrap text-gray-10',
+                'px-4 py-2 text-12 whitespace-nowrap text-gray-10',
                 index !== 0 && 'mt-4',
               )}
             >

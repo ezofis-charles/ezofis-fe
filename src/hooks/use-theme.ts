@@ -3,7 +3,6 @@ import { useLingui } from '@lingui/react/macro'
 import { useMantineColorScheme } from '@mantine/core'
 
 interface ColorSchemeOption {
-  activeIcon: string
   icon: string
   label: string
   value: MantineColorScheme
@@ -14,20 +13,17 @@ export function useTheme() {
 
   const ColorSchemeOptions: ColorSchemeOption[] = [
     {
-      activeIcon: 'material-symbols:monitor-rounded',
-      icon: 'material-symbols:monitor-outline-rounded',
+      icon: 'tabler:device-desktop',
       label: t`System`,
       value: 'auto',
     },
     {
-      activeIcon: 'material-symbols:light-mode-rounded',
-      icon: 'material-symbols:light-mode-outline-rounded',
+      icon: 'tabler:sun',
       label: t`Light`,
       value: 'light',
     },
     {
-      activeIcon: 'material-symbols:dark-mode-rounded',
-      icon: 'material-symbols:dark-mode-outline-rounded',
+      icon: 'tabler:moon',
       label: t`Dark`,
       value: 'dark',
     },

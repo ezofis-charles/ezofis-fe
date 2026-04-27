@@ -7,7 +7,6 @@ export interface SidebarMenuGroup {
 }
 
 export interface SidebarMenuItem {
-  activeIcon: string
   icon: string
   label: string
   route: string
