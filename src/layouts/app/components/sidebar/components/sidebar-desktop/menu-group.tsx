@@ -9,7 +9,7 @@ interface Props {
 
 export const MenuGroup = ({ menuGroup }: Props) => {
   return (
-    <ScrollArea style={{ height: 'calc(100dvh - 100px)' }}>
+    <ScrollArea style={{ height: 'calc(100dvh - 104px)' }}>
       <nav className='py-2'>
         {menuGroup.map((group, index) => (
           <div key={group.label}>
@@ -17,7 +17,7 @@ export const MenuGroup = ({ menuGroup }: Props) => {
 
             <ul className={'space-y-1'}>
               {group.items.map((item) => (
-                <li className='px-2' key={item.label}>
+                <li className='px-2.5' key={item.label}>
                   <MenuGroupItem {...item} />
                 </li>
               ))}

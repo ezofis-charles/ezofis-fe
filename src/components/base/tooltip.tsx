@@ -22,7 +22,7 @@ interface Props {
 type TooltipColor = 'gray' | 'primary' | 'red' | 'secondary'
 
 const colorClassName: Record<TooltipColor, string> = {
-  gray: 'bg-gray-12 text-gray-1',
+  gray: 'bg-gray-13 text-gray-1',
   primary: 'bg-primary-9',
   red: 'bg-red-9',
   secondary: 'bg-secondary-9',

@@ -1,4 +1,5 @@
 import { Avatar as Base } from '@mantine/core'
+import { cn } from '@/utils/cn'
 
 interface Props {
   initials: string
@@ -18,11 +19,13 @@ export const Avatar = ({
   return (
     <Base
       alt={imageLabel}
-      className={className}
       size={size}
       src={image}
       classNames={{
-        placeholder: 'border-none bg-gray-3 font-semibold text-gray-11',
+        placeholder: cn(
+          'border border-gray-5 bg-gray-4 text-13 font-semibold text-gray-11',
+          className,
+        ),
       }}
     >
       {initials}

@@ -8,7 +8,7 @@ type Store = {
 }
 
 export const useSidebarStore = create<Store>()((set) => ({
-  sidebarState: 'collapsed',
+  sidebarState: 'expanded',
   toggleSidebar: () =>
     set((state) => ({
       sidebarState:

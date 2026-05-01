@@ -36,7 +36,7 @@ export const FloatingPanel = ({
     >
       <Base.Trigger asChild>{trigger}</Base.Trigger>
       <Base.Positioner>
-        <Base.Content className='rounded-lg border border-gray-4 bg-surface p-0 shadow-xl data-maximized:rounded-none data-maximized:border-0'>
+        <Base.Content className='rounded-lg border border-gray-4 bg-surface p-0 shadow-xl outline-none data-maximized:rounded-none data-maximized:border-0'>
           <Base.DragTrigger>
             <Base.Header className='flex h-13 flex-wrap items-center gap-1 pr-2 pl-4'>
               <Icon
@@ -46,22 +46,22 @@ export const FloatingPanel = ({
               <Base.Title className='ml-1 flex-1 text-14 font-semibold text-gray-13 xl:text-13'>
                 {title}
               </Base.Title>
-              <Base.Control>
-                <Base.StageTrigger stage='maximized'>
+              <Base.Control className='flex items-center'>
+                <Base.StageTrigger stage='maximized' asChild>
                   <ButtonIcon
                     color='gray'
                     icon='tabler:maximize'
                     variant='ghost'
                   />
                 </Base.StageTrigger>
-                <Base.StageTrigger stage='default'>
+                <Base.StageTrigger stage='default' asChild>
                   <ButtonIcon
                     color='gray'
                     icon='tabler:minimize'
                     variant='ghost'
                   />
                 </Base.StageTrigger>
-                <Base.CloseTrigger>
+                <Base.CloseTrigger asChild>
                   <ButtonIcon color='gray' icon='tabler:x' variant='ghost' />
                 </Base.CloseTrigger>
               </Base.Control>

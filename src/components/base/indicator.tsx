@@ -30,7 +30,7 @@ export const Indicator = ({
   disabled,
   offset,
   position,
-  size = 5,
+  size = 4,
 }: Props) => {
   return (
     <Base

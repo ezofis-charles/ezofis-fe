@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { AiChatBar } from './components/ai-chat-bar'
 import { Main } from './components/main'
 import { Sidebar } from './components/sidebar'
 
@@ -11,6 +12,7 @@ export const AppLayout = ({ children }: Props) => {
     <>
       <Sidebar />
       <Main>{children}</Main>
+      <AiChatBar />
     </>
   )
 }

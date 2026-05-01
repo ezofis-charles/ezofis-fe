@@ -14,7 +14,7 @@ export const NotificationsTrigger = () => {
       openDelay={TOOLTIP_DELAY}
       position='right'
     >
-      <Indicator offset={7} animate>
+      <Indicator offset={8} animate>
         <ButtonIcon
           ariaLabel='notifications'
           color='gray'

@@ -12,16 +12,15 @@ export const UserMenuTrigger = () => {
   return (
     <div
       className={cn(
-        'mx-1 flex cursor-pointer items-center p-1',
+        'group mx-1.5 flex cursor-pointer items-center p-1',
         sidebarState === 'expanded' && 'rounded hover:bg-gray-4',
       )}
     >
       <div className='flex h-10 w-8 shrink-0 items-center justify-center'>
         <Avatar
-          className='border border-gray-3'
-          image={user.avatarUrl}
+          className='group-hover:bg-surface'
           imageLabel='user picture'
-          initials='CV'
+          initials='JD'
           size={30}
         />
       </div>
@@ -30,7 +29,7 @@ export const UserMenuTrigger = () => {
         <div className='flex items-center select-none'>
           <div className='min-w-0 flex-1'>
             <div className='truncate text-14 font-medium text-gray-12 xl:text-13'>
-              {user.name}
+              Jane Doe
             </div>
             <div className='truncate text-12/5'>{user.email}</div>
           </div>

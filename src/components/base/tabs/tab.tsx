@@ -48,9 +48,12 @@ export const Tab = ({
       {label}
       {badgeLabel && (
         <Badge
-          className={cn('h-5 px-1 group-hover/tab:bg-surface', badgeClassName)}
           color={badgeColor}
           label={badgeLabel}
+          className={cn(
+            'h-4 rounded-sm bg-gray-3 p-1 text-xs text-gray-11 group-hover/tab:bg-surface',
+            badgeClassName,
+          )}
         />
       )}
     </Base.Trigger>

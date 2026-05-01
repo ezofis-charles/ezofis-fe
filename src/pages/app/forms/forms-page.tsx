@@ -97,7 +97,7 @@ export const FormsPage = () => {
   return (
     <div>
       <FormsPageHeader />
-      <div className='divide-y divide-gray-3 px-6 py-4'>
+      <div className='hidden divide-y divide-gray-3 px-6 py-4'>
         <div className='flex h-12 items-center pl-0'>
           <Icon name='tabler:chevron-right' />
           <h2 className='mr-2 ml-4 text-14 font-semibold text-gray-12 xl:text-13'>

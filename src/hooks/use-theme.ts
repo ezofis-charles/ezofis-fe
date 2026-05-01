@@ -18,7 +18,7 @@ export function useTheme() {
       value: 'auto',
     },
     {
-      icon: 'tabler:sun',
+      icon: 'tabler:sun-high',
       label: t`Light`,
       value: 'light',
     },

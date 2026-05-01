@@ -47,14 +47,19 @@ export const MenuGroupItem = ({
             className={cn(
               'transition-colors',
               isActive
-                ? 'text-primary-11'
-                : 'text-gray-11 group-hover:text-gray-11',
+                ? 'text-gray-11'
+                : 'text-gray-10 group-hover:text-gray-11',
             )}
           />
         </div>
 
         <AnimatePresence>
-          <div className='pr-2 font-medium whitespace-nowrap text-gray-12'>
+          <div
+            className={cn(
+              'pr-2 font-medium whitespace-nowrap group-hover:text-gray-12',
+              isActive ? 'text-gray-12' : 'text-gray-11',
+            )}
+          >
             {label}
           </div>
         </AnimatePresence>

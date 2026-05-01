@@ -1,4 +1,4 @@
 export const SIDEBAR_SIZE = {
-  COLLAPSED: 48,
+  COLLAPSED: 52,
   EXPANDED: 240,
 } as const
