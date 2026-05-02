@@ -47,7 +47,7 @@ export const MenuGroupItem = ({
             className={cn(
               'transition-colors',
               isActive
-                ? 'text-gray-11'
+                ? 'text-primary-11'
                 : 'text-gray-10 group-hover:text-gray-11',
             )}
           />
