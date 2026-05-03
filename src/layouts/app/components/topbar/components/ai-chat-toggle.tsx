@@ -15,9 +15,9 @@ export const AiChatToggle = () => {
     >
       <ButtonIcon
         ariaLabel='toggle ai chat'
-        className='rounded-full border-none bg-linear-to-br from-secondary-9 to-primary-9'
-        icon='boxicons:sparkle-filled'
-        size='lg'
+        color='gray'
+        icon='boxicons:sparkle'
+        variant='ghost'
         onClick={toggleAiChat}
       />
     </Tooltip>

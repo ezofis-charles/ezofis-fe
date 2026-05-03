@@ -45,7 +45,7 @@ export function getVariantClassName(
         variant: 'outline',
       },
       {
-        class: 'border-secondary-5 text-secondary-11 hover:bg-secondary-4',
+        class: 'border-secondary-5 text-secondary-9 hover:bg-secondary-4',
         color: 'secondary',
         variant: 'outline',
       },
@@ -71,7 +71,7 @@ export function getVariantClassName(
         variant: 'subtle',
       },
       {
-        class: 'bg-secondary-3 text-secondary-11 hover:bg-secondary-4',
+        class: 'bg-secondary-3 text-secondary-9 hover:bg-secondary-4',
         color: 'secondary',
         variant: 'subtle',
       },
@@ -97,7 +97,7 @@ export function getVariantClassName(
         variant: 'ghost',
       },
       {
-        class: 'text-secondary-11 hover:bg-secondary-4',
+        class: 'text-secondary-9 hover:bg-secondary-4',
         color: 'secondary',
         variant: 'ghost',
       },

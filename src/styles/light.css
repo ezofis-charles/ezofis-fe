@@ -169,6 +169,7 @@
   --gray-12: #43434a;
   --gray-13: #211f26;
 
+  --surface-raised: white;
   --surface: white;
   --surface-muted: var(--gray-2);
 }

@@ -39,14 +39,14 @@ export const FormsPageHeader = () => {
       <div className='mt-6 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-6'>
         <div className='flex items-center gap-2'>
           <Button
-            className='w-36 bg-surface'
+            className='w-36 bg-surface-raised'
             color='gray'
             icon='tabler:search'
             label='Search'
             variant='outline'
           />
           <ButtonIcon
-            className='bg-surface'
+            className='bg-surface-raised'
             color='gray'
             icon='tabler:filter-2'
             variant='outline'
@@ -62,7 +62,7 @@ export const FormsPageHeader = () => {
             variant='outline'
           /> */}
           <ButtonIcon
-            className='bg-surface'
+            className='bg-surface-raised'
             color='gray'
             icon='material-symbols:page-info-outline-rounded'
             variant='outline'

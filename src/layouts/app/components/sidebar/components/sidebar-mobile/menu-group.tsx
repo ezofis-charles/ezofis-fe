@@ -15,7 +15,7 @@ export const MenuGroup = ({ menuGroup }: Props) => {
           <div key={group.label}>
             <div
               className={cn(
-                'px-4 py-2 text-12 font-medium whitespace-nowrap text-gray-10',
+                'px-4 py-2 text-12 whitespace-nowrap text-gray-10',
                 index !== 0 && 'mt-4',
               )}
             >
