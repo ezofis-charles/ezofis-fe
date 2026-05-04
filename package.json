@@ -38,8 +38,8 @@
     "@tailwindcss/vite": "^4.2.4",
     "@tanstack/react-form": "^1.29.1",
     "@tanstack/react-form-devtools": "^0.2.22",
-    "@tanstack/react-query": "^5.100.8",
-    "@tanstack/react-query-devtools": "^5.100.8",
+    "@tanstack/react-query": "^5.100.9",
+    "@tanstack/react-query-devtools": "^5.100.9",
     "@tanstack/react-router": "^1.169.1",
     "@tanstack/react-router-devtools": "^1.166.13",
     "@tiptap/extension-link": "^3.22.5",
@@ -61,7 +61,7 @@
     "tailwindcss": "^4.2.4",
     "usehooks-ts": "^3.1.1",
     "vaul": "^1.1.2",
-    "zod": "^4.4.2",
+    "zod": "^4.4.3",
     "zustand": "^5.0.12"
   },
   "devDependencies": {

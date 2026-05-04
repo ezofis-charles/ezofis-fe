@@ -1,26 +1,22 @@
 import { Tabs as Base } from '@ark-ui/react/tabs'
 import { Icon } from '@/components/base/icon'
 import { cn } from '@/utils/cn'
-import type { BadgeColor } from '../badge'
-import { Badge } from '../badge'
 
 interface Props {
   label: string
   value: string
-  badgeClassName?: string
-  badgeColor?: BadgeColor
-  badgeLabel?: string
   className?: string
+  counter?: string
+  counterClassName?: string
   disabled?: boolean
   icon?: string
   iconClassName?: string
 }
 
 export const Tab = ({
-  badgeClassName,
-  badgeColor,
-  badgeLabel,
   className,
+  counter,
+  counterClassName,
   disabled,
   icon,
   iconClassName,
@@ -45,17 +41,14 @@ export const Tab = ({
           )}
         />
       )}
-      {label}
-      {badgeLabel && (
-        <Badge
-          color={badgeColor}
-          label={badgeLabel}
-          className={cn(
-            'h-4 rounded-sm bg-gray-3 p-1 text-xs text-gray-11 group-hover/tab:bg-surface',
-            badgeClassName,
-          )}
-        />
-      )}
+      <div className='inline-flex items-baseline gap-1'>
+        {label}
+        {counter && (
+          <span className={cn('font-normal text-gray-9', counterClassName)}>
+            ({counter})
+          </span>
+        )}
+      </div>
     </Base.Trigger>
   )
 }

@@ -9,9 +9,9 @@ export const FormsPageHeader = () => {
     <>
       <div className='border-b border-gray-3 px-4 xl:px-6'>
         <Tabs value={value} noPadding onChange={setValue}>
-          <Tabs.Tab label='Inbox' value='all' />
-          <Tabs.Tab label='Sent' value='favourites' />
-          <Tabs.Tab label='Closed' value='drafts' />
+          <Tabs.Tab counter='2' label='Inbox' value='all' />
+          <Tabs.Tab counter='5' label='Sent' value='favourites' />
+          <Tabs.Tab counter='12' label='Closed' value='drafts' />
         </Tabs>
 
         <div className='hidden items-center gap-2'>

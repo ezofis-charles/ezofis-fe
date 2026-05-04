@@ -122,7 +122,7 @@ export function getVariantClassName(
       },
       variant: {
         ghost: '',
-        outline: '',
+        outline: 'shadow-xs',
         solid: 'text-white shadow-sm',
         subtle: '',
       },

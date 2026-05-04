@@ -161,7 +161,7 @@ export const FormsPage = () => {
         </div>
       </div>
 
-      <div className='space-y-2 px-4 pt-6 xl:px-6'>
+      <div className='hidden space-y-2 px-4 pt-6 xl:px-6'>
         <div className='hidden space-y-1 rounded border border-gray-3 bg-surface-muted pt-20'>
           <div className='h-40 rounded border-t border-gray-3 bg-surface-raised'></div>
         </div>

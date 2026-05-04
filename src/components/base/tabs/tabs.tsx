@@ -28,7 +28,7 @@ export const Tabs = ({
       <Base.List
         data-color={color}
         className={cn(
-          'group/tabs relative flex h-12 items-center gap-2',
+          'group/tabs relative flex h-14 items-center gap-2 xl:h-12',
           noPadding && 'gap-6 **:data-[part=trigger]:px-0',
         )}
       >
