@@ -13,11 +13,10 @@ export const IconStory = () => {
 
       <Section title='Color'>
         <div className='flex items-center gap-2'>
-          <Icon className='text-gray-600' name='tabler:trash' />
-          <Icon className='text-primary-600' name='tabler:trash' />
-          <Icon className='text-secondary-600' name='tabler:trash' />
-          <Icon className='text-red-600' name='tabler:trash' />
-          <Icon className='text-green-600' name='tabler:trash' />
+          <Icon className='text-primary-9' name='tabler:trash' />
+          <Icon className='text-secondary-9' name='tabler:trash' />
+          <Icon className='text-red-9' name='tabler:trash' />
+          <Icon className='text-green-9' name='tabler:trash' />
         </div>
       </Section>
 

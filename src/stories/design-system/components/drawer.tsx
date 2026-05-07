@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button } from '@/components/base/button'
+import { Button, ButtonClose } from '@/components/base/button'
 import { Drawer } from '@/components/base/drawer'
 import { Overlay } from '@/components/base/overlay'
 import { Header } from '../shared/header'
@@ -83,7 +83,10 @@ export const DrawerStory = () => {
           open={openWithoutOverlay}
           onClose={() => setOpenWithoutOverlay(false)}
         >
-          <></>
+          <ButtonClose
+            className='absolute top-2 right-2'
+            onClick={() => setOpenWithoutOverlay(false)}
+          />
         </Drawer>
       </Section>
     </>

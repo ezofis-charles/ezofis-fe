@@ -169,6 +169,6 @@
   --gray-12: #484651;
   --gray-13: #211f26;
 
-  --surface: white;
+  --surface: #ffffff;
   --surface-muted: var(--gray-2);
 }

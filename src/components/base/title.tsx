@@ -25,7 +25,7 @@ export const Title = ({
       {level === 1 && (
         <h1
           className={cn(
-            'text-lg leading-6 font-semibold text-gray-13',
+            'text-18 leading-6 font-semibold text-gray-13',
             titleClassName,
           )}
         >

@@ -41,6 +41,7 @@ export const Toast = ({
         descriptionClassName='text-gray'
         level={3}
         title={title}
+        titleClassName='leading-5'
       />
 
       <ButtonClose
