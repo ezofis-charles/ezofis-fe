@@ -6,7 +6,6 @@ interface Props {
   children: ReactNode
   value: null | string
   color?: 'gray' | 'primary' | 'secondary'
-  noPadding?: boolean
   onChange: (value: null | string) => void
 }
 
@@ -19,23 +18,19 @@ const indicatorClassNameMap = {
 export const Tabs = ({
   children,
   color = 'primary',
-  noPadding = false,
   value,
   onChange,
 }: Props) => {
   return (
     <Base.Root value={value} onValueChange={(e) => onChange(e.value)}>
       <Base.List
+        className='group/tabs relative flex h-14 items-center gap-3 xl:h-12'
         data-color={color}
-        className={cn(
-          'group/tabs relative flex h-14 items-center gap-2 xl:h-12',
-          noPadding && 'gap-6 **:data-[part=trigger]:px-0',
-        )}
       >
         {children}
         <Base.Indicator
           className={cn(
-            'bottom-0 h-0.5 w-(--width) rounded',
+            'bottom-0 h-0.5 w-(--width) rounded-full',
             indicatorClassNameMap[color],
           )}
         />

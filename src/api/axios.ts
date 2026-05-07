@@ -1,5 +1,5 @@
 import type { InternalAxiosRequestConfig } from 'axios'
-import axios from 'axios'
+import { create } from 'axios'
 import { z } from 'zod'
 
 declare module 'axios' {
@@ -8,7 +8,7 @@ declare module 'axios' {
   }
 }
 
-const axiosInstance = axios.create({
+const axiosInstance = create({
   baseURL: '/api',
 })
 

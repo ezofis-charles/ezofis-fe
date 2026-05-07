@@ -7,12 +7,14 @@ export const FormsPageHeader = () => {
 
   return (
     <>
-      <div className='border-b border-gray-3 px-4 xl:px-6'>
-        <Tabs value={value} noPadding onChange={setValue}>
-          <Tabs.Tab counter='2' label='Inbox' value='all' />
-          <Tabs.Tab counter='5' label='Sent' value='favourites' />
-          <Tabs.Tab counter='12' label='Closed' value='drafts' />
-        </Tabs>
+      <div className='border-b border-gray-3 px-4 xl:px-8'>
+        <div className=''>
+          <Tabs value={value} onChange={setValue}>
+            <Tabs.Tab counter='20' label='Inbox' value='all' />
+            <Tabs.Tab counter='5' label='Sent' value='favourites' />
+            <Tabs.Tab counter='0' label='Closed' value='drafts' />
+          </Tabs>
+        </div>
 
         <div className='hidden items-center gap-2'>
           {/* <ButtonIcon
@@ -36,17 +38,17 @@ export const FormsPageHeader = () => {
         </div>
       </div>
 
-      <div className='mt-6 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-6'>
+      <div className='mt-8 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-8'>
         <div className='flex items-center gap-2'>
           <Button
-            className='w-36 bg-surface-raised'
+            className='w-36 bg-surface'
             color='gray'
             icon='tabler:search'
             label='Search'
             variant='outline'
           />
           <ButtonIcon
-            className='bg-surface-raised'
+            className='bg-surface'
             color='gray'
             icon='tabler:filter-2'
             variant='outline'
@@ -62,7 +64,7 @@ export const FormsPageHeader = () => {
             variant='outline'
           /> */}
           <ButtonIcon
-            className='bg-surface-raised'
+            className='bg-surface'
             color='gray'
             icon='material-symbols:page-info-outline-rounded'
             variant='outline'

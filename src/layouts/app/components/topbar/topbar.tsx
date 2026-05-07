@@ -1,16 +1,14 @@
-import { SidebarToggle } from '../sidebar/components/sidebar-toggle'
 import { AiChatToggle } from './components/ai-chat-toggle'
 import { GlobalSearch } from './components/global-search'
 import { NotificationsTrigger } from './components/notifications/components/notifications-trigger'
 import { PageTitle } from './components/page-title'
+import { SidebarToggle } from './components/sidebar-toggle'
 
 export const Topbar = () => {
   return (
-    <header className='flex h-14 items-center justify-between border-b border-gray-3 px-4 xl:h-12 xl:px-6'>
+    <header className='flex h-14 items-center justify-between border-b border-gray-3 px-4 xl:h-12 xl:px-8'>
       <div className='flex items-center gap-2'>
-        <div className='hidden md:block xl:hidden'>
-          <SidebarToggle />
-        </div>
+        <SidebarToggle />
         <PageTitle />
       </div>
 

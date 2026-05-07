@@ -36,17 +36,9 @@ export const TabsStory = () => {
 
       <Section title='With Badge'>
         <Tabs value={value} onChange={setValue}>
-          <Tabs.Tab badgeLabel='10' label='Inbox' value='tab1' />
-          <Tabs.Tab badgeLabel='5' label='Sent' value='tab2' />
-          <Tabs.Tab badgeLabel='0' label='Closed' value='tab3' />
-        </Tabs>
-      </Section>
-
-      <Section title='No Padding'>
-        <Tabs value={value} noPadding onChange={setValue}>
-          <Tabs.Tab label='Inbox' value='tab1' />
-          <Tabs.Tab label='Sent' value='tab2' />
-          <Tabs.Tab label='Closed' value='tab3' />
+          <Tabs.Tab counter='10' label='Inbox' value='tab1' />
+          <Tabs.Tab counter='5' label='Sent' value='tab2' />
+          <Tabs.Tab counter='0' label='Closed' value='tab3' />
         </Tabs>
       </Section>
 

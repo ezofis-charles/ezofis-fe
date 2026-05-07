@@ -21,11 +21,11 @@ msgstr ""
 #~ msgid "Average Processing Time"
 #~ msgstr "Temps de traitement moyen"
 
-#: src/components/base/theme-switcher.tsx:16
+#: src/components/base/theme-switcher.tsx:23
 msgid "Change theme"
 msgstr "Changer le thème"
 
-#: src/components/base/theme-switcher.tsx:37
+#: src/components/base/theme-switcher.tsx:48
 msgid "Change Theme"
 msgstr "Changer le thème"
 
@@ -41,7 +41,7 @@ msgstr "Changer le thème"
 #~ msgid "Dark"
 #~ msgstr "Sombre"
 
-#: src/layouts/app/components/menubar/menubar.tsx:17
+#: src/layouts/app/components/sidebar/sidebar.tsx:16
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
@@ -69,11 +69,11 @@ msgstr "Tableau de bord"
 #~ msgid "Notifications"
 #~ msgstr "Notifications"
 
-#: src/layouts/app/components/menubar/menubar.tsx:26
+#: src/layouts/app/components/sidebar/sidebar.tsx:25
 msgid "Overview"
 msgstr ""
 
-#: src/layouts/app/components/menubar/menubar.tsx:22
+#: src/layouts/app/components/sidebar/sidebar.tsx:21
 msgid "Requests"
 msgstr "Requêtes"
 
