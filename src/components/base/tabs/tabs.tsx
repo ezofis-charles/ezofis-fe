@@ -11,7 +11,7 @@ interface Props {
 
 const indicatorClassNameMap = {
   gray: 'bg-gray-11',
-  primary: 'bg-primary-11',
+  primary: 'bg-primary-9',
   secondary: 'bg-secondary-9',
 }
 
