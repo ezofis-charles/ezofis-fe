@@ -7,7 +7,7 @@ export const FormsPageHeader = () => {
 
   return (
     <>
-      <div className='border-b border-gray-3 px-4 xl:px-8'>
+      <div className='border-b border-gray-3 px-4 xl:px-6'>
         <div className=''>
           <Tabs value={value} onChange={setValue}>
             <Tabs.Tab counter='20' label='Inbox' value='all' />
@@ -38,21 +38,16 @@ export const FormsPageHeader = () => {
         </div>
       </div>
 
-      <div className='mt-8 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-8'>
+      <div className='mt-6 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-6'>
         <div className='flex items-center gap-2'>
           <Button
-            className='w-36 bg-surface'
+            className='w-36'
             color='gray'
             icon='tabler:search'
             label='Search'
             variant='outline'
           />
-          <ButtonIcon
-            className='bg-surface'
-            color='gray'
-            icon='tabler:filter-2'
-            variant='outline'
-          />
+          <ButtonIcon color='gray' icon='tabler:filter-2' variant='outline' />
         </div>
 
         <div className='flex items-center gap-2'>
@@ -64,7 +59,6 @@ export const FormsPageHeader = () => {
             variant='outline'
           /> */}
           <ButtonIcon
-            className='bg-surface'
             color='gray'
             icon='material-symbols:page-info-outline-rounded'
             variant='outline'

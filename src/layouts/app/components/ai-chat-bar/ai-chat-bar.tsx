@@ -32,7 +32,7 @@ export const AiChatBar = () => {
       {isAiChatOpen && (
         <motion.div
           {...aiChatContentMotion}
-          className='bg-surface-raised fixed top-0 right-0 bottom-0 w-96 p-4'
+          className='bg-surface-muted fixed top-0 right-0 bottom-0 w-96 p-4'
         ></motion.div>
       )}
     </AnimatePresence>

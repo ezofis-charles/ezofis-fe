@@ -16,7 +16,7 @@ export const Main = ({ children }: Props) => {
     <main
       className={cn(
         'border-l border-gray-3 transition-[margin] xl:min-h-svh',
-        sidebarState === 'collapsed' ? 'xl:ml-13' : 'xl:ml-60',
+        sidebarState === 'collapsed' ? 'xl:ml-14' : 'xl:ml-60',
         isAiChatOpen ? 'border-r border-gray-3 xl:mr-96' : 'xl:mr-0',
       )}
     >
