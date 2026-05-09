@@ -166,10 +166,10 @@ export const FormsPage = () => {
           <div className='h-40 rounded border-t border-gray-3 bg-surface'></div>
         </div>
 
-        <div className='h-20 rounded border border-gray-3'></div>
-        <div className='h-20 rounded border border-gray-3'></div>
-        <div className='h-20 rounded border border-gray-3'></div>
-        <div className='h-20 rounded border border-gray-3'></div>
+        <div className='h-20 rounded border border-gray-3 bg-surface'></div>
+        <div className='h-20 rounded border border-gray-3 bg-surface'></div>
+        <div className='h-20 rounded border border-gray-3 bg-surface'></div>
+        <div className='h-20 rounded border border-gray-3 bg-surface'></div>
       </div>
     </div>
   )

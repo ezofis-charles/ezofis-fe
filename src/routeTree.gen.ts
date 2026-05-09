@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PlaygroundRouteImport } from './routes/playground'
 import { Route as DesignSystemRouteRouteImport } from './routes/design-system/route'
 import { Route as AuthRouteRouteImport } from './routes/_auth/route'
 import { Route as AppRouteRouteImport } from './routes/_app/route'
@@ -96,6 +97,11 @@ const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlaygroundRoute = PlaygroundRouteImport.update({
+  id: '/playground',
+  path: '/playground',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DesignSystemRouteRoute = DesignSystemRouteRouteImport.update({
@@ -538,6 +544,7 @@ const AppMyAccountChar123SlugChar125Route =
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
   '/design-system': typeof DesignSystemRouteRouteWithChildren
+  '/playground': typeof PlaygroundRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/folders': typeof AppFoldersRoute
@@ -615,6 +622,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof AppIndexRoute
+  '/playground': typeof PlaygroundRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/folders': typeof AppFoldersRoute
@@ -695,6 +703,7 @@ export interface FileRoutesById {
   '/_app': typeof AppRouteRouteWithChildren
   '/_auth': typeof AuthRouteRouteWithChildren
   '/design-system': typeof DesignSystemRouteRouteWithChildren
+  '/playground': typeof PlaygroundRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/_app/folders': typeof AppFoldersRoute
@@ -776,6 +785,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/design-system'
+    | '/playground'
     | '/privacy-policy'
     | '/terms-of-service'
     | '/folders'
@@ -853,6 +863,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/playground'
     | '/privacy-policy'
     | '/terms-of-service'
     | '/folders'
@@ -932,6 +943,7 @@ export interface FileRouteTypes {
     | '/_app'
     | '/_auth'
     | '/design-system'
+    | '/playground'
     | '/privacy-policy'
     | '/terms-of-service'
     | '/_app/folders'
@@ -1013,6 +1025,7 @@ export interface RootRouteChildren {
   AppRouteRoute: typeof AppRouteRouteWithChildren
   AuthRouteRoute: typeof AuthRouteRouteWithChildren
   DesignSystemRouteRoute: typeof DesignSystemRouteRouteWithChildren
+  PlaygroundRoute: typeof PlaygroundRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
 }
@@ -1031,6 +1044,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy-policy'
       fullPath: '/privacy-policy'
       preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/playground': {
+      id: '/playground'
+      path: '/playground'
+      fullPath: '/playground'
+      preLoaderRoute: typeof PlaygroundRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/design-system': {
@@ -1766,6 +1786,7 @@ const rootRouteChildren: RootRouteChildren = {
   AppRouteRoute: AppRouteRouteWithChildren,
   AuthRouteRoute: AuthRouteRouteWithChildren,
   DesignSystemRouteRoute: DesignSystemRouteRouteWithChildren,
+  PlaygroundRoute: PlaygroundRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
 }
