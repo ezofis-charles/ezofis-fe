@@ -41,14 +41,14 @@ export const FormsPageHeader = () => {
       <div className='mt-6 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-6'>
         <div className='flex items-center gap-2'>
           <Button
-            className='w-48 bg-surface'
+            className='squircle w-48 bg-surface'
             color='gray'
             icon='tabler:search'
             label='Search'
             variant='outline'
           />
           <ButtonIcon
-            className='bg-surface'
+            className='squircle bg-surface'
             color='gray'
             icon='tabler:filter-2'
             variant='outline'
@@ -64,12 +64,12 @@ export const FormsPageHeader = () => {
             variant='outline'
           /> */}
           <ButtonIcon
-            className='bg-surface'
+            className='squircle bg-surface'
             color='gray'
             icon='material-symbols:page-info-outline-rounded'
             variant='outline'
           />
-          <Button icon='tabler:plus' label='New Form' />
+          <Button className='squircle' icon='tabler:plus' label='New Form' />
         </div>
       </div>
     </>

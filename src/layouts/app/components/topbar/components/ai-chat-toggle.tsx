@@ -16,7 +16,7 @@ export const AiChatToggle = () => {
       <ButtonIcon
         ariaLabel='toggle ai chat'
         color='gray'
-        icon='boxicons:sparkle'
+        icon='tabler:sparkle-2'
         variant='ghost'
         onClick={toggleAiChat}
       />
