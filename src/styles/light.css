@@ -214,5 +214,5 @@
   --gray-13: #202020;
 
   --surface: #ffffff;
-  --surface-muted: #f9f9f9;
+  --surface-muted: var(--gray-2);
 }

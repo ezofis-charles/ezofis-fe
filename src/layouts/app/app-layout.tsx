@@ -9,10 +9,10 @@ interface Props {
 
 export const AppLayout = ({ children }: Props) => {
   return (
-    <>
+    <div className='flex h-dvh w-full overflow-hidden bg-surface-muted'>
       <Sidebar />
       <Main>{children}</Main>
       <AiChatBar />
-    </>
+    </div>
   )
 }

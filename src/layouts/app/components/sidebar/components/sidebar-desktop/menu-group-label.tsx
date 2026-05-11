@@ -35,7 +35,7 @@ export const MenuGroupLabel = ({ index, label }: Props) => {
           <motion.div {...animationConfig}>
             <div
               className={cn(
-                'px-4 py-2 text-12 whitespace-nowrap text-gray-10',
+                'px-4 py-2 text-13 whitespace-nowrap text-gray-9',
                 index !== 0 && 'mt-4',
               )}
             >

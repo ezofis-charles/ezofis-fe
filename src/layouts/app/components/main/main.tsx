@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import { cn } from '@/utils/cn'
 import { useAiChatStore } from '../../stores/use-ai-chat-store'
 import { Topbar } from '../topbar'
@@ -9,19 +8,17 @@ interface Props {
 }
 
 export const Main = ({ children }: Props) => {
-  const sidebarState = useSidebarStore((state) => state.sidebarState)
   const isAiChatOpen = useAiChatStore((state) => state.isAiChatOpen)
 
   return (
     <main
       className={cn(
-        'border-l border-gray-3 transition-[margin] xl:min-h-svh',
-        sidebarState === 'collapsed' ? 'xl:ml-14' : 'xl:ml-60',
-        isAiChatOpen ? 'border-r border-gray-3 xl:mr-96' : 'xl:mr-0',
+        'flex flex-1 flex-col border-l border-gray-3 bg-surface xl:rounded-l-xl',
+        isAiChatOpen && 'border-r xl:rounded-r-xl',
       )}
     >
       <Topbar />
-      {children}
+      <div className='flex-1'>{children}</div>
     </main>
   )
 }
