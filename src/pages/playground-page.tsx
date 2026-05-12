@@ -4,7 +4,7 @@ import { Title } from '@/components/base/title'
 
 export const PlaygroundPage = () => {
   return (
-    <div className='flex h-svh overflow-hidden'>
+    <div className='flex h-svh overflow-hidden bg-surface-muted'>
       <div className='hidden w-14 xl:block'>
         <div className='flex size-14 items-center justify-center'>
           <div className='flex size-8 shrink-0 items-center justify-center'>

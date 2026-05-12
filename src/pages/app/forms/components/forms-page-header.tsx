@@ -10,9 +10,9 @@ export const FormsPageHeader = () => {
       <div className='border-b border-gray-3 px-4 xl:px-6'>
         <div className=''>
           <Tabs value={value} onChange={setValue}>
-            <Tabs.Tab counter='20' label='Inbox' value='all' />
-            <Tabs.Tab counter='5' label='Sent' value='favourites' />
-            <Tabs.Tab counter='0' label='Closed' value='drafts' />
+            <Tabs.Tab counter='5' label='Inbox' value='all' />
+            <Tabs.Tab label='Sent' value='favourites' />
+            <Tabs.Tab label='Closed' value='drafts' />
           </Tabs>
         </div>
 
@@ -38,10 +38,10 @@ export const FormsPageHeader = () => {
         </div>
       </div>
 
-      <div className='mt-6 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-6'>
+      <div className='mt-8 flex flex-wrap items-center justify-between gap-4 px-4 xl:px-6'>
         <div className='flex items-center gap-2'>
           <Button
-            className='squircle w-48 bg-surface'
+            className='squircle w-42 bg-surface xl:w-48'
             color='gray'
             icon='tabler:search'
             label='Search'

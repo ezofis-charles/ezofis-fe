@@ -41,14 +41,14 @@ export const Tab = ({
           )}
         />
       )}
-      <span className='font-medium text-gray-11 group-hover/tab:text-gray-12 group-data-selected/tab:text-gray-12'>
+      <span className='text-14 font-medium text-gray-11 group-hover/tab:text-gray-12 group-data-selected/tab:text-gray-12'>
         {label}
       </span>
 
       {counter && (
         <span
           className={cn(
-            'rounded bg-gray-3 px-1.5 text-12/5 font-medium text-gray-12 group-hover/tab:bg-surface',
+            'rounded-sm bg-gray-3 px-1.5 text-12/5 font-medium text-gray-12 group-hover/tab:bg-surface dark:bg-gray-4',
             counterClassName,
           )}
         >
