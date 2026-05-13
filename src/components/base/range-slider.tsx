@@ -39,7 +39,7 @@ export const RangeSlider = ({
       value={value}
       classNames={{
         bar: 'bg-primary-9',
-        label: 'rounded bg-primary-9 text-white',
+        label: 'squircle-md rounded bg-primary-9 text-white',
         mark: 'border-gray-4 bg-white data-filled:border-primary-9',
         markLabel: 'text-12/6 text-gray-11',
         thumb: 'border-primary-9 bg-white shadow',

@@ -33,7 +33,7 @@ export const Accordion = ({
       variant={variant}
       classNames={{
         content: variant === 'default' ? 'px-0 py-2' : 'p-2',
-        control: cn('outline-primary-8', controlClassName[variant]),
+        control: cn('squircle-md outline-primary-8', controlClassName[variant]),
         item: 'border-gray-4 bg-transparent',
         label: 'p-0',
         panel: 'p-0',

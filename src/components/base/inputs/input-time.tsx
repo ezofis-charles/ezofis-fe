@@ -74,9 +74,10 @@ const InputTime = forwardRef<HTMLInputElement, Props>(
         withDropdown
         classNames={{
           control:
-            'text-14 text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[active]:!bg-primary-9 data-[active]:!font-medium data-[active]:!text-white xl:text-13',
+            'squircle-md text-14 text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[active]:!bg-primary-9 data-[active]:!font-medium data-[active]:!text-white xl:text-13',
           description: classNames.description,
-          dropdown: 'rounded-lg border border-gray-4 bg-surface shadow-xl',
+          dropdown:
+            'squircle-lg rounded-lg border border-gray-4 bg-surface shadow-xl',
           error: classNames.error,
           field: cn(
             'placeholder:text-gray-8 focus:bg-primary-9 focus:text-white focus:placeholder:text-white',

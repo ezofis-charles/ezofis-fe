@@ -16,7 +16,7 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
         {(nodeState) =>
           node.children ? (
             <TreeView.Branch className='relative'>
-              <TreeView.BranchControl className='user-select-none flex items-center gap-1.5 rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
+              <TreeView.BranchControl className='user-select-none squircle-md flex items-center gap-1.5 rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
                 <TreeView.BranchIndicator className='flex size-5 items-center justify-center text-gray-9 transition-transform data-[state=open]:rotate-90'>
                   <Icon name='tabler:chevron-right' />
                 </TreeView.BranchIndicator>
@@ -45,7 +45,7 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
               </TreeView.BranchContent>
             </TreeView.Branch>
           ) : (
-            <TreeView.Item className='rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
+            <TreeView.Item className='squircle-md rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
               <TreeView.ItemText className='flex items-center gap-2'>
                 <div className='flex size-5 items-center justify-center text-gray-10'>
                   <Icon name='tabler:file' />

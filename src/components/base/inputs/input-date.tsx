@@ -77,25 +77,25 @@ const InputDate = forwardRef<HTMLInputElement, Props>(
         allowDeselect
         classNames={{
           calendarHeaderControl:
-            'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50',
+            'squircle-md text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50',
           calendarHeaderLevel:
-            'text-14 font-semibold text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 xl:text-13',
-          day: 'text-14 text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:opacity-100 data-[outside]:hover:text-gray-12 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white data-[today]:bg-primary-4 data-[today]:font-medium data-[today]:text-primary-11 xl:text-13',
+            'squircle-md text-14 font-semibold text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 xl:text-13',
+          day: 'squircle-md text-14 text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:opacity-100 data-[outside]:hover:text-gray-12 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white data-[today]:bg-primary-4 data-[today]:font-medium data-[today]:text-primary-11 xl:text-13',
           description: classNames.description,
           error: classNames.error,
           input: classNames.input,
           label: classNames.label,
           monthsListControl:
-            'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',
+            'squircle-md text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',
           weekday: 'p-2 text-14 text-gray-10 xl:text-13',
           wrapper: classNames.wrapper,
           yearsListControl:
-            'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',
+            'squircle-md text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',
         }}
         popoverProps={{
           classNames: {
             dropdown:
-              'border border-gray-4 bg-surface p-3 rounded-lg shadow-xl',
+              'border border-gray-4 bg-surface p-3 rounded-lg squircle-lg shadow-xl',
           },
         }}
         onChange={onChange}

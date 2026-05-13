@@ -4,7 +4,7 @@ export const classNames = {
   description: 'mt-2 text-14 xl:text-13 text-gray-10',
   error: 'mt-2 text-14 xl:text-13 text-red-11',
   input:
-    'border-gray-6 bg-surface text-14 xl:text-13 font-medium text-gray-12 placeholder:font-normal placeholder:text-gray-8 focus-within:border-primary-8 focus-within:ring-2 focus-within:ring-primary-6 disabled:bg-gray-3 data-disabled:bg-gray-3 data-error:border-red-8 data-error:ring-red-5 h-10 min-h-10 xl:h-9 xl:min-h-9 group-data-[size=sm]:h-9 xl:group-data-[size=sm]:h-8 group-data-[size=sm]:min-h-9 xl:group-data-[size=sm]:min-h-8',
+    'border-gray-6 bg-surface text-14 xl:text-13 font-medium text-gray-12 placeholder:font-normal placeholder:text-gray-8 focus-within:border-primary-8 focus-within:ring-2 focus-within:ring-primary-6 disabled:bg-gray-3 data-disabled:bg-gray-3 data-error:border-red-8 data-error:ring-red-5 h-10 min-h-10 xl:h-9 xl:min-h-9 group-data-[size=sm]:h-9 xl:group-data-[size=sm]:h-8 group-data-[size=sm]:min-h-9 xl:group-data-[size=sm]:min-h-8 squircle-md',
   label: 'mb-2 text-14 xl:text-13 font-medium text-gray',
   required: 'text-red-11',
   wrapper: 'm-0 group',

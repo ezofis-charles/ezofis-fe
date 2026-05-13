@@ -16,7 +16,7 @@ export const Tour = ({ tour }: Props) => {
         <Base.Backdrop className='z-(--z-index) bg-black/40' />
         <Base.Spotlight className='rounded!' />
         <Base.Positioner className='fixed z-(--z-index) data-[type=dialog]:inset-0 data-[type=dialog]:flex data-[type=dialog]:transform-none! data-[type=dialog]:items-center data-[type=dialog]:justify-center'>
-          <Base.Content className='rounded-lg border border-gray-4 bg-surface p-4 shadow-xl'>
+          <Base.Content className='squircle-lg rounded-lg border border-gray-4 bg-surface-raised p-4 shadow-xl'>
             <Base.Title className='mb-2 text-16 font-semibold text-gray-13 xl:text-15' />
             <Base.Description className='text-14 leading-6 text-gray-11 xl:text-13' />
 

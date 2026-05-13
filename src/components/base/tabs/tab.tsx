@@ -28,7 +28,7 @@ export const Tab = ({
       disabled={disabled}
       value={value}
       className={cn(
-        'group/tab flex h-8 items-center gap-2 rounded px-2 transition-colors hover:cursor-pointer hover:bg-gray-4 focus-visible:bg-gray-4 focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50',
+        'group/tab squircle-md flex h-8 items-center gap-2 rounded px-2 transition-colors hover:cursor-pointer hover:bg-gray-4 focus-visible:bg-gray-4 focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50',
         className,
       )}
     >
@@ -41,14 +41,14 @@ export const Tab = ({
           )}
         />
       )}
-      <span className='text-14 font-medium text-gray-11 group-hover/tab:text-gray-12 group-data-selected/tab:text-gray-12'>
+      <span className='font-medium text-gray-11 group-hover/tab:text-gray-12 group-data-selected/tab:text-gray-12'>
         {label}
       </span>
 
       {counter && (
         <span
           className={cn(
-            'rounded-sm bg-gray-3 px-1.5 text-12/5 font-medium text-gray-12 group-hover/tab:bg-surface dark:bg-gray-4',
+            'squircle-sm rounded-sm bg-gray-3 px-1.5 text-12/5 font-medium text-gray-12 group-hover/tab:bg-surface dark:bg-gray-4',
             counterClassName,
           )}
         >

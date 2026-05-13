@@ -19,7 +19,7 @@ export const Table = ({
   return (
     <div
       className={cn(
-        'overflow-hidden rounded border-gray-3',
+        'squircle-lg overflow-hidden rounded border-gray-3',
         tableBorder && 'border',
         rowBorder &&
           '[&_tr_th]:border-b [&_tr_th]:border-gray-3 [&_tr:not(:last-child)_td]:border-b [&_tr:not(:last-child)_td]:border-gray-3',

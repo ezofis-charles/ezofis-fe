@@ -27,7 +27,7 @@ export const Alert = ({ className, color = 'primary', text }: Props) => {
   return (
     <div
       className={cn(
-        'flex min-h-9 items-center gap-2 rounded border border-none px-3 py-2',
+        'squircle-lg flex min-h-9 items-center gap-2 rounded border border-none px-3 py-2',
         colorClassNames[color],
         className,
       )}

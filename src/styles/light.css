@@ -185,20 +185,6 @@
   --gold-11: #71624b;
   --gold-12: #3b352b;
 
-  --gray-1: #fdfcfd;
-  --gray-2: #faf9fb;
-  --gray-3: #f2eff3;
-  --gray-4: #eae7ec;
-  --gray-5: #e3dfe6;
-  --gray-6: #dbd8e0;
-  --gray-7: #d0cdd7;
-  --gray-8: #bcbac7;
-  --gray-9: #8e8c99;
-  --gray-10: #84828e;
-  --gray-11: #65636d;
-  --gray-12: #484651;
-  --gray-13: #211f26;
-
   --gray-1: #fcfcfc;
   --gray-2: #f9f9f9;
   --gray-3: #f0f0f0;
@@ -213,6 +199,7 @@
   --gray-12: #424242;
   --gray-13: #202020;
 
-  --surface: #ffffff;
-  --surface-muted: var(--gray-2);
+  --surface-raised: #ffffff;
+  --surface: var(--gray-1);
+  --surface-muted: #f7f7f7;
 }

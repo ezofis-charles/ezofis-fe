@@ -23,9 +23,10 @@ export const Avatar = ({
       src={image}
       classNames={{
         placeholder: cn(
-          'border border-gray-5 bg-gray-4 text-13 font-semibold text-gray-11',
+          'squircle-xl rounded border border-gray-5 bg-gray-4 text-13 font-semibold text-gray-11',
           className,
         ),
+        root: 'squircle-xl rounded',
       }}
     >
       {initials}

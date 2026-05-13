@@ -25,7 +25,7 @@ export const ComboboxOption = ({
       disabled={disabled}
       value={id}
       className={cn(
-        'group flex min-h-9 gap-2.5 rounded px-1.5 py-1 transition-colors hover:bg-gray-4 data-combobox-selected:bg-gray-4 xl:min-h-8',
+        'group squircle-md flex min-h-9 gap-2.5 rounded px-1.5 py-1 transition-colors hover:bg-gray-4 data-combobox-selected:bg-gray-4 xl:min-h-8',
         !description && 'items-center',
       )}
     >

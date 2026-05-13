@@ -5,8 +5,28 @@
 }
 
 @supports (corner-shape: squircle) {
-  .squircle {
+  .squircle-sm {
+    corner-shape: squircle;
+    border-radius: 8px;
+  }
+
+  .squircle-md {
     corner-shape: squircle;
     border-radius: 12px;
+  }
+
+  .squircle-lg {
+    corner-shape: squircle;
+    border-radius: 16px;
+  }
+
+  .squircle-xl {
+    corner-shape: squircle;
+    border-radius: 24px;
+  }
+
+  .squircle-none {
+    corner-shape: squircle;
+    border-radius: 0;
   }
 }
