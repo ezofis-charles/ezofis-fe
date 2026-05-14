@@ -23,7 +23,6 @@ export const SidebarDesktop = ({ menuGroup }: Props) => {
     <motion.aside
       animate={{ width }}
       className='group/sidebar bg-surface-muted'
-      data-expanded={sidebarState === 'expanded'}
       initial={{ width }}
       transition={{ duration: ANIMATE_NORMAL }}
     >

@@ -11,7 +11,7 @@ export const NotFoundPage = () => {
   }
 
   return (
-    <div className='flex min-h-svh items-center justify-center space-y-6 bg-surface py-12'>
+    <div className='flex h-dvh items-center justify-center space-y-6 bg-surface py-12'>
       <Logo className='justify-center' hideText />
 
       <Title

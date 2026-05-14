@@ -46,9 +46,7 @@ export const MenuGroupItem = ({
             name={icon}
             className={cn(
               'transition-colors',
-              isActive
-                ? 'text-primary-11'
-                : 'text-gray-10 group-hover:text-gray-11',
+              isActive ? 'text-primary-11' : 'text-gray-11',
             )}
           />
         </div>

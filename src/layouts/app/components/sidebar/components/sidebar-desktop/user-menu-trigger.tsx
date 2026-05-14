@@ -13,15 +13,17 @@ export const UserMenuTrigger = () => {
     <div
       className={cn(
         'group mx-1.5 flex cursor-pointer items-center p-1',
-        sidebarState === 'expanded' && 'rounded hover:bg-gray-4',
+        sidebarState === 'expanded' && 'squircle-md rounded hover:bg-gray-4',
       )}
     >
       <div className='flex h-10 w-8 shrink-0 items-center justify-center'>
         <Avatar
-          className='group-hover:bg-surface'
           imageLabel='user picture'
-          initials='JD'
+          initials={user?.name?.slice(0, 2).toUpperCase()}
           size={30}
+          className={cn(
+            sidebarState === 'expanded' && 'group-hover:bg-surface',
+          )}
         />
       </div>
 
@@ -29,9 +31,9 @@ export const UserMenuTrigger = () => {
         <div className='flex items-center select-none'>
           <div className='min-w-0 flex-1'>
             <div className='truncate text-14 font-medium text-gray-12 xl:text-13'>
-              Jane Doe
+              {user?.name}
             </div>
-            <div className='truncate text-12/5'>{user.email}</div>
+            <div className='truncate text-12/5'>{user?.email}</div>
           </div>
           <Icon name='material-symbols:more-vert' />
         </div>

@@ -4,9 +4,9 @@ import { AnimatePresence } from './animate-presence'
 
 export const Logo = () => {
   return (
-    <div className='flex h-12 items-center gap-0.5 overflow-hidden px-2.75'>
+    <div className='flex h-12 items-center gap-0.5 overflow-hidden px-2.5'>
       <div className='flex size-8 shrink-0 items-center justify-center'>
-        <img alt='logo mark' className='size-7.5' src={logoMark} />
+        <img alt='logo mark' className='size-7' src={logoMark} />
       </div>
 
       <AnimatePresence>

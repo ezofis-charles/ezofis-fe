@@ -7,7 +7,7 @@ interface Props {
 
 export const AuthLayout = ({ children }: Props) => {
   return (
-    <ScrollArea className='flex min-h-svh items-center justify-center bg-surface'>
+    <ScrollArea className='flex h-dvh items-center justify-center bg-surface'>
       {children}
     </ScrollArea>
   )
