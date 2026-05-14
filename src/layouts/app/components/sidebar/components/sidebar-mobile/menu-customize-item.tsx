@@ -10,12 +10,12 @@ interface Props {
 export const MenuCustomizeItem = ({ index, item }: Props) => {
   return (
     <Sortable
-      className='mx-2 flex h-9 items-center gap-2 rounded px-2'
+      className='squircle-md mx-2 flex h-9 items-center gap-2 rounded px-2'
       draggingClassName='bg-gray-4'
       id={item.label}
       index={index}
     >
-      <Icon className='text-gray' name={item.icon} />
+      <Icon className='text-gray-11' name={item.icon} />
 
       <div className='flex-1 font-medium whitespace-nowrap text-gray-12'>
         {item.label}

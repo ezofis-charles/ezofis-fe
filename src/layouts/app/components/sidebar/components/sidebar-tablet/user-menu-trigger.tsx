@@ -22,7 +22,7 @@ export const UserMenuTrigger = ({ className }: Props) => {
           className='border border-gray-3'
           image={user.avatarUrl}
           imageLabel='user picture'
-          initials='CV'
+          initials={user?.name?.slice(0, 2).toUpperCase()}
           size={32}
         />
       </div>

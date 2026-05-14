@@ -27,7 +27,7 @@ export const SidebarMobile = ({ menuGroup }: Props) => {
         <MenuPinned items={items} />
         <ButtonIcon
           color='gray'
-          icon='material-symbols:unfold-more-rounded'
+          icon='tabler:selector'
           variant='ghost'
           onClick={() => setOpen(true)}
         />

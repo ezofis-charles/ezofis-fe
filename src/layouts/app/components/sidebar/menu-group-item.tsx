@@ -17,7 +17,7 @@ export const MenuGroupItem = ({ icon, iconClassName, label, route }: Props) => {
     <Link
       to={route}
       className={cn(
-        'flex items-center gap-1 rounded outline-0 transition-colors hover:bg-gray-4 focus-visible:bg-gray-4',
+        'squircle-md flex items-center gap-1 rounded outline-0 transition-colors hover:bg-gray-4 focus-visible:bg-gray-4',
         isActive && 'bg-gray-4',
       )}
     >
