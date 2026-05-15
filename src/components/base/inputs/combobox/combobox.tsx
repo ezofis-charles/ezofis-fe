@@ -62,7 +62,7 @@ const Combobox = forwardRef<HTMLButtonElement, Props>(
         <Base.Dropdown
           classNames={{
             dropdown:
-              'squircle-lg rounded-lg border border-gray-4 bg-surface-raised p-0 shadow-xl',
+              'squircle-lg rounded-lg border border-gray-4 bg-surface p-0 shadow-xl',
           }}
         >
           {(searchable || creatable) && (

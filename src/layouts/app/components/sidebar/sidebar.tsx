@@ -36,21 +36,26 @@ export const Sidebar = () => {
           label: 'Forms',
           route: '/forms',
         },
-        // {
-        //   icon: 'tabler:folder',
-        //   label: 'Folders',
-        //   route: '/folders',
-        // },
-        // {
-        //   icon: 'tabler:box',
-        //   label: 'Tasks',
-        //   route: '/tasks',
-        // },
-        // {
-        //   icon: 'tabler:picture-in-picture',
-        //   label: 'Portals',
-        //   route: '/portals',
-        // },
+        {
+          icon: 'tabler:folder',
+          label: 'Folders',
+          route: '/folders',
+        },
+        {
+          icon: 'tabler:box',
+          label: 'Tasks',
+          route: '/tasks',
+        },
+        {
+          icon: 'tabler:picture-in-picture',
+          label: 'Portals',
+          route: '/portals',
+        },
+        {
+          icon: 'tabler:settings',
+          label: 'Settings',
+          route: '/settings',
+        },
       ],
       label: 'Modules',
     },

@@ -24,7 +24,7 @@ export const Menu = ({ menuGroup }: Props) => {
       />
 
       <Sheet open={open} onClose={() => setOpen(false)}>
-        <ScrollArea className='h-96'>
+        <ScrollArea className='h-108'>
           <nav className='p-2'>
             {menuGroup.map((group, index) => (
               <div key={group.label}>

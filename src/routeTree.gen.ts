@@ -26,6 +26,7 @@ import { Route as AuthOnBoardingRouteImport } from './routes/_auth/on-boarding'
 import { Route as AuthForgotPasswordRouteImport } from './routes/_auth/forgot-password'
 import { Route as AppWorkflowsRouteImport } from './routes/_app/workflows'
 import { Route as AppTasksRouteImport } from './routes/_app/tasks'
+import { Route as AppSettingsRouteImport } from './routes/_app/settings'
 import { Route as AppRequestsRouteImport } from './routes/_app/requests'
 import { Route as AppPortalsRouteImport } from './routes/_app/portals'
 import { Route as AppFormsRouteImport } from './routes/_app/forms'
@@ -170,6 +171,11 @@ const AppWorkflowsRoute = AppWorkflowsRouteImport.update({
 const AppTasksRoute = AppTasksRouteImport.update({
   id: '/tasks',
   path: '/tasks',
+  getParentRoute: () => AppRouteRoute,
+} as any)
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
   getParentRoute: () => AppRouteRoute,
 } as any)
 const AppRequestsRoute = AppRequestsRouteImport.update({
@@ -551,6 +557,7 @@ export interface FileRoutesByFullPath {
   '/forms': typeof AppFormsRoute
   '/portals': typeof AppPortalsRoute
   '/requests': typeof AppRequestsRoute
+  '/settings': typeof AppSettingsRoute
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
@@ -629,6 +636,7 @@ export interface FileRoutesByTo {
   '/forms': typeof AppFormsRoute
   '/portals': typeof AppPortalsRoute
   '/requests': typeof AppRequestsRoute
+  '/settings': typeof AppSettingsRoute
   '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
@@ -710,6 +718,7 @@ export interface FileRoutesById {
   '/_app/forms': typeof AppFormsRoute
   '/_app/portals': typeof AppPortalsRoute
   '/_app/requests': typeof AppRequestsRoute
+  '/_app/settings': typeof AppSettingsRoute
   '/_app/tasks': typeof AppTasksRoute
   '/_app/workflows': typeof AppWorkflowsRoute
   '/_auth/forgot-password': typeof AuthForgotPasswordRoute
@@ -792,6 +801,7 @@ export interface FileRouteTypes {
     | '/forms'
     | '/portals'
     | '/requests'
+    | '/settings'
     | '/tasks'
     | '/workflows'
     | '/forgot-password'
@@ -870,6 +880,7 @@ export interface FileRouteTypes {
     | '/forms'
     | '/portals'
     | '/requests'
+    | '/settings'
     | '/tasks'
     | '/workflows'
     | '/forgot-password'
@@ -950,6 +961,7 @@ export interface FileRouteTypes {
     | '/_app/forms'
     | '/_app/portals'
     | '/_app/requests'
+    | '/_app/settings'
     | '/_app/tasks'
     | '/_app/workflows'
     | '/_auth/forgot-password'
@@ -1149,6 +1161,13 @@ declare module '@tanstack/react-router' {
       path: '/tasks'
       fullPath: '/tasks'
       preLoaderRoute: typeof AppTasksRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
+    '/_app/settings': {
+      id: '/_app/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
       parentRoute: typeof AppRouteRoute
     }
     '/_app/requests': {
@@ -1593,6 +1612,7 @@ interface AppRouteRouteChildren {
   AppFormsRoute: typeof AppFormsRoute
   AppPortalsRoute: typeof AppPortalsRoute
   AppRequestsRoute: typeof AppRequestsRoute
+  AppSettingsRoute: typeof AppSettingsRoute
   AppTasksRoute: typeof AppTasksRoute
   AppWorkflowsRoute: typeof AppWorkflowsRoute
   AppIndexRoute: typeof AppIndexRoute
@@ -1604,6 +1624,7 @@ const AppRouteRouteChildren: AppRouteRouteChildren = {
   AppFormsRoute: AppFormsRoute,
   AppPortalsRoute: AppPortalsRoute,
   AppRequestsRoute: AppRequestsRoute,
+  AppSettingsRoute: AppSettingsRoute,
   AppTasksRoute: AppTasksRoute,
   AppWorkflowsRoute: AppWorkflowsRoute,
   AppIndexRoute: AppIndexRoute,

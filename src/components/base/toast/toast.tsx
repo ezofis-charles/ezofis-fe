@@ -30,7 +30,7 @@ export const Toast = ({
   const { className, name } = iconMap[variant]
 
   return (
-    <div className='squircle-lg relative flex items-start gap-2 overflow-hidden rounded border border-gray-4 bg-surface-raised p-4 shadow-xl'>
+    <div className='squircle-lg relative flex items-start gap-2 overflow-hidden rounded border border-gray-4 bg-surface p-4 shadow-xl'>
       <div className='flex size-5 items-center justify-center'>
         <Icon className={className} name={name} />
       </div>

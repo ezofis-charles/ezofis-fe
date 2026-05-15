@@ -41,7 +41,7 @@ export const Menu = ({
       returnFocus
       classNames={{
         dropdown: cn(
-          'squircle-lg space-y-0.5 rounded-lg border border-gray-4 bg-surface-raised p-1 shadow-xl',
+          'squircle-lg space-y-0.5 rounded-lg border border-gray-4 bg-surface p-1 shadow-xl',
           className,
         ),
         item: 'group squircle-md flex h-9 items-center gap-2 rounded px-2 font-medium text-gray-12 transition-colors hover:bg-gray-4 hover:text-gray-12 focus-visible:bg-gray-4 focus-visible:outline-0 xl:h-8',
