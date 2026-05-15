@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { AiChatBar } from './components/ai-chat-bar'
+import { AiChat } from './components/ai-chat'
 import { Sidebar } from './components/sidebar'
 import { Topbar } from './components/topbar'
 
@@ -15,7 +15,7 @@ export const AppLayout = ({ children }: Props) => {
         <Topbar />
         <div className='flex-1 overflow-y-auto'>{children}</div>
       </main>
-      <AiChatBar />
+      <AiChat />
     </div>
   )
 }

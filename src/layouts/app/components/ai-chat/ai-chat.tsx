@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { ANIMATE_NORMAL } from '@/constants'
 import { useAiChatStore } from '@/layouts/app/stores/use-ai-chat-store'
 
-export const AiChatBar = () => {
+export const AiChat = () => {
   const isAiChatOpen = useAiChatStore((state) => state.isAiChatOpen)
 
   return (

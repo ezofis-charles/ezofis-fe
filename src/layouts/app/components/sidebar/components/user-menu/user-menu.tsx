@@ -2,8 +2,8 @@ import type { ReactNode } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Menu } from '@/components/base/menu'
 import { useSessionStore } from '@/stores/use-session-store'
-import { LanguageSwitcher } from './language-switcher'
-import { ThemeSwitcher } from './theme-switcher'
+import { LanguageSwitcher } from './components/language-switcher'
+import { ThemeSwitcher } from './components/theme-switcher'
 
 interface Props {
   alignmentAxis?: number
@@ -35,7 +35,6 @@ export const UserMenu = ({
       offset={{ alignmentAxis, mainAxis }}
       position='top-start'
       target={trigger}
-      targetClassName='w-full'
       width={224}
       withinPortal={withinPortal}
     >

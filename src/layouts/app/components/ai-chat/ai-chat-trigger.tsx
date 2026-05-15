@@ -3,7 +3,7 @@ import { Tooltip } from '@/components/base/tooltip'
 import { TOOLTIP_DELAY } from '@/constants'
 import { useAiChatStore } from '@/layouts/app/stores/use-ai-chat-store'
 
-export const AiChatToggle = () => {
+export const AiChatTrigger = () => {
   const isAiChatOpen = useAiChatStore((state) => state.isAiChatOpen)
   const toggleAiChat = useAiChatStore((state) => state.toggleAiChat)
 

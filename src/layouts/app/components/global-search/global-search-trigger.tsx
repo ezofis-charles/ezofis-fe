@@ -2,7 +2,7 @@ import { ButtonIcon } from '@/components/base/button'
 import { Tooltip } from '@/components/base/tooltip'
 import { TOOLTIP_DELAY } from '@/constants'
 
-export const GlobalSearch = () => {
+export const GlobalSearchTrigger = () => {
   return (
     <Tooltip content='Search' openDelay={TOOLTIP_DELAY}>
       <ButtonIcon

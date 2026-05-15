@@ -1,36 +1,54 @@
+import { useState } from 'react'
 import { ButtonIcon } from '@/components/base/button'
+import { ScrollArea } from '@/components/base/scroll-area'
 import { Sheet } from '@/components/base/sheet'
+import { cn } from '@/utils/cn'
 import type { SidebarMenuGroup } from '../../sidebar-types'
-import { UserMenu } from '../user-menu/user-menu'
-import { MenuGroup } from './menu-group'
-import { UserMenuTrigger } from './user-menu-trigger'
+import { MenuGroupItem } from '../../menu-group-item'
 
 interface Props {
   menuGroup: SidebarMenuGroup[]
-  open: boolean
-  onClose: () => void
-  onCustomize: () => void
 }
 
-export const Menu = ({ menuGroup, open, onClose, onCustomize }: Props) => {
+export const Menu = ({ menuGroup }: Props) => {
+  const [open, setOpen] = useState(false)
+
   return (
-    <Sheet open={open} onClose={onClose}>
-      <MenuGroup menuGroup={menuGroup} />
+    <>
+      <ButtonIcon
+        ariaLabel='menu'
+        color='gray'
+        icon='tabler:menu-3'
+        variant='ghost'
+        onClick={() => setOpen(!open)}
+      />
 
-      <div className='mr-4 mb-4 ml-5 flex items-center border-t border-gray-3 pt-4'>
-        <UserMenu
-          alignmentAxis={0}
-          trigger={<UserMenuTrigger />}
-          withinPortal={false}
-        />
+      <Sheet open={open} onClose={() => setOpen(false)}>
+        <ScrollArea className='h-96'>
+          <nav className='p-2'>
+            {menuGroup.map((group, index) => (
+              <div key={group.label}>
+                <div
+                  className={cn(
+                    'px-4 py-2 text-12 whitespace-nowrap text-gray-10',
+                    index !== 0 && 'mt-4',
+                  )}
+                >
+                  {group.label}
+                </div>
 
-        <ButtonIcon
-          color='gray'
-          icon='material-symbols:page-info-outline-rounded'
-          variant='ghost'
-          onClick={onCustomize}
-        />
-      </div>
-    </Sheet>
+                <ul className='space-y-1'>
+                  {group.items.map((item) => (
+                    <li className='px-2' key={item.label}>
+                      <MenuGroupItem {...item} iconClassName='size-9' />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
+        </ScrollArea>
+      </Sheet>
+    </>
   )
 }
