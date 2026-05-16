@@ -7,7 +7,12 @@ interface Props extends SidebarMenuItemType {
   iconClassName?: string
 }
 
-export const MenuGroupItem = ({ icon, iconClassName, label, route }: Props) => {
+export const SidebarMenuItem = ({
+  icon,
+  iconClassName,
+  label,
+  route,
+}: Props) => {
   const pathname = useLocation({
     select: (location) => location.pathname,
   })

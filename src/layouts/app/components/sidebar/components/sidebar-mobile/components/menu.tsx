@@ -3,8 +3,8 @@ import { ButtonIcon } from '@/components/base/button'
 import { ScrollArea } from '@/components/base/scroll-area'
 import { Sheet } from '@/components/base/sheet'
 import { cn } from '@/utils/cn'
-import type { SidebarMenuGroup } from '../../sidebar-types'
-import { MenuGroupItem } from '../../menu-group-item'
+import type { SidebarMenuGroup } from '../../../sidebar-types'
+import { SidebarMenuItem } from '../../../sidebar-menu-item'
 
 interface Props {
   menuGroup: SidebarMenuGroup[]
@@ -40,7 +40,7 @@ export const Menu = ({ menuGroup }: Props) => {
                 <ul className='space-y-1'>
                   {group.items.map((item) => (
                     <li className='px-2' key={item.label}>
-                      <MenuGroupItem {...item} iconClassName='size-9' />
+                      <SidebarMenuItem {...item} iconClassName='size-9' />
                     </li>
                   ))}
                 </ul>

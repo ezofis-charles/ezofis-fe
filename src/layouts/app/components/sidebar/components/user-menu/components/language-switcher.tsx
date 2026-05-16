@@ -10,7 +10,7 @@ export const LanguageSwitcher = () => {
         <Menu.Item
           key={code}
           label={name}
-          suffixIcon={language === code ? 'material-symbols:check-rounded' : ''}
+          suffixIcon={language === code ? 'tabler:check' : ''}
           suffixIconClassName='text-primary-11'
           onClick={() => setLanguage(code)}
         />

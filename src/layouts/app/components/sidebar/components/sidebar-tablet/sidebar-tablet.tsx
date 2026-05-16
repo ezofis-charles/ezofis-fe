@@ -3,9 +3,9 @@ import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import type { SidebarMenuGroup } from '../../sidebar-types'
 import { SIDEBAR_SIZE } from '../../sidebar-constants'
 import { UserMenu } from '../user-menu'
-import { Logo } from './logo'
-import { MenuGroup } from './menu-group'
-import { UserMenuTrigger } from './user-menu-trigger'
+import { Logo } from './components/logo'
+import { MenuGroup } from './components/menu-group'
+import { UserMenuTrigger } from './components/user-menu-trigger'
 
 interface Props {
   menuGroup: SidebarMenuGroup[]

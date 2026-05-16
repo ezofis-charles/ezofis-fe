@@ -58,7 +58,7 @@ export const UserMenu = ({
       <LanguageSwitcher />
       <Menu.Divider />
       <Menu.Item
-        icon='material-symbols:logout-rounded'
+        icon='tabler:logout'
         iconClassName='text-red-11'
         label='Sign out'
         onClick={logout}

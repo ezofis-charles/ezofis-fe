@@ -1,7 +1,7 @@
 import { ScrollArea } from '@/components/base/scroll-area'
 import { cn } from '@/utils/cn'
-import type { SidebarMenuGroup } from '../../sidebar-types'
-import { MenuGroupItem } from '../../menu-group-item'
+import type { SidebarMenuGroup } from '../../../sidebar-types'
+import { SidebarMenuItem } from '../../../sidebar-menu-item'
 
 interface Props {
   menuGroup: SidebarMenuGroup[]
@@ -25,7 +25,7 @@ export const MenuGroup = ({ menuGroup }: Props) => {
             <ul className='space-y-1'>
               {group.items.map((item) => (
                 <li className='px-2.5' key={item.label}>
-                  <MenuGroupItem {...item} />
+                  <SidebarMenuItem {...item} />
                 </li>
               ))}
             </ul>
