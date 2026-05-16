@@ -1,7 +1,7 @@
 import type { SidebarMenuGroup } from '../../sidebar-types'
 import { AiChatTrigger } from '../../../ai-chat'
 import { GlobalSearchTrigger } from '../../../global-search'
-import { NotificationsTrigger } from '../../../notifications'
+import { Notifications } from '../../../notifications'
 import { Menu } from './components/menu'
 import { UserMenu } from './components/user-menu'
 
@@ -15,7 +15,7 @@ export const SidebarMobile = ({ menuGroup }: Props) => {
       <Menu menuGroup={menuGroup} />
       <GlobalSearchTrigger />
       <AiChatTrigger />
-      <NotificationsTrigger />
+      <Notifications />
       <UserMenu />
     </div>
   )

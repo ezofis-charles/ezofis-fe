@@ -17,7 +17,7 @@ export const SidebarToggle = () => {
     >
       <ButtonIcon
         ariaLabel='toggle sidebar'
-        className='-ml-0.5 hidden md:flex'
+        className='hidden md:flex'
         color='gray'
         icon='tabler-menu-3'
         variant='ghost'

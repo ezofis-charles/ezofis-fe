@@ -25,7 +25,7 @@ export const DrawerStory = () => {
 
         <Drawer open={open} withOverlay onClose={() => setOpen(false)}>
           <Overlay.Header title='Drawer' onClose={() => setOpen(false)} />
-          <Overlay.Content style={{ height: 'calc(100dvh - 126px' }}>
+          <Overlay.Content className='h-[calc(100dvh-138px)] xl:h-[calc(100dvh-122px)]'>
             <></>
           </Overlay.Content>
           <Overlay.Footer

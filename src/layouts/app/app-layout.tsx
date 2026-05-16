@@ -13,7 +13,7 @@ export const AppLayout = ({ children }: Props) => {
       <Sidebar />
       <main className='flex flex-1 flex-col bg-surface ring ring-gray-3 xl:rounded-l-xl'>
         <Topbar />
-        <div className='flex-1 overflow-y-auto'>{children}</div>
+        <div className='flex-1'>{children}</div>
       </main>
       <AiChat />
     </div>
