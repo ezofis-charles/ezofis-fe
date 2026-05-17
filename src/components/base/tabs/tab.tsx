@@ -28,7 +28,7 @@ export const Tab = ({
       disabled={disabled}
       value={value}
       className={cn(
-        'group/tab squircle-md flex h-8 items-center gap-2 rounded px-1 transition-colors hover:cursor-pointer hover:bg-gray-4 focus-visible:bg-gray-4 focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50',
+        'group/tab squircle-md relative flex h-full items-center gap-1.5 rounded pl-px transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-full hover:cursor-pointer hover:after:bg-gray-4 focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50',
         className,
       )}
     >
@@ -48,7 +48,7 @@ export const Tab = ({
       {counter && (
         <span
           className={cn(
-            'squircle-md rounded bg-primary-3 px-1.5 text-12/5 font-medium text-primary-11 group-hover/tab:bg-surface dark:bg-gray-4',
+            'squircle-sm rounded-sm bg-primary-3 px-1 text-12/5 font-medium text-primary-11',
             counterClassName,
           )}
         >

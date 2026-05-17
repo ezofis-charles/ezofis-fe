@@ -24,7 +24,7 @@ export const Tabs = ({
   return (
     <Base.Root value={value} onValueChange={(e) => onChange(e.value)}>
       <Base.List
-        className='group/tabs relative flex h-14 items-center gap-4 xl:h-12'
+        className='group/tabs relative flex h-14 items-center gap-5 xl:h-12'
         data-color={color}
       >
         {children}
