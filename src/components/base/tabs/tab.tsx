@@ -6,7 +6,7 @@ interface Props {
   label: string
   value: string
   className?: string
-  counter?: string
+  counter?: number
   counterClassName?: string
   disabled?: boolean
   icon?: string
@@ -45,7 +45,7 @@ export const Tab = ({
         {label}
       </span>
 
-      {counter && (
+      {counter !== 0 && (
         <span
           className={cn(
             'squircle-sm rounded-sm bg-primary-3 px-1 text-12/5 font-medium text-primary-11',

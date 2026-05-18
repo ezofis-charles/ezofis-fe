@@ -9,7 +9,7 @@ declare module 'axios' {
 }
 
 const axiosInstance = create({
-  baseURL: '/api',
+  baseURL: 'https://dummyjson.com',
 })
 
 interface AxiosRequestConfig extends InternalAxiosRequestConfig {

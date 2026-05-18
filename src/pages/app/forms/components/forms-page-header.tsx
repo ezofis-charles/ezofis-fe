@@ -10,7 +10,7 @@ export const FormsPageHeader = () => {
       <div className='border-b border-gray-3 px-4 xl:px-6'>
         <div className=''>
           <Tabs value={value} onChange={setValue}>
-            <Tabs.Tab counter='3' label='Inbox' value='all' />
+            <Tabs.Tab counter={3} label='Inbox' value='all' />
             <Tabs.Tab label='Sent' value='favourites' />
             <Tabs.Tab label='Closed' value='drafts' />
           </Tabs>

@@ -36,9 +36,9 @@ export const TabsStory = () => {
 
       <Section title='With Badge'>
         <Tabs value={value} onChange={setValue}>
-          <Tabs.Tab counter='10' label='Inbox' value='tab1' />
-          <Tabs.Tab counter='5' label='Sent' value='tab2' />
-          <Tabs.Tab counter='0' label='Closed' value='tab3' />
+          <Tabs.Tab counter={10} label='Inbox' value='tab1' />
+          <Tabs.Tab counter={5} label='Sent' value='tab2' />
+          <Tabs.Tab counter={0} label='Closed' value='tab3' />
         </Tabs>
       </Section>
 
